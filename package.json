@@ -1,0 +1,19 @@
+{
+  "name": "mecan-cloud",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SaaS multi-tenant para talleres mecánicos",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "build": "node scripts/build.js",
+    "test": "node --test --test-concurrency=1",
+    "check": "npm run build && npm test",
+    "smoke": "node scripts/smoke.js",
+    "backup": "node scripts/backup.js",
+    "restore": "node scripts/restore.js",
+    "export-tenant": "node scripts/export-tenant.js"
+  }
+}

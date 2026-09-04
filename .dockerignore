@@ -1,0 +1,9 @@
+.git
+.env
+data
+storage/*
+!storage/.gitkeep
+coverage
+*.log
+tests
+docs
