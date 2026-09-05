@@ -1,0 +1,50 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    init: true
+    env_file: .env.production
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      SEED_DEMO: 'false'
+      TRUST_PROXY: 'true'
+      # DATABASE_URL and verified TLS are supplied by the private .env.production.
+      MOBILE_RELEASES_PATH: /app/movile-releases
+      STORAGE_PATH: /app/storage
+      BACKUP_PATH: /app/backups
+    volumes:
+      - mecan_storage:/app/storage
+      - mecan_backups:/app/backups
+      - ./movile/releases:/app/movile-releases:ro
+      - ./legal:/app/legal:ro
+      - ./certificates:/app/certificates:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '5'
+  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      PUBLIC_HOST: ${PUBLIC_HOST:?Configura PUBLIC_HOST usando --env-file .env.production}
+    ports: ['80:80', '443:443']
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+volumes:
+  mecan_storage:
+  mecan_backups:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setup_title">Servidor del taller</string>
+    <string name="setup_intro">Escribe la dirección donde está publicado tu sistema. Ejemplo: https://taller.midominio.com</string>
+    <string name="setup_hint">https://</string>
+    <string name="setup_save">Conectar</string>
+    <string name="setup_invalid">Escribe una dirección válida que empiece con https:// (o http:// solo en la versión de prueba).</string>
+    <string name="offline_title">Sin conexión con el servidor</string>
+    <string name="offline_body">No se pudo contactar al servidor. Revisa tu conexión a internet y vuelve a intentar.</string>
+    <string name="retry">Reintentar</string>
+    <string name="change_server">Cambiar servidor</string>
+    <string name="searching_server">Buscando el servidor en la red…</string>
+    <string name="searching_body">La dirección anterior no responde. Se está revisando la red por si cambió.</string>
+    <string name="server_found">Servidor encontrado en %1$s</string>
+
+    <string name="update_available_title">Actualización disponible</string>
+    <string name="update_required_title">Actualización obligatoria</string>
+    <string name="update_body">Versión %1$s. Instalada: %2$s.</string>
+    <string name="update_install">Actualizar ahora</string>
+    <string name="update_later">Más tarde</string>
+    <string name="update_downloading">Descargando actualización…</string>
+    <string name="update_verifying">Verificando la descarga…</string>
+    <string name="update_none">Ya tienes la última versión (%1$s).</string>
+    <string name="update_check_failed">No se pudo consultar si hay actualizaciones.</string>
+    <string name="update_download_failed">No se pudo descargar la actualización.</string>
+    <string name="update_hash_failed">La actualización descargada no coincide con la publicada. Se descartó por seguridad.</string>
+    <string name="update_permission_title">Permiso para instalar</string>
+    <string name="update_permission_body">Android necesita tu permiso para que esta app instale su propia actualización. Se abrirá la pantalla del sistema para autorizarlo.</string>
+    <string name="update_permission_open">Abrir ajustes</string>
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar</string>
+    <string name="downloading_file">Descargando archivo…</string>
+    <string name="download_unsupported">No se pudo iniciar la descarga.</string>
+</resources>

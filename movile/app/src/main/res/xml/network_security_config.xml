@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Compilación de publicación: solo HTTPS.
+  La actualización automática descarga e instala un APK; sobre HTTP en claro un
+  atacante en la misma red podría sustituirlo y el hash SHA-256 no protegería,
+  porque viajaría por el mismo canal manipulable.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

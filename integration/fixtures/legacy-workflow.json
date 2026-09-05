@@ -1,0 +1,1358 @@
+{
+  "description": "Synthetic SQLite migration fixture; test credentials only, captured before PostgreSQL runtime conversion.",
+  "tenantA": {
+    "tenantId": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+    "userId": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+    "branchId": "fadf34e2-8dd4-4872-a58f-a93459e2342e"
+  },
+  "tenantB": {
+    "tenantId": "c7321817-382f-4832-bac4-634d7586761d",
+    "userId": "c706618e-fe4f-4f95-9864-8bcbf301c400",
+    "branchId": "d1e2fcdf-d423-463e-b22a-0d51fcca8f04"
+  },
+  "receipt": {
+    "purchaseOrderId": "10904c97-77a1-4932-80bb-ce709daaf14a",
+    "receiptId": "def760b7-5dae-431e-8f23-80259cad1b93",
+    "payableId": "927a081b-e378-4b1f-8455-4869c20c22d5",
+    "status": "PARTIAL",
+    "duplicate": false
+  },
+  "tables": {
+    "schema_migrations": [
+      {
+        "id": "001_initial",
+        "applied_at": "2026-09-05T04:08:58.586Z"
+      },
+      {
+        "id": "002_operational_workflow",
+        "applied_at": "2026-09-05T04:08:58.593Z"
+      },
+      {
+        "id": "003_customer_security",
+        "applied_at": "2026-09-05T04:08:58.595Z"
+      },
+      {
+        "id": "004_notification_delivery",
+        "applied_at": "2026-09-05T04:08:58.597Z"
+      },
+      {
+        "id": "005_operational_hardening",
+        "applied_at": "2026-09-05T04:08:58.598Z"
+      },
+      {
+        "id": "006_account_recovery_rate_limit",
+        "applied_at": "2026-09-05T04:08:58.598Z"
+      },
+      {
+        "id": "007_release_integrity",
+        "applied_at": "2026-09-05T04:08:58.611Z"
+      },
+      {
+        "id": "008_operational_closure",
+        "applied_at": "2026-09-05T04:08:58.613Z"
+      },
+      {
+        "id": "009_notification_privacy",
+        "applied_at": "2026-09-05T04:08:58.615Z"
+      },
+      {
+        "id": "010_no_charge_authorization",
+        "applied_at": "2026-09-05T04:08:58.619Z"
+      },
+      {
+        "id": "011_payment_reversals",
+        "applied_at": "2026-09-05T04:08:58.622Z"
+      },
+      {
+        "id": "012_partial_purchasing",
+        "applied_at": "2026-09-05T04:08:58.641Z"
+      }
+    ],
+    "users": [
+      {
+        "id": "user-platform-admin",
+        "email": "root@pg.test",
+        "password_hash": "scrypt:c2a466d761d7e6d72e3f429d3f6f0bc6:0417fdc0019f05aa784c2a143f910a302e8d9915771991bdb9300200d41023d1112b1c70bdb9d6a3826bf4d963cc4c9ea800873009bd9dead10db9f2a9d9c0b7",
+        "name": "Administrador de plataforma",
+        "kind": "PLATFORM",
+        "platform_role": "SUPER_ADMIN",
+        "active": 1,
+        "last_activity_at": null,
+        "created_at": "2026-09-05T04:08:58.641Z",
+        "email_verified_at": null,
+        "password_changed_at": null,
+        "must_change_password": 0
+      },
+      {
+        "id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "email": "a@pg.test",
+        "password_hash": "scrypt:e054b98fdd8250421fcb6fd1b6686c0e:061eba758a3bc5708d8a7e346aa04f0dd4b7db1580bb0146e8ac72d894b9d80e5968dd3764ec67ef21fb8845a9ef74cc4986a6bc8d1e6bc6e261a6cf202cb515",
+        "name": "Propietario A",
+        "kind": "TENANT",
+        "platform_role": null,
+        "active": 1,
+        "last_activity_at": "2026-09-05T04:08:58.721Z",
+        "created_at": "2026-09-05T04:08:58.664Z",
+        "email_verified_at": null,
+        "password_changed_at": null,
+        "must_change_password": 0
+      },
+      {
+        "id": "c706618e-fe4f-4f95-9864-8bcbf301c400",
+        "email": "b@pg.test",
+        "password_hash": "scrypt:b5bcc77900df86fb16a3fab6d6ec0172:bbf556933f601fed28db325c92457fa23f3ec0a37a008ca7c707bb851f97c08402d922d09520b4976269305b8950a16fe52c1baf4ec57608c200c4b591b29795",
+        "name": "Propietario B",
+        "kind": "TENANT",
+        "platform_role": null,
+        "active": 1,
+        "last_activity_at": null,
+        "created_at": "2026-09-05T04:08:58.694Z",
+        "email_verified_at": null,
+        "password_changed_at": null,
+        "must_change_password": 0
+      }
+    ],
+    "sessions": [
+      {
+        "id": "64a2371eefe5b39fb76f6b5424733096b475fe00094f91218a3a10831c7fa6ee",
+        "user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "csrf_token": "5fb814ffb0d151ee81f69fb3681a17d1f14be6a8702b9a00",
+        "impersonated_tenant_id": null,
+        "expires_at": "2026-09-19T04:08:58.721Z",
+        "created_at": "2026-09-05T04:08:58.721Z",
+        "ip_hash": null,
+        "user_agent_hash": null
+      }
+    ],
+    "plans": [
+      {
+        "id": "plan-basic",
+        "code": "basic",
+        "name": "Esencial",
+        "description": "Para talleres que están comenzando",
+        "price_monthly": 149000,
+        "currency": "PYG",
+        "active": 1,
+        "public": 1,
+        "created_at": "2026-09-05T04:08:58.641Z",
+        "retired_at": null
+      },
+      {
+        "id": "plan-pro",
+        "code": "professional",
+        "name": "Profesional",
+        "description": "Operación completa para talleres en crecimiento",
+        "price_monthly": 299000,
+        "currency": "PYG",
+        "active": 1,
+        "public": 1,
+        "created_at": "2026-09-05T04:08:58.641Z",
+        "retired_at": null
+      },
+      {
+        "id": "plan-premium",
+        "code": "premium",
+        "name": "Multi-sucursal",
+        "description": "Control consolidado para operaciones amplias",
+        "price_monthly": 549000,
+        "currency": "PYG",
+        "active": 1,
+        "public": 1,
+        "created_at": "2026-09-05T04:08:58.641Z",
+        "retired_at": null
+      }
+    ],
+    "features": [
+      {
+        "id": "feat-employees",
+        "code": "employees",
+        "name": "Empleados",
+        "description": "Límite de empleados",
+        "kind": "limit",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-branches",
+        "code": "branches",
+        "name": "Sucursales",
+        "description": "Límite de sucursales",
+        "kind": "limit",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-users",
+        "code": "users",
+        "name": "Usuarios",
+        "description": "Límite de usuarios",
+        "kind": "limit",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-storage_mb",
+        "code": "storage_mb",
+        "name": "Almacenamiento",
+        "description": "Megabytes disponibles",
+        "kind": "limit",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-vehicles",
+        "code": "vehicles",
+        "name": "Vehículos",
+        "description": "Límite de vehículos",
+        "kind": "limit",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-orders_monthly",
+        "code": "orders_monthly",
+        "name": "Órdenes mensuales",
+        "description": "Límite mensual",
+        "kind": "limit",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-inventory",
+        "code": "inventory",
+        "name": "Inventario",
+        "description": "Gestión de inventario",
+        "kind": "boolean",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-reports",
+        "code": "reports",
+        "name": "Reportes",
+        "description": "Reportes avanzados",
+        "kind": "boolean",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-multi_branch",
+        "code": "multi_branch",
+        "name": "Consolidación",
+        "description": "Operación multi-sucursal",
+        "kind": "boolean",
+        "global_enabled": 1
+      },
+      {
+        "id": "feat-integrations",
+        "code": "integrations",
+        "name": "Integraciones",
+        "description": "Acceso a integraciones",
+        "kind": "boolean",
+        "global_enabled": 1
+      }
+    ],
+    "plan_features": [
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-employees",
+        "enabled": 1,
+        "limit_value": 5
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-branches",
+        "enabled": 1,
+        "limit_value": 1
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-users",
+        "enabled": 1,
+        "limit_value": 5
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-storage_mb",
+        "enabled": 1,
+        "limit_value": 500
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-vehicles",
+        "enabled": 1,
+        "limit_value": 500
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-orders_monthly",
+        "enabled": 1,
+        "limit_value": 200
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-inventory",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-reports",
+        "enabled": 0,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-multi_branch",
+        "enabled": 0,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-basic",
+        "feature_id": "feat-integrations",
+        "enabled": 0,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-employees",
+        "enabled": 1,
+        "limit_value": 20
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-branches",
+        "enabled": 1,
+        "limit_value": 3
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-users",
+        "enabled": 1,
+        "limit_value": 20
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-storage_mb",
+        "enabled": 1,
+        "limit_value": 5000
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-vehicles",
+        "enabled": 1,
+        "limit_value": 5000
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-orders_monthly",
+        "enabled": 1,
+        "limit_value": 2000
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-inventory",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-reports",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-multi_branch",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-pro",
+        "feature_id": "feat-integrations",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-employees",
+        "enabled": 1,
+        "limit_value": 100
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-branches",
+        "enabled": 1,
+        "limit_value": 15
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-users",
+        "enabled": 1,
+        "limit_value": 100
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-storage_mb",
+        "enabled": 1,
+        "limit_value": 25000
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-vehicles",
+        "enabled": 1,
+        "limit_value": 50000
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-orders_monthly",
+        "enabled": 1,
+        "limit_value": 20000
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-inventory",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-reports",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-multi_branch",
+        "enabled": 1,
+        "limit_value": null
+      },
+      {
+        "plan_id": "plan-premium",
+        "feature_id": "feat-integrations",
+        "enabled": 1,
+        "limit_value": null
+      }
+    ],
+    "tenants": [
+      {
+        "id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "slug": "taller-a",
+        "name": "Taller A",
+        "legal_name": "Taller A",
+        "owner_name": "Propietario A",
+        "tax_id": null,
+        "phone": null,
+        "email": "a@pg.test",
+        "address": null,
+        "country": "Paraguay",
+        "city": null,
+        "status": "TRIAL",
+        "onboarding_step": 1,
+        "logo_url": null,
+        "primary_color": "#0f766e",
+        "storage_used_bytes": 0,
+        "last_activity_at": "2026-09-05T04:08:58.664Z",
+        "created_at": "2026-09-05T04:08:58.664Z",
+        "canceled_at": null,
+        "deletion_eligible_at": null
+      },
+      {
+        "id": "c7321817-382f-4832-bac4-634d7586761d",
+        "slug": "taller-b",
+        "name": "Taller B",
+        "legal_name": "Taller B",
+        "owner_name": "Propietario B",
+        "tax_id": null,
+        "phone": null,
+        "email": "b@pg.test",
+        "address": null,
+        "country": "Paraguay",
+        "city": null,
+        "status": "TRIAL",
+        "onboarding_step": 1,
+        "logo_url": null,
+        "primary_color": "#0f766e",
+        "storage_used_bytes": 0,
+        "last_activity_at": "2026-09-05T04:08:58.694Z",
+        "created_at": "2026-09-05T04:08:58.694Z",
+        "canceled_at": null,
+        "deletion_eligible_at": null
+      }
+    ],
+    "branches": [
+      {
+        "id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "name": "Casa central",
+        "phone": null,
+        "address": null,
+        "city": null,
+        "active": 1,
+        "is_main": 1,
+        "created_at": "2026-09-05T04:08:58.664Z"
+      },
+      {
+        "id": "d1e2fcdf-d423-463e-b22a-0d51fcca8f04",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "name": "Casa central",
+        "phone": null,
+        "address": null,
+        "city": null,
+        "active": 1,
+        "is_main": 1,
+        "created_at": "2026-09-05T04:08:58.694Z"
+      }
+    ],
+    "roles": [
+      {
+        "id": "25164049-60b2-47c8-93a9-7a5657e77187",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "code": "OWNER",
+        "name": "Propietario",
+        "permissions": "[\"*\"]",
+        "system": 1
+      },
+      {
+        "id": "ca1eb503-10f6-4c23-91cc-9b8ef4ffaecb",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "code": "MANAGER",
+        "name": "Gerencia",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"customers.create\",\"customers.update\",\"customers.export\",\"vehicles.view\",\"vehicles.create\",\"vehicles.update\",\"vehicles.export\",\"orders.view\",\"orders.create\",\"orders.inspect\",\"orders.diagnose\",\"orders.estimate\",\"orders.approve\",\"orders.assign\",\"orders.execute\",\"orders.quality\",\"orders.deliver\",\"orders.cancel\",\"orders.print\",\"inventory.view\",\"inventory.cost\",\"inventory.adjust\",\"inventory.consume\",\"inventory.request\",\"purchases.manage\",\"purchases.pay\",\"billing.view\",\"billing.invoice\",\"billing.collect\",\"cash.manage\",\"billing.cost\",\"billing.export\",\"billing.print\",\"reports.view\",\"reports.export\",\"employees.manage\",\"branches.manage\",\"settings.manage\",\"documents.view\",\"documents.upload\",\"documents.delete\",\"documents.manage\",\"support.manage\"]",
+        "system": 1
+      },
+      {
+        "id": "dddff063-1e80-4bb8-99d5-9a8ea9cd6025",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "code": "RECEPTION",
+        "name": "Recepción",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"customers.create\",\"customers.update\",\"vehicles.view\",\"vehicles.create\",\"vehicles.update\",\"orders.view\",\"orders.create\",\"orders.estimate\",\"orders.approve\",\"orders.deliver\",\"orders.print\",\"billing.view\",\"billing.collect\",\"documents.view\",\"documents.upload\"]",
+        "system": 1
+      },
+      {
+        "id": "2fd8c0f5-8d11-453c-91ed-678c83ec050e",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "code": "TECHNICIAN",
+        "name": "Mecánico",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"vehicles.view\",\"orders.view\",\"orders.inspect\",\"orders.diagnose\",\"orders.execute\",\"inventory.view\",\"inventory.consume\",\"inventory.request\",\"documents.view\",\"documents.upload\"]",
+        "system": 1
+      },
+      {
+        "id": "a76f2d70-7f84-4fce-a457-5bca86150da3",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "code": "CASHIER",
+        "name": "Caja",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"vehicles.view\",\"orders.view\",\"billing.view\",\"billing.invoice\",\"billing.print\",\"billing.collect\",\"billing.export\",\"purchases.pay\"]",
+        "system": 1
+      },
+      {
+        "id": "55767d50-6af6-461c-8e4f-f53888e4ef53",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "code": "INVENTORY",
+        "name": "Inventario",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"orders.view\",\"inventory.view\",\"inventory.cost\",\"inventory.adjust\",\"inventory.consume\",\"purchases.manage\",\"inventory.request\",\"reports.view\"]",
+        "system": 1
+      },
+      {
+        "id": "f1db8b51-610e-47c4-8c9f-69b8337ee338",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "code": "OWNER",
+        "name": "Propietario",
+        "permissions": "[\"*\"]",
+        "system": 1
+      },
+      {
+        "id": "bf15d466-de96-47e2-a0d8-f36ce63ff1de",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "code": "MANAGER",
+        "name": "Gerencia",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"customers.create\",\"customers.update\",\"customers.export\",\"vehicles.view\",\"vehicles.create\",\"vehicles.update\",\"vehicles.export\",\"orders.view\",\"orders.create\",\"orders.inspect\",\"orders.diagnose\",\"orders.estimate\",\"orders.approve\",\"orders.assign\",\"orders.execute\",\"orders.quality\",\"orders.deliver\",\"orders.cancel\",\"orders.print\",\"inventory.view\",\"inventory.cost\",\"inventory.adjust\",\"inventory.consume\",\"inventory.request\",\"purchases.manage\",\"purchases.pay\",\"billing.view\",\"billing.invoice\",\"billing.collect\",\"cash.manage\",\"billing.cost\",\"billing.export\",\"billing.print\",\"reports.view\",\"reports.export\",\"employees.manage\",\"branches.manage\",\"settings.manage\",\"documents.view\",\"documents.upload\",\"documents.delete\",\"documents.manage\",\"support.manage\"]",
+        "system": 1
+      },
+      {
+        "id": "13933eb0-e712-43f6-b8c5-70f40414213e",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "code": "RECEPTION",
+        "name": "Recepción",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"customers.create\",\"customers.update\",\"vehicles.view\",\"vehicles.create\",\"vehicles.update\",\"orders.view\",\"orders.create\",\"orders.estimate\",\"orders.approve\",\"orders.deliver\",\"orders.print\",\"billing.view\",\"billing.collect\",\"documents.view\",\"documents.upload\"]",
+        "system": 1
+      },
+      {
+        "id": "c59084f5-a0c1-47b4-b3d8-6278c1b4e6f9",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "code": "TECHNICIAN",
+        "name": "Mecánico",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"vehicles.view\",\"orders.view\",\"orders.inspect\",\"orders.diagnose\",\"orders.execute\",\"inventory.view\",\"inventory.consume\",\"inventory.request\",\"documents.view\",\"documents.upload\"]",
+        "system": 1
+      },
+      {
+        "id": "58f56b78-539a-40bb-8636-a428407628ec",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "code": "CASHIER",
+        "name": "Caja",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"customers.view\",\"vehicles.view\",\"orders.view\",\"billing.view\",\"billing.invoice\",\"billing.print\",\"billing.collect\",\"billing.export\",\"purchases.pay\"]",
+        "system": 1
+      },
+      {
+        "id": "bb1eda10-bad8-4728-90b4-52d4d4f16b8a",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "code": "INVENTORY",
+        "name": "Inventario",
+        "permissions": "[\"dashboard.view\",\"search.use\",\"orders.view\",\"inventory.view\",\"inventory.cost\",\"inventory.adjust\",\"inventory.consume\",\"purchases.manage\",\"inventory.request\",\"reports.view\"]",
+        "system": 1
+      }
+    ],
+    "memberships": [
+      {
+        "id": "a9fb9819-aa72-4640-acc9-e9ace08cf56f",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "role_id": "25164049-60b2-47c8-93a9-7a5657e77187",
+        "job_title": "Propietario/a",
+        "status": "ACTIVE",
+        "invited_at": null,
+        "joined_at": "2026-09-05T04:08:58.664Z"
+      },
+      {
+        "id": "24cf1fe8-c4e5-4f35-9447-b44ef94ce3d7",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "user_id": "c706618e-fe4f-4f95-9864-8bcbf301c400",
+        "branch_id": "d1e2fcdf-d423-463e-b22a-0d51fcca8f04",
+        "role_id": "f1db8b51-610e-47c4-8c9f-69b8337ee338",
+        "job_title": "Propietario/a",
+        "status": "ACTIVE",
+        "invited_at": null,
+        "joined_at": "2026-09-05T04:08:58.694Z"
+      }
+    ],
+    "subscriptions": [
+      {
+        "id": "5a8f84a1-4af8-4197-aadb-2852deb9c21b",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "plan_id": "plan-pro",
+        "billing_cycle": "MONTHLY",
+        "price": 299000,
+        "currency": "PYG",
+        "started_at": "2026-09-05T04:08:58.664Z",
+        "next_charge_at": "2026-09-19T04:08:58.664Z",
+        "status": "TRIAL",
+        "auto_renew": 0,
+        "discount_percent": 0,
+        "promotion": null,
+        "grace_until": "2026-09-24T04:08:58.664Z",
+        "canceled_at": null,
+        "updated_at": "2026-09-05T04:08:58.664Z"
+      },
+      {
+        "id": "93084b22-57e0-46ae-8f3b-f5afc22b05ea",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "plan_id": "plan-pro",
+        "billing_cycle": "MONTHLY",
+        "price": 299000,
+        "currency": "PYG",
+        "started_at": "2026-09-05T04:08:58.694Z",
+        "next_charge_at": "2026-09-19T04:08:58.694Z",
+        "status": "TRIAL",
+        "auto_renew": 0,
+        "discount_percent": 0,
+        "promotion": null,
+        "grace_until": "2026-09-24T04:08:58.694Z",
+        "canceled_at": null,
+        "updated_at": "2026-09-05T04:08:58.694Z"
+      }
+    ],
+    "subscription_history": [],
+    "trials": [
+      {
+        "id": "cb0d2c3f-9e36-4bb8-920d-b3dbe534a27b",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "plan_id": "plan-pro",
+        "starts_at": "2026-09-05T04:08:58.664Z",
+        "ends_at": "2026-09-19T04:08:58.664Z",
+        "active": 1
+      },
+      {
+        "id": "0e1cf701-3b99-4bc2-89ad-921b9c7b765c",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "plan_id": "plan-pro",
+        "starts_at": "2026-09-05T04:08:58.694Z",
+        "ends_at": "2026-09-19T04:08:58.694Z",
+        "active": 1
+      }
+    ],
+    "tenant_features": [],
+    "tenant_settings": [
+      {
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "currency": "PYG",
+        "tax_rate": 10,
+        "timezone": "America/Asuncion",
+        "opening_hours": "{}",
+        "document_header": null,
+        "document_footer": null,
+        "onboarding_data": "{}",
+        "updated_at": "2026-09-05T04:08:58.664Z",
+        "warranty_days": 90,
+        "warranty_terms": "Garantía sobre los trabajos realizados."
+      },
+      {
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "currency": "PYG",
+        "tax_rate": 10,
+        "timezone": "America/Asuncion",
+        "opening_hours": "{}",
+        "document_header": null,
+        "document_footer": null,
+        "onboarding_data": "{}",
+        "updated_at": "2026-09-05T04:08:58.694Z",
+        "warranty_days": 90,
+        "warranty_terms": "Garantía sobre los trabajos realizados."
+      }
+    ],
+    "platform_settings": [
+      {
+        "key": "trial_days",
+        "value": "14",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      },
+      {
+        "key": "grace_days",
+        "value": "5",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      },
+      {
+        "key": "suspension_days",
+        "value": "10",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      },
+      {
+        "key": "retention_days",
+        "value": "365",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      },
+      {
+        "key": "default_plan_id",
+        "value": "plan-pro",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      },
+      {
+        "key": "support_email",
+        "value": "soporte@mecan.local",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      },
+      {
+        "key": "platform_name",
+        "value": "Mecan Cloud",
+        "updated_at": "2026-09-05T04:08:58.641Z"
+      }
+    ],
+    "customers": [
+      {
+        "id": "customer-a",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "name": "Cliente a",
+        "document": null,
+        "phone": null,
+        "email": null,
+        "address": null,
+        "notes": null,
+        "created_at": "2026-09-05T04:08:58.721Z",
+        "active": 1
+      },
+      {
+        "id": "customer-b",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "branch_id": "d1e2fcdf-d423-463e-b22a-0d51fcca8f04",
+        "name": "Cliente b",
+        "document": null,
+        "phone": null,
+        "email": null,
+        "address": null,
+        "notes": null,
+        "created_at": "2026-09-05T04:08:58.721Z",
+        "active": 1
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "vehicle-a",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "customer_id": "customer-a",
+        "plate": "PLATE-a",
+        "make": null,
+        "model": null,
+        "year": null,
+        "vin": null,
+        "color": null,
+        "odometer": 0,
+        "created_at": "2026-09-05T04:08:58.721Z",
+        "active": 1
+      },
+      {
+        "id": "vehicle-b",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "customer_id": "customer-b",
+        "plate": "PLATE-b",
+        "make": null,
+        "model": null,
+        "year": null,
+        "vin": null,
+        "color": null,
+        "odometer": 0,
+        "created_at": "2026-09-05T04:08:58.721Z",
+        "active": 1
+      }
+    ],
+    "services": [],
+    "work_orders": [],
+    "work_order_items": [],
+    "inventory_items": [
+      {
+        "id": "part",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "sku": null,
+        "name": "Repuesto",
+        "quantity": 4,
+        "minimum_stock": 0,
+        "cost": 500,
+        "sale_price": 1000,
+        "active": 1,
+        "created_at": "2026-09-05T04:08:58.722Z"
+      }
+    ],
+    "suppliers": [
+      {
+        "id": "supplier",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "name": "Proveedor",
+        "tax_id": null,
+        "phone": null,
+        "email": null,
+        "address": null,
+        "active": 1,
+        "created_at": "2026-09-05T04:08:58.722Z"
+      }
+    ],
+    "purchases": [],
+    "bays": [],
+    "appointments": [],
+    "workshop_invoices": [],
+    "cash_movements": [
+      {
+        "id": "672fa8ff-5749-4bcb-82d1-60bffd2c27bb",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "type": "EXPENSE",
+        "category": "SUPPLIER_PAYMENT",
+        "amount": 500,
+        "reference": null,
+        "notes": "Pago a proveedor",
+        "created_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "created_at": "2026-09-05T04:08:58.737Z",
+        "workshop_payment_id": null,
+        "purchase_payment_id": "c7c52887-721a-41df-8253-60442c31f4ed",
+        "voided_at": null,
+        "idempotency_key": "supplier-payment:c7c52887-721a-41df-8253-60442c31f4ed",
+        "reversal_id": null
+      },
+      {
+        "id": "3eb5cfd6-f0ef-4f87-9e29-19ce2200c407",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "type": "INCOME",
+        "category": "SUPPLIER_PAYMENT_REVERSAL",
+        "amount": 500,
+        "reference": null,
+        "notes": "Registro incorrecto",
+        "created_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "created_at": "2026-09-05T04:08:58.739Z",
+        "workshop_payment_id": null,
+        "purchase_payment_id": null,
+        "voided_at": null,
+        "idempotency_key": "payment-reversal:b079d47c-bd88-4bc3-ad8e-289b747be564",
+        "reversal_id": "b079d47c-bd88-4bc3-ad8e-289b747be564"
+      },
+      {
+        "id": "3f171612-4bc9-4655-8170-3cbf1c74c04b",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "type": "EXPENSE",
+        "category": "SUPPLIER_PAYMENT",
+        "amount": 1000,
+        "reference": null,
+        "notes": "Pago a proveedor",
+        "created_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "created_at": "2026-09-05T04:08:58.741Z",
+        "workshop_payment_id": null,
+        "purchase_payment_id": "efefff77-91a7-4517-861e-96719cbbac06",
+        "voided_at": null,
+        "idempotency_key": "supplier-payment:efefff77-91a7-4517-861e-96719cbbac06",
+        "reversal_id": null
+      }
+    ],
+    "saas_invoices": [],
+    "saas_payments": [],
+    "support_tickets": [],
+    "files": [],
+    "audit_logs": [
+      {
+        "id": "aa0f98f6-bca2-4457-b8a6-cf245a9084c5",
+        "scope": "PLATFORM",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "TENANT_PROVISIONED",
+        "entity_type": "tenant",
+        "entity_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "ip_address": null,
+        "metadata": "{\"plan\":\"professional\",\"source\":\"self_signup\"}",
+        "created_at": "2026-09-05T04:08:58.694Z",
+        "branch_id": null,
+        "before_json": null,
+        "after_json": null,
+        "request_id": null
+      },
+      {
+        "id": "d1b3361e-6c85-419e-858b-b9863b05266f",
+        "scope": "PLATFORM",
+        "tenant_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "actor_user_id": "c706618e-fe4f-4f95-9864-8bcbf301c400",
+        "impersonator_user_id": null,
+        "action": "TENANT_PROVISIONED",
+        "entity_type": "tenant",
+        "entity_id": "c7321817-382f-4832-bac4-634d7586761d",
+        "ip_address": null,
+        "metadata": "{\"plan\":\"professional\",\"source\":\"self_signup\"}",
+        "created_at": "2026-09-05T04:08:58.720Z",
+        "branch_id": null,
+        "before_json": null,
+        "after_json": null,
+        "request_id": null
+      },
+      {
+        "id": "eef4ed11-745f-44a1-ad95-b28375c0f979",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "RESTOCK_REQUESTED",
+        "entity_type": "purchase_request",
+        "entity_id": "43a264cc-a541-4e81-9340-b1bac117c848",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.723Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": null,
+        "after_json": "{\"itemId\":\"part\",\"quantity\":4}",
+        "request_id": null
+      },
+      {
+        "id": "855e9052-7a36-4a01-9a11-61c45e96dbb2",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "PURCHASE_ORDER_CREATED",
+        "entity_type": "purchase_order",
+        "entity_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.735Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": null,
+        "after_json": "{\"requestId\":\"43a264cc-a541-4e81-9340-b1bac117c848\",\"total\":2200,\"quantity\":4,\"currency\":\"PYG\"}",
+        "request_id": null
+      },
+      {
+        "id": "bdd076f8-dcb3-4aa9-a8af-59b9356c95b4",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "PURCHASE_ORDER_RECEIVED",
+        "entity_type": "purchase_order",
+        "entity_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.737Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": "{\"status\":\"SENT\",\"receivedTotal\":0,\"payable\":0}",
+        "after_json": "{\"status\":\"PARTIAL\",\"receiptId\":\"def760b7-5dae-431e-8f23-80259cad1b93\",\"receivedTotal\":1100,\"payable\":1100,\"lines\":[{\"lineId\":\"17bcf2c9-0436-42f1-963a-1a61d7aa7b2a\",\"quantity\":2}]}",
+        "request_id": null
+      },
+      {
+        "id": "f5836eab-b0d6-4c24-b64e-206ddd53c63d",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "SUPPLIER_PAYMENT_RECORDED",
+        "entity_type": "accounts_payable",
+        "entity_id": "927a081b-e378-4b1f-8455-4869c20c22d5",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.738Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": "{\"balance\":1100}",
+        "after_json": "{\"balance\":600,\"status\":\"PARTIAL\"}",
+        "request_id": null
+      },
+      {
+        "id": "8c391380-3d70-4215-9e74-f8415dc4b4a4",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "SUPPLIER_PAYMENT_REVERSED",
+        "entity_type": "purchase_payment",
+        "entity_id": "c7c52887-721a-41df-8253-60442c31f4ed",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.739Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": "{\"paid\":500,\"balance\":600,\"status\":\"PARTIAL\"}",
+        "after_json": "{\"reversalId\":\"b079d47c-bd88-4bc3-ad8e-289b747be564\",\"paid\":0,\"balance\":1100,\"status\":\"PENDING\",\"reason\":\"Registro incorrecto\",\"amount\":500}",
+        "request_id": null
+      },
+      {
+        "id": "850389e8-2cd0-4638-94a2-df5354c18941",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "PURCHASE_ORDER_RECEIVED",
+        "entity_type": "purchase_order",
+        "entity_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.741Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": "{\"status\":\"PARTIAL\",\"receivedTotal\":1100,\"payable\":1100}",
+        "after_json": "{\"status\":\"RECEIVED\",\"receiptId\":\"59c57cd5-4fff-4fcd-909b-f0d824b3147f\",\"receivedTotal\":2200,\"payable\":2200,\"lines\":[{\"lineId\":\"17bcf2c9-0436-42f1-963a-1a61d7aa7b2a\",\"quantity\":2}]}",
+        "request_id": null
+      },
+      {
+        "id": "f1a69940-2ddb-485f-b08a-24d9d4e8fa54",
+        "scope": "TENANT",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "impersonator_user_id": null,
+        "action": "SUPPLIER_PAYMENT_RECORDED",
+        "entity_type": "accounts_payable",
+        "entity_id": "927a081b-e378-4b1f-8455-4869c20c22d5",
+        "ip_address": null,
+        "metadata": "{}",
+        "created_at": "2026-09-05T04:08:58.741Z",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "before_json": "{\"balance\":2200}",
+        "after_json": "{\"balance\":1200,\"status\":\"PARTIAL\"}",
+        "request_id": null
+      }
+    ],
+    "document_sequences": [
+      {
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "kind": "PURCHASE_ORDER",
+        "next_value": 2
+      }
+    ],
+    "receptions": [],
+    "inspections": [],
+    "diagnoses": [],
+    "estimates": [],
+    "estimate_items": [],
+    "work_assignments": [],
+    "time_entries": [],
+    "work_order_parts": [],
+    "work_order_labor": [],
+    "inventory_movements": [
+      {
+        "id": "23ada487-fe4f-43f6-bf3f-a37a6d7d1da2",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "inventory_item_id": "part",
+        "movement_type": "PURCHASE",
+        "quantity": 2,
+        "previous_quantity": 0,
+        "resulting_quantity": 2,
+        "unit_cost": 500,
+        "reference_type": "PURCHASE_ORDER",
+        "reference_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "reason": null,
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "idempotency_key": "purchase:receipt-1:17bcf2c9-0436-42f1-963a-1a61d7aa7b2a",
+        "created_at": "2026-09-05T04:08:58.736Z"
+      },
+      {
+        "id": "d88b9d7f-9870-49ed-a18b-c1cc667e4553",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "inventory_item_id": "part",
+        "movement_type": "PURCHASE",
+        "quantity": 2,
+        "previous_quantity": 2,
+        "resulting_quantity": 4,
+        "unit_cost": 500,
+        "reference_type": "PURCHASE_ORDER",
+        "reference_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "reason": null,
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "idempotency_key": "purchase:receipt-2:17bcf2c9-0436-42f1-963a-1a61d7aa7b2a",
+        "created_at": "2026-09-05T04:08:58.740Z"
+      }
+    ],
+    "purchase_requests": [
+      {
+        "id": "43a264cc-a541-4e81-9340-b1bac117c848",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "work_order_id": null,
+        "inventory_item_id": "part",
+        "description": "Repuesto",
+        "quantity": 4,
+        "priority": "NORMAL",
+        "status": "RECEIVED",
+        "requested_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "created_at": "2026-09-05T04:08:58.723Z",
+        "canceled_at": null,
+        "canceled_by": null,
+        "cancel_reason": null
+      }
+    ],
+    "purchase_orders": [
+      {
+        "id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "supplier_id": "supplier",
+        "purchase_request_id": "43a264cc-a541-4e81-9340-b1bac117c848",
+        "number": 1,
+        "status": "RECEIVED",
+        "subtotal": 2000,
+        "tax": 200,
+        "total": 2200,
+        "expected_at": null,
+        "received_at": "2026-09-05T04:08:58.740Z",
+        "created_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "created_at": "2026-09-05T04:08:58.735Z",
+        "currency": "PYG",
+        "received_subtotal": 2000,
+        "received_tax": 200,
+        "received_total": 2200,
+        "canceled_at": null,
+        "canceled_by": null,
+        "cancel_reason": null
+      }
+    ],
+    "purchase_order_items": [
+      {
+        "id": "17bcf2c9-0436-42f1-963a-1a61d7aa7b2a",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "purchase_order_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "inventory_item_id": "part",
+        "description": "Repuesto",
+        "quantity": 4,
+        "received_quantity": 4,
+        "unit_cost": 500,
+        "total": 2000,
+        "opening_received_quantity": 0,
+        "canceled_quantity": 0
+      }
+    ],
+    "accounts_payable": [
+      {
+        "id": "927a081b-e378-4b1f-8455-4869c20c22d5",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "supplier_id": "supplier",
+        "purchase_order_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "amount": 2200,
+        "paid_amount": 1000,
+        "balance": 1200,
+        "status": "PARTIAL",
+        "due_at": "2026-10-05T04:08:58.736Z",
+        "created_at": "2026-09-05T04:08:58.736Z"
+      }
+    ],
+    "purchase_payments": [
+      {
+        "id": "c7c52887-721a-41df-8253-60442c31f4ed",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "payable_id": "927a081b-e378-4b1f-8455-4869c20c22d5",
+        "amount": 500,
+        "method": "CASH",
+        "reference": null,
+        "paid_at": "2026-09-05T04:08:58.737Z",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "idempotency_key": "payment-1",
+        "created_at": "2026-09-05T04:08:58.738Z"
+      },
+      {
+        "id": "efefff77-91a7-4517-861e-96719cbbac06",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "payable_id": "927a081b-e378-4b1f-8455-4869c20c22d5",
+        "amount": 1000,
+        "method": "TRANSFER",
+        "reference": null,
+        "paid_at": "2026-09-05T04:08:58.741Z",
+        "actor_user_id": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "idempotency_key": "payment-2",
+        "created_at": "2026-09-05T04:08:58.741Z"
+      }
+    ],
+    "quality_checks": [],
+    "workshop_invoice_items": [],
+    "workshop_payments": [],
+    "deliveries": [],
+    "warranties": [],
+    "notifications": [
+      {
+        "id": "b971d9bd-e0b8-4c9e-859d-1708f900f3bc",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "user_id": null,
+        "channel": "IN_APP",
+        "event_type": "PURCHASE_RECEIVED",
+        "title": "Repuestos recibidos · compra #1",
+        "message": "Se registró una entrega parcial. Hay cantidades pendientes del proveedor.",
+        "payload": "{\"purchaseOrderId\":\"10904c97-77a1-4932-80bb-ce709daaf14a\",\"receiptId\":\"def760b7-5dae-431e-8f23-80259cad1b93\"}",
+        "status": "PENDING",
+        "idempotency_key": "[\"2a2ceebb-19db-4151-bd66-c6f4d285b064\",\"IN_APP\",\"purchase-receipt:def760b7-5dae-431e-8f23-80259cad1b93\"]",
+        "scheduled_at": "2026-09-05T04:08:58.737Z",
+        "sent_at": null,
+        "read_at": null,
+        "created_at": "2026-09-05T04:08:58.737Z",
+        "attempts": 0,
+        "last_error": null,
+        "next_attempt_at": null,
+        "locked_until": null,
+        "required_permission": "inventory.view"
+      },
+      {
+        "id": "2d4b66fc-af56-4b07-94c8-e1d4f28ea930",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "user_id": null,
+        "channel": "IN_APP",
+        "event_type": "PURCHASE_RECEIVED",
+        "title": "Repuestos recibidos · compra #1",
+        "message": "La compra fue recibida y el inventario está actualizado.",
+        "payload": "{\"purchaseOrderId\":\"10904c97-77a1-4932-80bb-ce709daaf14a\",\"receiptId\":\"59c57cd5-4fff-4fcd-909b-f0d824b3147f\"}",
+        "status": "PENDING",
+        "idempotency_key": "[\"2a2ceebb-19db-4151-bd66-c6f4d285b064\",\"IN_APP\",\"purchase-receipt:59c57cd5-4fff-4fcd-909b-f0d824b3147f\"]",
+        "scheduled_at": "2026-09-05T04:08:58.741Z",
+        "sent_at": null,
+        "read_at": null,
+        "created_at": "2026-09-05T04:08:58.741Z",
+        "attempts": 0,
+        "last_error": null,
+        "next_attempt_at": null,
+        "locked_until": null,
+        "required_permission": "inventory.view"
+      }
+    ],
+    "login_attempts": [],
+    "password_reset_tokens": [],
+    "idempotency_keys": [
+      {
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "operation": "RESTOCK_REQUEST",
+        "key": "request",
+        "resource_id": "43a264cc-a541-4e81-9340-b1bac117c848",
+        "response_json": null,
+        "created_at": "2026-09-05T04:08:58.723Z"
+      },
+      {
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "operation": "PURCHASE_RECEIVE",
+        "key": "receipt-1",
+        "resource_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "response_json": "{\"purchaseOrderId\":\"10904c97-77a1-4932-80bb-ce709daaf14a\",\"receiptId\":\"def760b7-5dae-431e-8f23-80259cad1b93\",\"payableId\":\"927a081b-e378-4b1f-8455-4869c20c22d5\",\"status\":\"PARTIAL\",\"duplicate\":false,\"fingerprint\":\"{\\\"purchaseOrderId\\\":\\\"10904c97-77a1-4932-80bb-ce709daaf14a\\\",\\\"lines\\\":[{\\\"lineId\\\":\\\"17bcf2c9-0436-42f1-963a-1a61d7aa7b2a\\\",\\\"quantity\\\":2}],\\\"reference\\\":\\\"R1\\\",\\\"notes\\\":null,\\\"dueAt\\\":null}\"}",
+        "created_at": "2026-09-05T04:08:58.736Z"
+      },
+      {
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "operation": "PURCHASE_RECEIVE",
+        "key": "receipt-2",
+        "resource_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "response_json": "{\"purchaseOrderId\":\"10904c97-77a1-4932-80bb-ce709daaf14a\",\"receiptId\":\"59c57cd5-4fff-4fcd-909b-f0d824b3147f\",\"payableId\":\"927a081b-e378-4b1f-8455-4869c20c22d5\",\"status\":\"RECEIVED\",\"duplicate\":false,\"fingerprint\":\"{\\\"purchaseOrderId\\\":\\\"10904c97-77a1-4932-80bb-ce709daaf14a\\\",\\\"lines\\\":null,\\\"reference\\\":\\\"R2\\\",\\\"notes\\\":null,\\\"dueAt\\\":null}\"}",
+        "created_at": "2026-09-05T04:08:58.740Z"
+      }
+    ],
+    "file_links": [],
+    "customer_communications": [],
+    "warranty_claims": [],
+    "stock_reservations": [],
+    "inventory_transfers": [],
+    "contact_inquiries": [],
+    "platform_sequences": [],
+    "password_reset_requests": [],
+    "legal_acceptances": [],
+    "request_limits": [],
+    "stock_returns": [],
+    "notification_reads": [],
+    "payment_reversals": [
+      {
+        "id": "b079d47c-bd88-4bc3-ad8e-289b747be564",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "customer_payment_id": null,
+        "purchase_payment_id": "c7c52887-721a-41df-8253-60442c31f4ed",
+        "amount": 500,
+        "reason": "Registro incorrecto",
+        "created_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "created_at": "2026-09-05T04:08:58.739Z",
+        "idempotency_key": "reversal-1"
+      }
+    ],
+    "purchase_receipts": [
+      {
+        "id": "def760b7-5dae-431e-8f23-80259cad1b93",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "purchase_order_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "reference": "R1",
+        "notes": null,
+        "subtotal": 1000,
+        "tax": 100,
+        "amount": 1100,
+        "currency": "PYG",
+        "received_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "received_at": "2026-09-05T04:08:58.736Z",
+        "idempotency_key": "receipt-1",
+        "request_fingerprint": "{\"purchaseOrderId\":\"10904c97-77a1-4932-80bb-ce709daaf14a\",\"lines\":[{\"lineId\":\"17bcf2c9-0436-42f1-963a-1a61d7aa7b2a\",\"quantity\":2}],\"reference\":\"R1\",\"notes\":null,\"dueAt\":null}"
+      },
+      {
+        "id": "59c57cd5-4fff-4fcd-909b-f0d824b3147f",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "branch_id": "fadf34e2-8dd4-4872-a58f-a93459e2342e",
+        "purchase_order_id": "10904c97-77a1-4932-80bb-ce709daaf14a",
+        "reference": "R2",
+        "notes": null,
+        "subtotal": 1000,
+        "tax": 100,
+        "amount": 1100,
+        "currency": "PYG",
+        "received_by": "8a45d1f0-fb84-4bbc-824a-3664d5a58191",
+        "received_at": "2026-09-05T04:08:58.740Z",
+        "idempotency_key": "receipt-2",
+        "request_fingerprint": "{\"purchaseOrderId\":\"10904c97-77a1-4932-80bb-ce709daaf14a\",\"lines\":null,\"reference\":\"R2\",\"notes\":null,\"dueAt\":null}"
+      }
+    ],
+    "purchase_receipt_lines": [
+      {
+        "id": "21d377f0-a8b8-4285-be39-b845e7ceb1d0",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "receipt_id": "def760b7-5dae-431e-8f23-80259cad1b93",
+        "purchase_order_item_id": "17bcf2c9-0436-42f1-963a-1a61d7aa7b2a",
+        "inventory_item_id": "part",
+        "quantity": 2,
+        "unit_cost": 500,
+        "inventory_movement_id": "23ada487-fe4f-43f6-bf3f-a37a6d7d1da2"
+      },
+      {
+        "id": "eede03c7-d393-4863-89b4-70e332c5187c",
+        "tenant_id": "2a2ceebb-19db-4151-bd66-c6f4d285b064",
+        "receipt_id": "59c57cd5-4fff-4fcd-909b-f0d824b3147f",
+        "purchase_order_item_id": "17bcf2c9-0436-42f1-963a-1a61d7aa7b2a",
+        "inventory_item_id": "part",
+        "quantity": 2,
+        "unit_cost": 500,
+        "inventory_movement_id": "d88b9d7f-9870-49ed-a18b-c1cc667e4553"
+      }
+    ]
+  }
+}

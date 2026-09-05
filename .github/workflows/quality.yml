@@ -6,10 +6,42 @@ permissions:
   contents: read
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    env:
+      DATABASE_URL: postgresql://mecan_ci:ci_${{ github.run_id }}_${{ github.run_attempt }}@127.0.0.1:5432/mecan_ci
+      DATABASE_SSL_MODE: disable
+      POSTGRES_BIN_PATH: /usr/lib/postgresql/18/bin
+    services:
+      postgres:
+        image: postgres:18.6
+        env:
+          POSTGRES_DB: mecan_ci
+          POSTGRES_USER: mecan_ci
+          POSTGRES_PASSWORD: ci_${{ github.run_id }}_${{ github.run_attempt }}
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U mecan_ci -d mecan_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
+      - run: npm ci
       - run: npm run check
+      - name: Install native PostgreSQL 18 backup tools
+        run: |
+          sudo install -d /usr/share/postgresql-common/pgdg
+          sudo curl --fail --silent --show-error https://www.postgresql.org/media/keys/ACCC4CF8.asc --output /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+          sudo cp deploy/pgdg-ci.sources /etc/apt/sources.list.d/mecan-pgdg.sources
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends postgresql-client-18
+      - run: npm run test:postgres
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - run: npm audit --omit=dev --audit-level=high
+      - run: docker build -t mecan-ci .

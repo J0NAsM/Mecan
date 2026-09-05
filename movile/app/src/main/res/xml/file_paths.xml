@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Única ruta compartida: el APK descargado que el instalador del sistema debe leer. -->
+    <files-path name="actualizaciones" path="updates/" />
+</paths>

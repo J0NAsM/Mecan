@@ -1,0 +1,87 @@
+import java.util.Properties
+
+plugins {
+  id 'com.android.application'
+}
+
+// La versión del APK se lee de version.properties: publish-release.js la incrementa
+// para que el manifiesto servido por la web y el APK instalado no puedan divergir.
+def appVersion = new Properties()
+file('version.properties').withInputStream { appVersion.load(it) }
+
+// Firma de publicación. La clave vive fuera de Git; sin ella solo se puede compilar debug.
+def signingFile = rootProject.file('keystore/signing.properties')
+def signing = new Properties()
+if (signingFile.exists()) signingFile.withInputStream { signing.load(it) }
+
+android {
+  namespace 'py.softshop.mecan'
+  compileSdk 36
+
+  defaultConfig {
+    applicationId 'py.softshop.mecan'
+    minSdk 26
+    targetSdk 36
+    versionCode appVersion.getProperty('versionCode').toInteger()
+    versionName appVersion.getProperty('versionName')
+    resValue 'string', 'app_name', appVersion.getProperty('appName', 'Mecan')
+  }
+
+  signingConfigs {
+    release {
+      if (signing.getProperty('storeFile')) {
+        storeFile rootProject.file(signing.getProperty('storeFile'))
+        storePassword signing.getProperty('storePassword')
+        keyAlias signing.getProperty('keyAlias')
+        keyPassword signing.getProperty('keyPassword')
+      }
+      // minSdk 26 no necesita la firma v1; v3 habilita rotación de clave si algún día hace falta.
+      enableV1Signing false
+      enableV2Signing true
+      enableV3Signing true
+    }
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled true
+      shrinkResources true
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      if (signing.getProperty('storeFile')) signingConfig signingConfigs.release
+      // Servidor que trae la app recién instalada, para no tener que escribirlo a mano.
+      // publish-release.js lo fija con --server, y solo admite https.
+      buildConfigField 'String', 'DEFAULT_SERVER_URL',
+          "\"${appVersion.getProperty('defaultServerUrl', '')}\""
+    }
+    debug {
+      applicationIdSuffix '.debug'
+      versionNameSuffix '-debug'
+      // La de prueba apunta al servidor de la red local, que es http. Se guarda en una propiedad
+      // aparte a propósito: una dirección en claro no debe poder colarse en el APK de publicación,
+      // donde el sistema quedaría sin poder cargar y además abriría la puerta a sustituir el APK.
+      buildConfigField 'String', 'DEFAULT_SERVER_URL',
+          "\"${appVersion.getProperty('debugServerUrl', '')}\""
+    }
+  }
+
+  buildFeatures {
+    buildConfig true
+    resValues true
+    viewBinding false
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+
+  packaging {
+    resources.excludes += ['META-INF/*.version', 'META-INF/*.kotlin_module']
+  }
+}
+
+dependencies {
+  implementation 'androidx.appcompat:appcompat:1.7.0'
+  implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+  implementation 'androidx.core:core:1.16.0'
+}

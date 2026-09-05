@@ -1,0 +1,22 @@
+# Artefactos de compilación Android
+.gradle/
+build/
+app/build/
+local.properties
+captures/
+.cxx/
+
+# Firma: nunca versionar la clave ni sus contraseñas.
+# Se excluye el contenido, no el directorio, para poder conservar su README.
+keystore/*
+!keystore/README.md
+
+# Los APK publicados son artefactos de despliegue: se distribuyen desde el servidor,
+# no desde Git. El manifiesto describe un archivo que no está versionado, así que
+# tampoco se versiona: sin el APK en disco el servidor no anuncia ninguna versión.
+releases/*
+!releases/.gitkeep
+
+# APK copiados para instalar a mano en un teléfono. Son artefactos de compilación:
+# se regeneran con gradlew y no se versionan.
+apk/

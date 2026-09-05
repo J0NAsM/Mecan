@@ -4,16 +4,42 @@
   "private": true,
   "type": "module",
   "description": "SaaS multi-tenant para talleres mecánicos",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "build": "node scripts/build.js",
     "test": "node --test --test-concurrency=1",
+    "test:e2e": "playwright test",
+    "format": "prettier --write src scripts public tests e2e movile/scripts playwright.config.js",
+    "production:check": "node scripts/production-check.js",
+    "migrate": "node scripts/migrate.js",
+    "postgres:migrate": "node scripts/postgres-migrate.js",
+    "postgres:import": "node scripts/postgres-import.js",
+    "postgres:backup": "node scripts/postgres-backup.js",
+    "postgres:restore": "node scripts/postgres-restore.js",
+    "postgres:dev": "node scripts/dev-postgres.js start",
+    "postgres:stop": "node scripts/dev-postgres.js stop",
+    "test:postgres": "node --test integration/postgres.spec.js",
     "check": "npm run build && npm test",
     "smoke": "node scripts/smoke.js",
     "backup": "node scripts/backup.js",
     "restore": "node scripts/restore.js",
-    "export-tenant": "node scripts/export-tenant.js"
+    "export-tenant": "node scripts/export-tenant.js",
+    "desktop:shortcut": "powershell -ExecutionPolicy Bypass -File scripts/desktop-shortcut.ps1",
+    "desktop:start": "node scripts/start-desktop.js",
+    "tunnel": "node scripts/tunnel.js",
+    "icon": "node scripts/generate-icon.js",
+    "mobile:publish": "node movile/scripts/publish-release.js"
+  },
+  "dependencies": {
+    "nodemailer": "10.0.0",
+    "pg": "8.23.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "prettier": "3.9.6"
   }
 }

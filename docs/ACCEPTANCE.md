@@ -1,27 +1,43 @@
-# Criterios de aceptación de la v1
+# Aceptación del cierre
 
-La primera versión se acepta cuando `npm run check` termina correctamente y se verifican estas garantías:
+## Estado
 
-- alta transaccional de tenant, propietario, sucursal, rol, trial y suscripción;
-- el tenant procede exclusivamente de la sesión autenticada;
-- permisos comprobados en servidor y navegación adaptada al rol;
-- estados de la orden centralizados, sin facturar antes de autorización/calidad;
-- repuestos consumidos únicamente dentro de cantidad autorizada, sin stock negativo ni descuentos duplicados;
-- compras recibidas actualizan inventario y cuenta por pagar en una transacción;
-- cobros no superan el saldo y generan exactamente un movimiento de caja;
-- factura SaaS con saldo parcial, idempotencia y reactivación solo al cancelar la deuda;
-- suspensión en modo consulta sin eliminar datos;
-- archivos privados por tenant, cuota bloqueada, firma de contenido validada y descarga autorizada;
-- errores públicos comprensibles, sin SQL, stack trace o nombres internos;
-- migraciones, health check, cierre ordenado, backup, restauración y exportación documentados;
-- sitio, panel SaaS y aplicación del taller utilizables en escritorio, tablet y móvil.
+**Parcialmente completado. No autorizado para publicación comercial todavía.**
 
-## Suite obligatoria
+El objetivo no se marca completo porque no hay dominio/host productivo, datos comerciales y legales aprobados, proveedor real de correo validado, cobro autónomo integrado ni prueba de operación en infraestructura final. Pasar pruebas locales no demuestra estos requisitos.
 
-La suite cubre aprovisionamiento, permisos, entitlements, sesiones hasheadas, recuperación de contraseña, rate limit, firmas de archivos, restricciones de base, IDOR HTTP, facturación/caja, cobranza SaaS parcial, flujo completo del taller y falta de stock con compra. El recorrido E2E HTTP ejecuta:
+## Evidencia local
 
-`recepción → inspección → diagnóstico → presupuesto → autorización → asignación → reparación → calidad → factura → cobro → entrega → garantía`
+- `npm run check`: build de backend/frontend SSR y suite Node de seguridad, datos y negocio.
+- `npm run test:e2e`: navegación pública, alta real, panel del taller/SaaS, cinco roles y operación completa en escritorio/notebook/tablet/móvil.
+- `tests/release.test.js`: versiones de presupuesto, reservas, devolución, transferencias, costo promedio, permisos, SMTP local real y paginación sobre PostgreSQL.
+- `integration/postgres.spec.js`: migraciones nativas, importación íntegra, rollback, concurrencia y backup/restauración reales; `tests/legacy-migration.test.js` conserva la recuperación SQLite anterior.
+- `tests/postgres-concurrency.test.js`: suspensión/permisos/sesiones durante espera real de bloqueo, cobro frente a vencimiento, ajustes duplicados y cambios/reset de contraseña simultáneos.
+- `tests/postgres-admin.test.js`: comprobación de producción de solo lectura y exportación aislada por cursores, sin secretos ni sobrescritura de archivos.
+- `tests/http-isolation.test.js`: ataques por URL/ID a órdenes, clientes, vehículos y archivos de otro taller.
+- `tests/http-workflow.test.js` y `e2e/product.spec.js`: secuencia de recepción a entrega.
+- `tests/workshop-workflow.test.js`: falta de stock, compra, recepción, deuda, pago y guardas de workflow.
+- `tests/core.test.js`: SaaS, límites, cobros parciales y separación de plataforma/taller.
+- Garantías sin cargo y corrección auditada de cobros/pagos: pruebas de autorización, idempotencia, saldo, caja y conservación de entrega/recepción física.
+- Instalación SQLite anterior preservada e importada a PostgreSQL: 72 tablas de dominio y 123 filas. Es una copia local con accesos demo, no una base lista para publicarse.
+- `tests/mobile-release.test.js`: publicación del APK, manifiesto, descarga íntegra con hash coincidente, ausencia de versión publicada, manifiesto que no corresponde al archivo en disco y rechazo de rutas ajenas al directorio de versiones.
+- APK Android: `assembleRelease` compila y firma (verificado con `apksigner`, esquema v2, RSA 4096). Dos versiones consecutivas publicadas con el mismo certificado, condición que Android exige para aceptar una actualización.
+- Acceso directo de escritorio: ejecutado; prepara la base, arranca el servidor, confirma que el `/health` que responde es el propio y abre el navegador.
+- `npm audit --omit=dev --audit-level=high`: revisión de dependencias de ejecución.
+- `npm run production:check`: falla deliberadamente con la configuración local no productiva e identifica los campos faltantes sin revelar valores secretos.
 
-## Integraciones externas
+Los resultados cuantitativos de la última ejecución están en [reporte de cierre](RELEASE_REPORT.md). Las capturas/traces de navegador son artefactos locales ignorados por Git, no datos de clientes.
 
-No se consideran aprobadas hasta configurar y probar contra el proveedor elegido: facturación fiscal, pasarela automática, email, WhatsApp/SMS y almacenamiento S3. La plataforma conserva contratos e idempotencia para conectarlas sin falsear resultados.
+## Requisitos de publicación que faltan demostrar
+
+1. Configuración final y legal aprobada; sin cuentas demo en la base comercial.
+2. DNS y HTTPS reales; build de imagen y arranque en host final.
+3. Recuperación de contraseña y avisos recibidos usando el proveedor real, no solo SMTP de prueba.
+4. Pago autónomo con la pasarela elegida, firma de webhooks, reintentos, idempotencia y reconciliación contra pagos reales.
+5. Facturación fiscal, si forma parte de lo que se venderá, contra un emisor/proveedor autorizado.
+6. Respaldo cifrado fuera del host, restauración operativa, alertas y responsables.
+7. Prueba de carga/capacidad y recuperación ajustada al volumen y disponibilidad acordados.
+8. Aplicación Android probada en un teléfono real: instalación, sesión, subida de archivos y ciclo completo de actualización sobre una versión anterior instalada. Este entorno no tiene emulador ni dispositivo; lo verificado hasta ahora es la compilación, la firma y la distribución desde el servidor. Basta un teléfono con Android 8.0 o superior, sin datos del propietario.
+9. Respaldo de la clave de firma del APK (`movile/keystore/`) fuera de esta máquina, antes de repartir la primera versión. Sin ella, ningún teléfono ya instalado puede recibir actualizaciones nunca más.
+
+Estos son bloqueos o verificaciones pendientes reales, no funcionalidades presentadas como completadas. Los datos externos están consolidados en [una sola lista](PRODUCTION_INPUTS.md).
