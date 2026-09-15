@@ -1,3 +1,7 @@
+<!-- BEGIN ECOSYSTEM ENTRY -->
+Entrada vigente: [MecanCloud — contexto](<.context/contexto.md>). Identidad, alcance, reglas y comandos se consultan desde esa entrada. La documentación histórica se conserva; sus fotografías de estado no acreditan la situación actual.
+<!-- END ECOSYSTEM ENTRY -->
+
 # Mecan Cloud
 
 SaaS multi-tenant para talleres. Incluye aplicación del taller, sitio público y consola independiente de plataforma. El estado comercial de producción no se deduce de que el build pase: consultar [aceptación](docs/ACCEPTANCE.md) y [datos externos](docs/PRODUCTION_INPUTS.md).
@@ -60,6 +64,14 @@ servidor y abre el navegador; cerrar la ventana detiene el sistema. No instala u
 modifica el arranque de Windows. Si `.env` define `DATABASE_URL` usa esa base; si no, recurre al
 PostgreSQL local aislado del proyecto, que es de desarrollo. Cuando otro programa ya ocupa el puerto
 lo advierte en lugar de abrir el navegador en la aplicación equivocada.
+
+Las comprobaciones de arranque usan conexiones nuevas y tienen un tiempo límite, para evitar que
+Windows siga consultando a otro programa que comparte el puerto en una interfaz diferente. Si
+`APP_URL` usa una IP privada HTTP de una red anterior, el lanzador de desarrollo utiliza la IP de
+la única interfaz física disponible; sin una red inequívoca utiliza el acceso local. Informa la
+dirección elegida y la aplica tanto al servidor como al navegador, sin modificar `.env`. Los
+dominios, HTTPS y la configuración de producción se mantienen tal como están definidos. Para
+separar Mecan de otros proyectos, configura un puerto libre en `PORT` y en `APP_URL`.
 
 `npm run desktop:shortcut -- -Remove` lo elimina. `npm run desktop:start` hace lo mismo sin crear el
 acceso directo. Si `APP_URL` es una dirección HTTPS, además abre el túnel y espera a que responda

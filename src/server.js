@@ -86,6 +86,7 @@ import { ORDER_LABELS } from './workflow.js';
 import { publicError, AppError } from './errors.js';
 import { logger, requestId } from './logger.js';
 import {
+  isAllowedRequestOrigin,
   assertRequestRate,
   assertLoginAllowed,
   recordLoginAttempt,
@@ -3718,11 +3719,7 @@ export const server = http.createServer(async (req, res) => {
       !url.pathname.startsWith('/assets/')
     )
       return redirect(res, '/account/password');
-    if (
-      req.method === 'POST' &&
-      req.headers.origin &&
-      req.headers.origin !== new URL(config.appUrl).origin
-    )
+    if (req.method === 'POST' && !isAllowedRequestOrigin(req, config))
       throw new AppError('El origen de la solicitud no es válido.', { status: 403 });
     const presentation = req.context?.tenant
       ? await db

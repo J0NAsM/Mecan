@@ -47,6 +47,93 @@ async function authenticate(base, email, password) {
   return { cookie, csrf: workshopHtml.match(/name="csrf" value="([^"]+)"/)?.[1] };
 }
 
+test('HTTP crea un taller desde localhost aunque APP_URL conserve la IP de otra red', async (t) => {
+  const setup = await openTestDatabase();
+  const port = await freePort();
+  const base = `http://127.0.0.1:${port}`;
+  let serverError = '';
+  const child = spawn(process.execPath, ['src/server.js'], {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      NODE_ENV: 'development',
+      HOST: '127.0.0.1',
+      PORT: String(port),
+      APP_URL: `http://192.168.199.160:${port}`,
+      DATABASE_SCHEMA: setup.schema,
+      SEED_DEMO: 'false',
+      EMAIL_TRANSPORT: 'disabled',
+    },
+    windowsHide: true,
+    stdio: ['ignore', 'ignore', 'pipe'],
+  });
+  child.stderr.on('data', (chunk) => (serverError += chunk.toString()));
+  t.after(async () => {
+    await new Promise((resolve) => {
+      if (child.exitCode != null) return resolve();
+      child.once('exit', resolve);
+      child.kill();
+    });
+  });
+  await waitFor(`${base}/health`, () => serverError);
+  const page = await fetch(`${base}/signup`);
+  const cookie = page.headers.get('set-cookie').split(';')[0];
+  const html = await page.text();
+  const guestCsrf = html.match(/name="guestCsrf" value="([^"]+)"/)[1];
+  const input = {
+    guestCsrf,
+    ownerName: 'Titular registro local',
+    workshopName: 'Taller cambio de red',
+    email: 'registro-local@example.test',
+    password: 'LocalSignup123!',
+    planId: 'plan-basic',
+    acceptLegal: '1',
+  };
+  const submit = (origin, values = input, csrfCookie = cookie) =>
+    fetch(`${base}/signup`, {
+      method: 'POST',
+      redirect: 'manual',
+      headers: {
+        origin,
+        referer: `${base}/signup`,
+        cookie: csrfCookie,
+        'content-type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(values),
+    });
+  for (const origin of ['http://evil.example', `http://127.0.0.1:${port + 1}`]) {
+    const response = await submit(origin);
+    assert.equal(response.status, 303);
+    assert.equal(
+      new URL(response.headers.get('location'), base).searchParams.get('error'),
+      'El origen de la solicitud no es válido.',
+    );
+  }
+  for (const [values, csrfCookie] of [
+    [{ ...input, guestCsrf: 'invalid' }, cookie],
+    [input, ''],
+  ]) {
+    const response = await submit(base, values, csrfCookie);
+    assert.equal(
+      new URL(response.headers.get('location'), base).searchParams.get('error'),
+      'La página expiró. Recárgala e intenta nuevamente.',
+    );
+  }
+  assert.equal(Number((await setup.prepare('SELECT COUNT(*) total FROM tenants').get()).total), 0);
+  const response = await submit(base);
+  assert.equal(response.status, 303);
+  assert.equal(response.headers.get('location'), '/workshop/onboarding');
+  const sessionCookie = response.headers.get('set-cookie').split(';')[0];
+  const onboarding = await fetch(`${base}/workshop/onboarding`, {
+    headers: { cookie: sessionCookie },
+  });
+  assert.equal(onboarding.status, 200);
+  assert.match(await onboarding.text(), /Configura tu taller/);
+  assert.equal(Number((await setup.prepare('SELECT COUNT(*) total FROM tenants').get()).total), 1);
+  const auth = await authenticate(base, input.email, input.password);
+  assert.ok(auth.csrf);
+});
+
 test('HTTP completa recepción, diagnóstico, autorización, reparación, factura, cobro y entrega', async (t) => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'mecan-e2e-'));
   const setup = await openTestDatabase();

@@ -1,6 +1,39 @@
 import crypto from 'node:crypto';
+import net from 'node:net';
 import { AppError } from './errors.js';
 import { id, now, addDays } from './utils.js';
+
+export function isAllowedRequestOrigin(req, settings) {
+  const origin = req.headers.origin;
+  if (!origin) return true;
+  const configured = new URL(settings.appUrl);
+  if (origin === configured.origin) return true;
+  if (settings.production || settings.secureTransport || configured.protocol !== 'http:')
+    return false;
+  try {
+    const source = new URL(origin);
+    if (
+      source.origin !== origin ||
+      source.protocol !== 'http:' ||
+      source.host !== req.headers.host ||
+      Number(source.port || 80) !== Number(settings.port) ||
+      req.socket.localPort !== Number(settings.port)
+    )
+      return false;
+    // En desarrollo la IP puede cambiar con la red. Se acepta solo el mismo origen
+    // que recibió la conexión, comprobado contra el socket, nunca contra un proxy.
+    const address = req.socket.localAddress?.replace(/^::ffff:/, '');
+    const hostname = source.hostname.replace(/^\[|\]$/g, '');
+    if (!net.isIP(address)) return false;
+    return (
+      hostname === address ||
+      (hostname === 'localhost' &&
+        (address === '::1' || (net.isIP(address) === 4 && address.startsWith('127.'))))
+    );
+  } catch {
+    return false;
+  }
+}
 
 export const opaqueHash = (value) =>
   crypto.createHash('sha256').update(String(value)).digest('hex');

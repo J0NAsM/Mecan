@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "PROJECT_ID": "mecan",
+  "PROJECT_NAME": "MecanCloud",
+  "TYPE": "web-mobile",
+  "TECH_STACK": "Node HTTP/SSR propio; PostgreSQL; Android nativo/WebView",
+  "TECH_STACK_SOURCE": [
+    "package.json",
+    "movile/build.gradle",
+    "movile/app/build.gradle"
+  ],
+  "ENVIRONMENT": "NO DETERMINADO",
+  "STATUS": "NO DETERMINADO",
+  "OBSERVED_STATE": "Aplicación de gestión con operación y entrega comercial documentadas.",
+  "VERSION_SOURCE": [
+    "package.json",
+    "movile/build.gradle",
+    "movile/app/build.gradle"
+  ],
+  "LAST_CONTEXT_UPDATE": "2026-09-14",
+  "LAST_VALIDATION": {
+    "date": "NO DETERMINADO",
+    "revision": "NO DETERMINADO",
+    "command": "NO DETERMINADO",
+    "result": "NO DETERMINADO"
+  },
+  "LAST_DEPLOY": "NO DETERMINADO",
+  "EXTERNAL_DEPENDENCIES": "Node >=24, PostgreSQL, correo y almacenamiento persistente.",
+  "CONFIG_SOURCES": [
+    "compose.yaml",
+    "Dockerfile",
+    ".github/workflows/quality.yml"
+  ],
+  "SOURCE_HASHES": {
+    "package.json": "dba7bb70635b80489beefb2cc89eb7d019cb00f4b7c85037f137adbe649ae1f6",
+    "movile/build.gradle": "9a497d8eee0e4abdd604d97921338c4ce23046f777fa6ad2ee255a369a4c02df",
+    "movile/app/build.gradle": "a5ceeeda1dc457cfaa78418fdf219933b702a11eb89bc0abae392ed4080656f2",
+    "compose.yaml": "a6df56457a66edd4c5b7d3e1ac9378c778e5d4894dd50cd34120e14eaea308d9",
+    "Dockerfile": "4b8f3739ff10ae2851736a6904547b6deb24db61a8b1d95498d822e47de53730",
+    ".github/workflows/quality.yml": "5f3d2c54bb707873b2691e0c082afeeaaf44c98799da535790bfa553b5899b84"
+  },
+  "VAULTS_ROOT_RELATIVE": "../Vaults/jmartinez"
+}

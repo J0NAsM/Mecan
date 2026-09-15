@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { desktopUrls, probeServer, waitForServer } from './desktop-startup.js';
 
 const root = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
 process.chdir(root);
@@ -15,12 +16,12 @@ const envFile = path.join(root, '.env');
 if (fs.existsSync(envFile)) process.loadEnvFile(envFile);
 const configured = Boolean(process.env.DATABASE_URL);
 const port = process.env.PORT || '3000';
-// La salud se consulta siempre en local: prueba que arrancó este proceso, no que haya internet.
-const localUrl = `http://127.0.0.1:${port}`;
+const { localUrl, publicUrl, previousUrl } = desktopUrls();
 // Con un túnel configurado, APP_URL es la dirección pública y pasa a ser la única utilizable: el
 // servidor rechaza todo POST cuyo origen no coincida con ella, así que entrar por localhost
 // cargaría las pantallas pero fallaría al guardar cualquier formulario.
-const publicUrl = process.env.APP_URL || localUrl;
+// El navegador y el servidor deben usar el mismo origen, incluso si cambió la IP de la PC.
+process.env.APP_URL = publicUrl;
 const tunnelled = publicUrl.startsWith('https://');
 
 function run(command, args, options = {}) {
@@ -33,27 +34,6 @@ function run(command, args, options = {}) {
         : reject(new Error(`${path.basename(command)} terminó con código ${code}`)),
     );
   });
-}
-
-/**
- * Espera a que responda este sistema y no cualquier cosa escuchando en el mismo puerto.
- *
- * Windows permite que dos procesos ocupen el mismo puerto en interfaces distintas, así que un 200
- * no alcanza: se confirma que la respuesta es el estado de salud de esta aplicación.
- */
-async function waitForServer(healthUrl, child) {
-  for (let attempt = 0; attempt < 150; attempt += 1) {
-    if (child.exitCode !== null) return 'detenido';
-    try {
-      const response = await fetch(healthUrl);
-      if (response.ok) {
-        const health = await response.json();
-        return typeof health?.migrations === 'number' && 'database' in health ? 'listo' : 'ajeno';
-      }
-    } catch {}
-    await new Promise((resolve) => setTimeout(resolve, 200));
-  }
-  return 'sin respuesta';
 }
 
 function openBrowser(target) {
@@ -70,6 +50,8 @@ function openBrowser(target) {
 }
 
 console.log(`\n  ${process.env.APP_NAME || 'Mecan Cloud'}\n`);
+if (previousUrl)
+  console.log(`  La dirección ${previousUrl} ya no pertenece a esta PC. Se usará ${publicUrl}.\n`);
 
 if (!configured) {
   console.log('  Base de datos: PostgreSQL local de desarrollo (.runtime, fuera de Git).');
@@ -107,9 +89,26 @@ const stop = () => {
 for (const signal of ['SIGINT', 'SIGTERM', 'SIGHUP']) process.once(signal, stop);
 process.once('exit', stop);
 server.once('exit', (code) => process.exit(code ?? 0));
+server.once('error', (error) => {
+  console.error(`\n  No se pudo iniciar el servidor: ${error.message}\n`);
+  process.exit(1);
+});
 
 console.log('  Iniciando el servidor…');
-const state = await waitForServer(`${localUrl}/health`, server);
+let { state, detail } = await waitForServer(`${localUrl}/health`, server);
+// La IP publicada también debe responder antes de abrirla en el navegador.
+if (state === 'listo' && !tunnelled && publicUrl !== localUrl) {
+  const published = await probeServer(`${publicUrl}/health`);
+  if (published.state !== 'listo') {
+    console.error(
+      `\n  Mecan responde en ${localUrl}, pero no en ${publicUrl}: ${published.detail}.`,
+    );
+    console.error(
+      '  Revisa APP_URL y la conexión de red antes de volver a abrir el acceso directo.\n',
+    );
+    state = 'direccion inaccesible';
+  }
+}
 if (state === 'listo') {
   if (tunnelled) {
     console.log('  Abriendo el túnel…');
@@ -136,7 +135,6 @@ if (state === 'listo') {
     '  Define otro puerto en .env (PORT y APP_URL) y vuelve a abrir el acceso directo.\n',
   );
 } else if (state === 'sin respuesta') {
-  console.error(
-    '\n  El servidor no respondió a tiempo. Se deja corriendo para ver el detalle arriba.\n',
-  );
+  console.error(`\n  El servidor no respondió a tiempo en ${localUrl}/health: ${detail}.`);
+  console.error('  Se deja corriendo para ver el detalle arriba.\n');
 }
