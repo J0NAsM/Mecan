@@ -22,6 +22,8 @@ import { id, now, addDays } from '../utils.js';
 import { orderProfitability } from '../services/workshop-operations.js';
 import { calendarDate, startOfLocalDate } from '../time.js';
 import { pagedRows } from '../pagination.js';
+import { damageOrderCard, workshopDocumentLinks } from './diagnosis.js';
+import { VEHICLE_PARTS, partLabel } from '../vehicle-diagnosis.js';
 
 const statusBadge = (status) =>
   `<span class="badge badge-${esc(status.toLowerCase())}">${esc(ORDER_LABELS[status] || status)}</span>`;
@@ -102,7 +104,7 @@ export async function orderDetailPage(db, req, orderId) {
   const estimateItems = estimate
     ? await db
         .prepare(
-          'SELECT ei.*,i.name inventory_name FROM estimate_items ei LEFT JOIN inventory_items i ON i.id=ei.inventory_item_id WHERE ei.tenant_id=? AND ei.estimate_id=?',
+          'SELECT ei.*,i.name inventory_name,u.name responsible FROM estimate_items ei LEFT JOIN inventory_items i ON i.id=ei.inventory_item_id LEFT JOIN users u ON u.id=ei.responsible_user_id WHERE ei.tenant_id=? AND ei.estimate_id=?',
         )
         .all(tenantId, estimate.id)
     : [];
@@ -197,6 +199,10 @@ export async function orderDetailPage(db, req, orderId) {
       'Completar diagnóstico',
     );
   if (order.status === 'ESTIMATE' && can(req.context, 'orders.estimate')) {
+    // Los trabajos del catálogo de servicios se ofrecen como sugerencias; la descripción sigue libre.
+    const services = await db
+      .prepare('SELECT name FROM services WHERE tenant_id=? AND active=1 ORDER BY name')
+      .all(tenantId);
     actions += formCard(
       'Agregar concepto al presupuesto',
       `/workshop/orders/${order.id}/estimate/items`,
@@ -207,7 +213,15 @@ export async function orderDetailPage(db, req, orderId) {
         ['SERVICE', 'Servicio'],
         ['OTHER', 'Otro'],
       ]) +
-        field('description', 'Descripción', 'text', '', { required: true }) +
+        `<label class="field"><span>Descripción *</span><input name="description" required maxlength="1000" list="service-catalog" placeholder="Trabajo de chapista, pintura, pulido…"></label><datalist id="service-catalog">${services.map((s) => `<option value="${esc(s.name)}">`).join('')}</datalist>` +
+        select('vehiclePart', 'Pieza del vehículo', [
+          ['', 'Sin pieza específica'],
+          ...VEHICLE_PARTS.map((part) => [part.code, part.label]),
+        ]) +
+        select('responsibleUserId', 'Responsable', [
+          ['', 'Sin asignar'],
+          ...technicians.map((x) => [x.id, x.name]),
+        ]) +
         select('inventoryItemId', 'Artículo', [
           ['', 'Seleccione si el concepto es un repuesto'],
           ...inventory.map((x) => [x.id, `${x.name} · stock ${x.quantity}`]),
@@ -226,6 +240,37 @@ export async function orderDetailPage(db, req, orderId) {
         field('validUntil', 'Válido hasta', 'date', addDays(now(), 7).slice(0, 10)),
       'Agregar concepto',
     );
+    if (estimate?.status === 'DRAFT')
+      actions += formCard(
+        'Condiciones del presupuesto',
+        `/workshop/orders/${order.id}/estimate/terms`,
+        csrf,
+        field('paymentTerms', 'Forma de pago', 'text', estimate.payment_terms || '', {
+          maxlength: 200,
+          placeholder: 'Contado, transferencia, 50% de anticipo…',
+        }) +
+          field(
+            'workTimeValue',
+            'Tiempo estimado de trabajo',
+            'number',
+            estimate.work_time_value ?? '',
+            {
+              min: 0.25,
+              step: 0.25,
+            },
+          ) +
+          select(
+            'workTimeUnit',
+            'Unidad',
+            [
+              ['HOURS', 'Horas'],
+              ['DAYS', 'Días'],
+            ],
+            estimate.work_time_unit || 'HOURS',
+          ) +
+          field('promisedAt', 'Entrega estimada', 'datetime-local', ''),
+        'Guardar condiciones',
+      );
     if (estimateItems.length)
       actions += card(
         'Enviar presupuesto',
@@ -507,6 +552,11 @@ export async function orderDetailPage(db, req, orderId) {
           [
             { label: 'Tipo', key: 'item_type' },
             { label: 'Concepto', key: 'description' },
+            {
+              label: 'Pieza',
+              render: (r) => esc(r.vehicle_part ? partLabel(r.vehicle_part) : '—'),
+            },
+            { label: 'Responsable', render: (r) => esc(r.responsible || '—') },
             { label: 'Cantidad', key: 'quantity' },
             {
               label: 'Costo',
@@ -528,6 +578,8 @@ export async function orderDetailPage(db, req, orderId) {
           `<div class="totals"><span>Subtotal <b>${money(estimate.subtotal)}</b></span><span>Impuesto <b>${money(estimate.tax)}</b></span><span>Total <strong>${money(estimate.total)}</strong></span>${statusBadge(estimate.status)}</div>`,
       )
     : '';
+  const damageCard = await damageOrderCard(db, req, order);
+  const documentsCard = workshopDocumentLinks(req, order, estimate);
   const financial =
     invoice && can(req.context, 'billing.view')
       ? card(
@@ -559,7 +611,7 @@ export async function orderDetailPage(db, req, orderId) {
           : 'Requiere permiso',
       },
     ]) +
-    `<div class="dashboard-grid"><div>${card('Recepción', `<div class="stat-list"><div><span>Motivo</span><b>${esc(order.complaint || '—')}</b></div><div><span>Kilometraje</span><b>${reception?.odometer?.toLocaleString('es-PY') || '—'} km</b></div><div><span>Combustible</span><b>${reception?.fuel_level ?? '—'}%</b></div><div><span>Daños visibles</span><b>${esc(reception?.visible_damage || 'Ninguno registrado')}</b></div></div>`)}${inspections.length ? card('Inspección', inspections.map((x) => `<p><b>${esc(x.inspector)}</b> · ${esc(x.findings)}</p>`).join('')) : ''}${diagnoses.length ? card('Diagnóstico', diagnoses.map((x) => `<p><b>${esc(x.technician || 'Equipo')}</b> · ${esc(x.summary)}</p>`).join('')) : ''}${estimateCard}${card('Trabajos asignados', assignmentsTable)}${
+    `<div class="dashboard-grid"><div>${card('Recepción', `<div class="stat-list"><div><span>Motivo</span><b>${esc(order.complaint || '—')}</b></div><div><span>Kilometraje</span><b>${reception?.odometer?.toLocaleString('es-PY') || '—'} km</b></div><div><span>Combustible</span><b>${reception?.fuel_level ?? '—'}%</b></div><div><span>Daños visibles</span><b>${esc(reception?.visible_damage || 'Ninguno registrado')}</b></div></div>`)}${inspections.length ? card('Inspección', inspections.map((x) => `<p class="preserve-lines"><b>${esc(x.inspector)}</b> · ${esc(x.findings)}</p>`).join('')) : ''}${diagnoses.length ? card('Diagnóstico', diagnoses.map((x) => `<p class="preserve-lines"><b>${esc(x.technician || 'Equipo')}</b> · ${esc(x.summary)}</p>`).join('')) : ''}${damageCard}${estimateCard}${card('Trabajos asignados', assignmentsTable)}${
       parts.length
         ? card(
             'Repuestos utilizados',
@@ -619,7 +671,7 @@ export async function orderDetailPage(db, req, orderId) {
             ),
           )
         : ''
-    }${financial}${delivery ? card('Entrega y garantía', `<p>Entregado a <b>${esc(delivery.received_by_name)}</b> el ${shortDate(delivery.delivered_at)}.</p>${warranty ? `<p>Garantía hasta <b>${shortDate(warranty.ends_at)}</b>: ${esc(warranty.terms)}</p>` : ''}`) : ''}</div><aside>${actions || card('Sin acciones pendientes', '<p>El flujo de esta orden está completo o tu rol no permite realizar la siguiente acción.</p>')}${
+    }${financial}${delivery ? card('Entrega y garantía', `<p>Entregado a <b>${esc(delivery.received_by_name)}</b> el ${shortDate(delivery.delivered_at)}.</p>${warranty ? `<p>Garantía hasta <b>${shortDate(warranty.ends_at)}</b>: ${esc(warranty.terms)}</p>` : ''}`) : ''}</div><aside>${documentsCard}${actions || card('Sin acciones pendientes', '<p>El flujo de esta orden está completo o tu rol no permite realizar la siguiente acción.</p>')}${
       requests.length
         ? card(
             'Solicitudes de compra',

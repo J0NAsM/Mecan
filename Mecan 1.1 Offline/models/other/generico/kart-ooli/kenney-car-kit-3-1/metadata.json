@@ -1,0 +1,78 @@
+{
+  "id": "generico-kart-ooli-kenney-car-kit-3-1",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Kart OOLI",
+  "version": "Kenney Car Kit (3.1)",
+  "year": null,
+  "category": "other",
+  "vehicleType": "kart",
+  "file": "models/other/generico/kart-ooli/kenney-car-kit-3-1/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 245660,
+  "triangles": 2706,
+  "vertices": 4343,
+  "stats": {
+    "triangles": 2706,
+    "vertices": 4343,
+    "primitives": 6,
+    "meshes": 6,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 0.974,
+    "y": 1.329,
+    "z": 1.428,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/other/generico/kart-ooli/kenney-car-kit-3-1/model.glb"
+  },
+  "thumbnail": "models/other/generico/kart-ooli/kenney-car-kit-3-1/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-kart-ooli-kenney-car-kit-3-1.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Car Kit",
+  "url": "https://kenney.nl/assets/car-kit",
+  "sources": [
+    {
+      "key": "kenney-car-kit:Models/GLB format/kart-ooli.glb",
+      "name": "Kenney · Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "originalPath": "Models/GLB format/kart-ooli.glb",
+      "downloadedAt": "2026-09-28T15:45:28.857Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:28.857Z",
+  "sha256": "06a43958a9924cca263110f1b5d291ea08c33a77bbc0ad176da2c254374f43a4",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.721Z",
+    "issues": []
+  }
+}

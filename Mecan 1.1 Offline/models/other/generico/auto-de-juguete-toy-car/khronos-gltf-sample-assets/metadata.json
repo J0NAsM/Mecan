@@ -1,0 +1,90 @@
+{
+  "id": "generico-auto-de-juguete-toy-car-khronos-gltf-sample-assets",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Auto de juguete (Toy Car)",
+  "version": "Khronos glTF Sample Assets",
+  "year": null,
+  "category": "other",
+  "vehicleType": "auto de juguete",
+  "file": "models/other/generico/auto-de-juguete-toy-car/khronos-gltf-sample-assets/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": null,
+  "sizeBytes": 5422412,
+  "triangles": 108936,
+  "vertices": 77429,
+  "stats": {
+    "triangles": 108936,
+    "vertices": 77429,
+    "primitives": 3,
+    "meshes": 3,
+    "materials": 3,
+    "textures": 8,
+    "images": 8,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform",
+      "KHR_materials_clearcoat",
+      "KHR_materials_transmission",
+      "KHR_materials_sheen"
+    ]
+  },
+  "dimensions": {
+    "x": 0.073,
+    "y": 0.029,
+    "z": 0.074,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/other/generico/auto-de-juguete-toy-car/khronos-gltf-sample-assets/model.glb"
+  },
+  "thumbnail": "models/other/generico/auto-de-juguete-toy-car/khronos-gltf-sample-assets/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-auto-de-juguete-toy-car-khronos-gltf-sample-assets.webp",
+  "author": "Guido Odendahl, Eric Chadwick",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Initial car model (Guido Odendahl, 2020)"
+    },
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Extensions and scene composition (Eric Chadwick, 2020)"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Khronos · glTF Sample Assets",
+  "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/ToyCar",
+  "sources": [
+    {
+      "key": "khronos-gltf-sample-assets:Models/ToyCar/glTF-Binary/ToyCar.glb",
+      "name": "Khronos · glTF Sample Assets",
+      "adapter": "github",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/ToyCar",
+      "downloadUrl": null,
+      "originalPath": "Models/ToyCar/glTF-Binary/ToyCar.glb",
+      "downloadedAt": "2026-09-28T15:45:38.340Z",
+      "licenseEvidence": [
+        "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Initial car model (Guido Odendahl, 2020)",
+        "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Extensions and scene composition (Eric Chadwick, 2020)"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:38.340Z",
+  "sha256": "01a60862de55cd4b9f3acfab0b0def86451800f9c42467fcd61052c16cb9838c",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.693Z",
+    "issues": []
+  }
+}

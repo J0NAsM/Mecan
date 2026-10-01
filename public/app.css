@@ -1558,3 +1558,152 @@ textarea:focus-visible {
   color: var(--muted);
   font-size: 0.85rem;
 }
+
+/* Diagnóstico visual 3D: chips de gravedad, mapa impreso y documentos del taller. */
+.damage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 4px 2px 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: #f1f4f6;
+}
+.damage-chip::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9aa5b1;
+}
+.damage-chip.sev-light::before {
+  background: #22c55e;
+}
+.damage-chip.sev-moderate::before {
+  background: #facc15;
+}
+.damage-chip.sev-severe::before {
+  background: #f97316;
+}
+.damage-chip.sev-critical::before {
+  background: #ef4444;
+}
+.damage-map-svg {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 8px auto;
+}
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.doc-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 6px 18px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.doc-meta div {
+  display: grid;
+}
+.doc-meta span {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.doc-section-title {
+  margin: 18px 0 6px;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.doc-date {
+  text-align: right;
+  margin: 0;
+}
+.doc-blank td {
+  height: 26px;
+}
+.doc-totals {
+  margin-left: auto;
+  max-width: 340px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  font-size: 1rem;
+}
+.doc-totals dt {
+  color: var(--muted);
+}
+.doc-totals dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+}
+.doc-totals .doc-grand {
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+.doc-signatures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin-top: 42px;
+}
+.doc-signatures div {
+  display: grid;
+  gap: 18px;
+}
+.doc-signatures p {
+  margin: 0;
+  padding-top: 6px;
+  border-top: 1px solid var(--ink);
+  font-size: 0.85rem;
+}
+.doc-notes {
+  min-height: 70px;
+  padding: 10px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+}
+.model-library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.model-card {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+}
+.model-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #0f141c;
+}
+.model-card small {
+  color: var(--muted);
+}
+@media print {
+  .doc-signatures {
+    break-inside: avoid;
+  }
+  .doc-section-title {
+    break-after: avoid;
+  }
+}

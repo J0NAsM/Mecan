@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Poly Haven
+
+Autor: MP (Poly Haven)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución requerida: Modelo de Poly Haven (polyhaven.com), obtenido mediante su API pública.
+
+Fuentes:
+- Poly Haven: https://polyhaven.com/a/covered_car (api.polyhaven.com/files/covered_car)
+
+Conversión: glTF + buffers + texturas → GLB sin pérdida (geometría, UV, materiales y texturas intactos).
+
+SHA-256: 32389568f3bf78aa4af1ebd604b05fab01ce569cdf90e8d1d44302e817bb6ffd

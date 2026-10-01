@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney Car Kit (3.1)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Car Kit: https://kenney.nl/assets/car-kit (Models/GLB format/taxi.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: 167d26280406e4f24f929a177eccf1073eff29bce4c60f85122ee319a4463319

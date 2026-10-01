@@ -1,0 +1,280 @@
+{
+  "_nota": "Configuración de fuentes. Agregar un repositorio, paquete o consulta aquí no requiere modificar la aplicación. Toda fuente nueva pasa igualmente por la política de licencias.",
+  "open_assets": {
+    "kenney": [
+      {
+        "id": "kenney-car-kit",
+        "name": "Kenney · Car Kit",
+        "page": "https://kenney.nl/assets/car-kit",
+        "onlyListed": true,
+        "names": {
+          "sedan": { "category": "cars", "vehicleType": "sedán", "model": "Sedán" },
+          "sedan-sports": {
+            "category": "cars",
+            "vehicleType": "sedán",
+            "model": "Sedán deportivo"
+          },
+          "hatchback-sports": {
+            "category": "cars",
+            "vehicleType": "hatchback",
+            "model": "Hatchback deportivo"
+          },
+          "taxi": { "category": "cars", "vehicleType": "taxi", "model": "Taxi" },
+          "police": { "category": "cars", "vehicleType": "patrullero", "model": "Patrullero" },
+          "race": {
+            "category": "cars",
+            "vehicleType": "auto de carreras",
+            "model": "Auto de carreras"
+          },
+          "race-future": {
+            "category": "cars",
+            "vehicleType": "auto de carreras",
+            "model": "Auto de carreras futurista"
+          },
+          "suv": { "category": "suv", "vehicleType": "SUV", "model": "SUV" },
+          "suv-luxury": { "category": "suv", "vehicleType": "SUV", "model": "SUV de lujo" },
+          "truck": { "category": "pickups", "vehicleType": "pickup", "model": "Pickup" },
+          "truck-flat": {
+            "category": "pickups",
+            "vehicleType": "pickup",
+            "model": "Pickup de caja plana"
+          },
+          "van": { "category": "vans", "vehicleType": "furgoneta", "model": "Furgoneta" },
+          "ambulance": { "category": "vans", "vehicleType": "ambulancia", "model": "Ambulancia" },
+          "delivery": {
+            "category": "trucks",
+            "vehicleType": "camión de reparto",
+            "model": "Camión de reparto"
+          },
+          "delivery-flat": {
+            "category": "trucks",
+            "vehicleType": "camión de plataforma",
+            "model": "Camión de plataforma"
+          },
+          "firetruck": {
+            "category": "trucks",
+            "vehicleType": "camión de bomberos",
+            "model": "Camión de bomberos"
+          },
+          "garbage-truck": {
+            "category": "trucks",
+            "vehicleType": "camión recolector",
+            "model": "Camión recolector"
+          },
+          "tractor": { "category": "other", "vehicleType": "tractor", "model": "Tractor" },
+          "tractor-police": {
+            "category": "other",
+            "vehicleType": "tractor",
+            "model": "Tractor policial"
+          },
+          "tractor-shovel": {
+            "category": "other",
+            "vehicleType": "pala cargadora",
+            "model": "Pala cargadora"
+          },
+          "kart-oobi": { "category": "other", "vehicleType": "kart", "model": "Kart OOBI" },
+          "kart-oodi": { "category": "other", "vehicleType": "kart", "model": "Kart OODI" },
+          "kart-ooli": { "category": "other", "vehicleType": "kart", "model": "Kart OOLI" },
+          "kart-oopi": { "category": "other", "vehicleType": "kart", "model": "Kart OOPI" },
+          "kart-oozi": { "category": "other", "vehicleType": "kart", "model": "Kart OOZI" }
+        }
+      },
+      {
+        "id": "kenney-racing-kit",
+        "name": "Kenney · Racing Kit",
+        "page": "https://kenney.nl/assets/racing-kit",
+        "onlyListed": true,
+        "names": {
+          "raceCarGreen": {
+            "category": "cars",
+            "vehicleType": "auto de carreras",
+            "model": "Auto de carreras verde"
+          },
+          "raceCarOrange": {
+            "category": "cars",
+            "vehicleType": "auto de carreras",
+            "model": "Auto de carreras naranja"
+          },
+          "raceCarRed": {
+            "category": "cars",
+            "vehicleType": "auto de carreras",
+            "model": "Auto de carreras rojo"
+          },
+          "raceCarWhite": {
+            "category": "cars",
+            "vehicleType": "auto de carreras",
+            "model": "Auto de carreras blanco"
+          }
+        }
+      },
+      {
+        "id": "kenney-toy-car-kit",
+        "name": "Kenney · Toy Car Kit",
+        "page": "https://kenney.nl/assets/toy-car-kit",
+        "onlyListed": true,
+        "names": {
+          "vehicle-drag-racer": {
+            "category": "cars",
+            "vehicleType": "dragster (juguete)",
+            "model": "Dragster de juguete"
+          },
+          "vehicle-monster-truck": {
+            "category": "trucks",
+            "vehicleType": "monster truck (juguete)",
+            "model": "Monster truck de juguete"
+          },
+          "vehicle-racer": {
+            "category": "cars",
+            "vehicleType": "auto de carreras (juguete)",
+            "model": "Auto de carreras de juguete"
+          },
+          "vehicle-racer-low": { "lodOf": "vehicle-racer", "level": "LOW" },
+          "vehicle-speedster": {
+            "category": "cars",
+            "vehicleType": "deportivo (juguete)",
+            "model": "Deportivo de juguete"
+          },
+          "vehicle-suv": {
+            "category": "suv",
+            "vehicleType": "SUV (juguete)",
+            "model": "SUV de juguete"
+          },
+          "vehicle-truck": {
+            "category": "trucks",
+            "vehicleType": "camión (juguete)",
+            "model": "Camión de juguete"
+          },
+          "vehicle-vintage-racer": {
+            "category": "cars",
+            "vehicleType": "auto de carreras clásico (juguete)",
+            "model": "Auto clásico de carreras de juguete"
+          }
+        }
+      }
+    ]
+  },
+  "github": {
+    "repositories": [
+      {
+        "id": "khronos-gltf-sample-assets",
+        "name": "Khronos · glTF Sample Assets",
+        "repo": "KhronosGroup/glTF-Sample-Assets",
+        "branch": "main",
+        "mode": "khronos-index",
+        "names": {
+          "ToyCar": {
+            "category": "other",
+            "vehicleType": "auto de juguete",
+            "model": "Auto de juguete (Toy Car)"
+          },
+          "CarConcept": { "category": "cars", "vehicleType": "concepto", "model": "Car Concept" },
+          "CesiumMilkTruck": {
+            "category": "trucks",
+            "vehicleType": "camión",
+            "model": "Cesium Milk Truck"
+          },
+          "VirtualCity": {
+            "category": "other",
+            "vehicleType": "escena urbana",
+            "model": "Virtual City"
+          }
+        }
+      },
+      {
+        "id": "khronos-gltf-sample-models",
+        "name": "Khronos · glTF Sample Models (archivado)",
+        "repo": "KhronosGroup/glTF-Sample-Models",
+        "branch": "main",
+        "mode": "readme-license",
+        "models": [
+          {
+            "path": "2.0/Buggy",
+            "file": "glTF-Binary/Buggy.glb",
+            "model": "Buggy",
+            "category": "other",
+            "vehicleType": "buggy"
+          }
+        ]
+      },
+      {
+        "id": "kenney-starter-kit-racing",
+        "name": "Kenney · Starter Kit Racing (GitHub)",
+        "repo": "KenneyNL/Starter-Kit-Racing",
+        "branch": "main",
+        "mode": "tree",
+        "paths": ["models/"],
+        "author": "Kenney (www.kenney.nl)",
+        "licenseEvidence": {
+          "file": "README.md",
+          "pattern": "3D models[^\\n]*CC0",
+          "spdx": "CC0-1.0"
+        },
+        "names": {
+          "vehicle-motorcycle": {
+            "category": "motorcycles",
+            "vehicleType": "motocicleta",
+            "model": "Motocicleta"
+          },
+          "vehicle-truck-green": {
+            "category": "trucks",
+            "vehicleType": "camión",
+            "model": "Camión verde"
+          },
+          "vehicle-truck-purple": {
+            "category": "trucks",
+            "vehicleType": "camión",
+            "model": "Camión violeta"
+          },
+          "vehicle-truck-red": {
+            "category": "trucks",
+            "vehicleType": "camión",
+            "model": "Camión rojo"
+          },
+          "vehicle-truck-yellow": {
+            "category": "trucks",
+            "vehicleType": "camión",
+            "model": "Camión amarillo"
+          }
+        }
+      },
+      {
+        "id": "threejs-examples",
+        "name": "three.js · ejemplos",
+        "repo": "mrdoob/three.js",
+        "branch": "dev",
+        "mode": "explicit",
+        "files": [
+          {
+            "path": "examples/models/gltf/ferrari.glb",
+            "model": "Ferrari 458 Italia",
+            "brand": "Ferrari",
+            "category": "cars",
+            "vehicleType": "deportivo",
+            "note": "El repositorio solo acredita al autor (vicent091036) en examples/webgl_materials_car.html; no declara una licencia para el modelo."
+          }
+        ]
+      }
+    ],
+    "search": {
+      "enabled": true,
+      "maxResultsPerQuery": 15,
+      "queries": [
+        "car 3d model license:cc0-1.0",
+        "car 3d model license:cc-by-4.0",
+        "vehicle glb license:cc0-1.0",
+        "vehicle gltf license:cc-by-4.0",
+        "low poly car license:cc0-1.0"
+      ]
+    }
+  },
+  "public_3d": {
+    "polyhaven": { "enabled": true, "levels": { "HIGH": "2k", "LOW": "1k" } },
+    "sketchfab": {
+      "enabled": true,
+      "tokenEnv": "SKETCHFAB_API_TOKEN",
+      "licenses": ["cc0", "by", "by-sa"],
+      "delayMs": 1100,
+      "maxResultsPerVehicle": 6
+    }
+  }
+}

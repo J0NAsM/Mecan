@@ -1,0 +1,78 @@
+{
+  "id": "generico-auto-de-carreras-verde-kenney-racing-kit-2-0",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Auto de carreras verde",
+  "version": "Kenney Racing Kit (2.0)",
+  "year": null,
+  "category": "cars",
+  "vehicleType": "auto de carreras",
+  "file": "models/cars/generico/auto-de-carreras-verde/kenney-racing-kit-2-0/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": null,
+  "sizeBytes": 106068,
+  "triangles": 1430,
+  "vertices": 5520,
+  "stats": {
+    "triangles": 1430,
+    "vertices": 5520,
+    "primitives": 11,
+    "meshes": 5,
+    "materials": 4,
+    "textures": 0,
+    "images": 0,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_materials_unlit"
+    ]
+  },
+  "dimensions": {
+    "x": 0.729,
+    "y": 0.397,
+    "z": 1.346,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/cars/generico/auto-de-carreras-verde/kenney-racing-kit-2-0/model.glb"
+  },
+  "thumbnail": "models/cars/generico/auto-de-carreras-verde/kenney-racing-kit-2-0/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-auto-de-carreras-verde-kenney-racing-kit-2-0.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Racing Kit",
+  "url": "https://kenney.nl/assets/racing-kit",
+  "sources": [
+    {
+      "key": "kenney-racing-kit:Models/GLTF format/raceCarGreen.glb",
+      "name": "Kenney · Racing Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/racing-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/racing-kit/933b8fd9fd-1677580949/kenney_racing-kit.zip",
+      "originalPath": "Models/GLTF format/raceCarGreen.glb",
+      "downloadedAt": "2026-09-28T15:45:29.186Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:29.186Z",
+  "sha256": "9d5fe01fb3dd1cc656238a669a79764aeaa45cecbd36cbd7321a38ec04b2cb55",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.561Z",
+    "issues": []
+  }
+}

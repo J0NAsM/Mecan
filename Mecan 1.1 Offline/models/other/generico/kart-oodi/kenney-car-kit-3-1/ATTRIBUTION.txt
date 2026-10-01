@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney Car Kit (3.1)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Car Kit: https://kenney.nl/assets/car-kit (Models/GLB format/kart-oodi.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: aa4e13e7d88e840d8c1af10a5475991651c0958564733620f8f8d9c3e45f214e

@@ -6,7 +6,9 @@ import {
   assertEntitlement,
   can,
 } from '../tenancy.js';
-import { required, optional, email, integer, positive } from '../validation.js';
+import { required, optional, email, integer, positive, oneOf } from '../validation.js';
+import { BODY_TYPE_CODES } from '../vehicle-diagnosis.js';
+import { modelEntry } from './vehicle-models.js';
 import { AppError } from '../errors.js';
 import { moneyAmount, tenantCurrency } from '../money.js';
 
@@ -18,7 +20,8 @@ export const catalogs = {
     create: 'customers.create',
     fields: [
       ['name', 'Nombre', 'text', true],
-      ['document', 'Documento / RUC'],
+      ['document', 'C.I. / Documento'],
+      ['tax_id', 'RUC'],
       ['phone', 'Teléfono', 'tel'],
       ['email', 'Email', 'email'],
       ['address', 'Dirección'],
@@ -39,6 +42,9 @@ export const catalogs = {
       ['vin', 'VIN / Chasis'],
       ['color', 'Color'],
       ['odometer', 'Kilometraje', 'number'],
+      ['body_type', 'Tipo de carrocería', 'bodyType'],
+      ['model_3d_id', 'Modelo 3D (biblioteca local)', 'model3d'],
+      ['notes', 'Observaciones', 'textarea'],
     ],
   },
   services: {
@@ -129,7 +135,16 @@ export async function updateCatalog(db, context, kind, recordId, input, meta = {
               })
             : positive(value || 0, label, { allowZero: true });
       else if (type === 'email') values[name] = value ? email(value) : null;
-      else
+      else if (type === 'bodyType')
+        values[name] = value ? oneOf(value, BODY_TYPE_CODES, 'El tipo de carrocería') : null;
+      else if (type === 'model3d') {
+        // Conservar la asignación vigente aunque su archivo no esté en esta biblioteca local.
+        if (value && value !== record.model_3d_id && !modelEntry(value))
+          throw new AppError('El modelo 3D elegido no está en la biblioteca local.', {
+            status: 422,
+          });
+        values[name] = value || null;
+      } else
         values[name] = mandatory
           ? required(value, label, { max: 200 })
           : optional(value, { max: type === 'textarea' ? 3000 : 500 });

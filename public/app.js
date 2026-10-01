@@ -22,6 +22,10 @@ document.addEventListener('keydown', (event) => {
 document
   .querySelectorAll('[data-print]')
   .forEach((button) => button.addEventListener('click', () => window.print()));
+// Sin conexión, un logo configurado por URL externa no carga: se oculta y queda el nombre del taller.
+document
+  .querySelectorAll('img.document-logo')
+  .forEach((image) => image.decode().catch(() => (image.hidden = true)));
 window.addEventListener('pageshow', () =>
   document.querySelectorAll('button[data-original-text]').forEach((button) => {
     button.disabled = false;

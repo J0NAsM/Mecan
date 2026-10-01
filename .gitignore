@@ -18,3 +18,18 @@ export-*.json
 *.before-restore-*
 legal/
 certificates/
+
+# Distribución portátil «Mecan 1.1 Offline»: la copia empaquetada, los binarios, la base local
+# y la caché de descargas se generan. Se versionan las herramientas, el catálogo, las fichas y
+# atribuciones de cada modelo; los archivos 3D (GLB) y las miniaturas no se versionan: viajan con
+# la carpeta y se recuperan con «npm run models:collect» (ver Mecan 1.1 Offline/README.md).
+Mecan 1.1 Offline/app/
+Mecan 1.1 Offline/runtime/
+Mecan 1.1 Offline/data/
+Mecan 1.1 Offline/cache/
+Mecan 1.1 Offline/catalog/history/
+Mecan 1.1 Offline/models/**/*.glb
+Mecan 1.1 Offline/models/**/*.webp
+Mecan 1.1 Offline/thumbnails/*.webp
+Mecan 1.1 Offline/Iniciar Mecan 1.1 Offline.cmd
+Mecan 1.1 Offline/Respaldar Mecan 1.1 Offline.cmd

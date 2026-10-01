@@ -1,0 +1,15 @@
+Modelo genérico
+
+Versión/origen: Kenney Racing Kit (2.0)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Racing Kit: https://kenney.nl/assets/racing-kit (Models/GLTF format/raceCarRed.glb)
+
+SHA-256: 1098f37bd5bfad5e6d46266b57f146e0f1f8ea96193df03653966d58f0692b3c

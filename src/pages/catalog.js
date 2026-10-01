@@ -15,6 +15,8 @@ import {
 } from '../ui.js';
 import { can } from '../tenancy.js';
 import { id } from '../utils.js';
+import { BODY_TYPES } from '../vehicle-diagnosis.js';
+import { modelOptions } from '../services/vehicle-models.js';
 
 export async function catalogEditPage(db, req, kind, recordId) {
   const definition = catalogs[kind],
@@ -35,6 +37,28 @@ export async function catalogEditPage(db, req, kind, recordId) {
                 .all(req.context.tenant.id)
             ).map((c) => [c.id, c.name]);
             return select(name, label, options, row[name], { required });
+          }
+          if (type === 'bodyType')
+            return select(
+              name,
+              label,
+              [
+                ['', 'Sin definir'],
+                ...BODY_TYPES.map((b) => [b.code, `${b.label} · ${b.doors} puertas`]),
+              ],
+              row[name] || '',
+            );
+          if (type === 'model3d') {
+            const options = modelOptions();
+            // Una asignación cuyo archivo falta en esta biblioteca se muestra y se conserva al guardar.
+            if (row[name] && !options.some(([id]) => id === row[name]))
+              options.unshift([row[name], `${row[name]} (no disponible en la biblioteca local)`]);
+            return select(
+              name,
+              label,
+              [['', 'Automático según marca, modelo y año'], ...options],
+              row[name] || '',
+            );
           }
           return type === 'textarea'
             ? textarea(name, label, row[name] || '')

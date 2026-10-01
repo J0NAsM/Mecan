@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney · Starter Kit Racing (GitHub)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Starter Kit Racing (GitHub): https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-yellow.glb (models/vehicle-truck-yellow.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: c7995e470700a6d9af1a1777559b7b46efcdbd828bfc33461a984c703e964822

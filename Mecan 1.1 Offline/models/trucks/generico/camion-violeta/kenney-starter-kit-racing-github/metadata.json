@@ -1,0 +1,78 @@
+{
+  "id": "generico-camion-violeta-kenney-starter-kit-racing-github",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Camión violeta",
+  "version": "Kenney · Starter Kit Racing (GitHub)",
+  "year": null,
+  "category": "trucks",
+  "vehicleType": "camión",
+  "file": "models/trucks/generico/camion-violeta/kenney-starter-kit-racing-github/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 88644,
+  "triangles": 814,
+  "vertices": 1392,
+  "stats": {
+    "triangles": 814,
+    "vertices": 1392,
+    "primitives": 6,
+    "meshes": 6,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.5,
+    "y": 1.3,
+    "z": 2.8,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/trucks/generico/camion-violeta/kenney-starter-kit-racing-github/model.glb"
+  },
+  "thumbnail": "models/trucks/generico/camion-violeta/kenney-starter-kit-racing-github/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-camion-violeta-kenney-starter-kit-racing-github.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "README.md: «3D Models & sounds _(CC0»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Starter Kit Racing (GitHub)",
+  "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-purple.glb",
+  "sources": [
+    {
+      "key": "kenney-starter-kit-racing:models/vehicle-truck-purple.glb",
+      "name": "Kenney · Starter Kit Racing (GitHub)",
+      "adapter": "github",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-purple.glb",
+      "downloadUrl": null,
+      "originalPath": "models/vehicle-truck-purple.glb",
+      "downloadedAt": "2026-09-28T15:59:25.983Z",
+      "licenseEvidence": [
+        "README.md: «3D Models & sounds _(CC0»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:59:25.983Z",
+  "sha256": "374f9723dbb8a4d3454407722f2e9ba94fe5a888ec994b1141153e42184c2db0",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.931Z",
+    "issues": []
+  }
+}

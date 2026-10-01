@@ -3,8 +3,11 @@ import { AppError } from '../errors.js';
 import { pageHead, esc, shortDate, money, dataTable } from '../ui.js';
 import { oneOf } from '../validation.js';
 import { audit } from '../domain.js';
+import { WORKSHOP_DOCUMENTS, printWorkshopDocument } from './workshop-documents.js';
 
 export async function printableOrder(db, req, orderId, type) {
+  // Hojas operativas del taller (materiales, diagnóstico visual, presupuesto del servicio).
+  if (Object.hasOwn(WORKSHOP_DOCUMENTS, type)) return printWorkshopDocument(db, req, orderId, type);
   oneOf(type, ['estimate', 'invoice', 'delivery'], 'El documento');
   assertPermission(req.context, type === 'invoice' ? 'billing.print' : 'orders.print');
   const t = req.context.tenant,

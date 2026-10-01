@@ -32,7 +32,11 @@
     "desktop:start": "node scripts/start-desktop.js",
     "tunnel": "node scripts/tunnel.js",
     "icon": "node scripts/generate-icon.js",
-    "mobile:publish": "node movile/scripts/publish-release.js"
+    "mobile:publish": "node movile/scripts/publish-release.js",
+    "vendor:three": "node scripts/vendor-three.js",
+    "models:collect": "node \"Mecan 1.1 Offline/tools/downloader/collect.js\"",
+    "models:validate": "node \"Mecan 1.1 Offline/tools/validator/validate.js\"",
+    "offline:package": "node scripts/offline-package.js"
   },
   "dependencies": {
     "nodemailer": "10.0.0",
@@ -40,6 +44,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",
-    "prettier": "3.9.6"
+    "prettier": "3.9.6",
+    "three": "0.160.0"
   }
 }

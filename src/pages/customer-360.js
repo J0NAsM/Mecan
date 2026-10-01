@@ -16,6 +16,10 @@ import {
 import { AppError } from '../errors.js';
 import { ORDER_LABELS } from '../workflow.js';
 import { can } from '../tenancy.js';
+import { vehicleDamageHistory } from '../services/damage-assessments.js';
+import { resolveVehicleModel } from '../services/vehicle-models.js';
+import { vehicleDamageHistoryCard, vehicleModelCard } from './diagnosis.js';
+import { bodyTypeLabel } from '../vehicle-diagnosis.js';
 
 export async function customerDetailPage(db, req, customerId) {
   const t = req.context.tenant.id;
@@ -236,6 +240,16 @@ export async function vehicleDetailPage(db, req, vehicleId) {
         )
         .all(t, vehicle.id, t, vehicle.id)
     : [];
+  const damageHistory = can(req.context, 'orders.view')
+    ? await vehicleDamageHistory(db, t, vehicle.id)
+    : [];
+  const model3d = resolveVehicleModel({
+    make: vehicle.make,
+    model: vehicle.model,
+    year: vehicle.year,
+    bodyType: vehicle.body_type,
+    model3dId: vehicle.model_3d_id,
+  });
   const timeline = [
     ...orders.map((x) => ({
       date: x.created_at,
@@ -293,7 +307,7 @@ export async function vehicleDetailPage(db, req, vehicleId) {
           ]
         : []),
     ]) +
-    `<div class="dashboard-grid">${can(req.context, 'orders.view') ? card('Historial del vehículo', timeline.length ? `<ul class="timeline">${timeline.map((x) => `<li><a href="${x.href}"><b>${esc(x.title)}</b></a><small>${shortDate(x.date)}</small><p>${esc(x.text)}</p></li>`).join('')}</ul>` : empty('Sin historial', 'Las recepciones, diagnósticos y reparaciones aparecerán aquí.')) : ''}<aside>${card('Identificación', `<div class="stat-list">${can(req.context, 'customers.view') ? `<div><span>Propietario</span><a href="/workshop/customers/${vehicle.customer_id}"><b>${esc(vehicle.customer)}</b></a></div>` : ''}<div><span>VIN / Chasis</span><b>${esc(vehicle.vin || '—')}</b></div><div><span>Color</span><b>${esc(vehicle.color || '—')}</b></div><div><span>Año</span><b>${esc(vehicle.year || '—')}</b></div></div>`)}${
+    `<div class="dashboard-grid">${can(req.context, 'orders.view') ? vehicleDamageHistoryCard(damageHistory) + card('Historial del vehículo', timeline.length ? `<ul class="timeline">${timeline.map((x) => `<li><a href="${x.href}"><b>${esc(x.title)}</b></a><small>${shortDate(x.date)}</small><p>${esc(x.text)}</p></li>`).join('')}</ul>` : empty('Sin historial', 'Las recepciones, diagnósticos y reparaciones aparecerán aquí.')) : ''}<aside>${card('Identificación', `<div class="stat-list">${can(req.context, 'customers.view') ? `<div><span>Propietario</span><a href="/workshop/customers/${vehicle.customer_id}"><b>${esc(vehicle.customer)}</b></a></div>` : ''}<div><span>VIN / Chasis</span><b>${esc(vehicle.vin || '—')}</b></div><div><span>Color</span><b>${esc(vehicle.color || '—')}</b></div><div><span>Año</span><b>${esc(vehicle.year || '—')}</b></div><div><span>Carrocería</span><b>${esc(vehicle.body_type ? bodyTypeLabel(vehicle.body_type) : 'Sin definir')}</b></div></div>${vehicle.notes ? `<p class="preserve-lines">${esc(vehicle.notes)}</p>` : ''}`)}${vehicleModelCard(model3d)}${
       files.length && can(req.context, 'documents.view')
         ? card(
             'Fotos y documentos',

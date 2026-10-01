@@ -18,6 +18,8 @@ const files = [
   ...javascriptFiles('scripts'),
   ...javascriptFiles('public'),
   ...(fs.existsSync('movile/scripts') ? javascriptFiles('movile/scripts') : []),
+  // Herramientas de la biblioteca 3D local; app/ y runtime/ son copias generadas por el paquete.
+  ...(fs.existsSync('Mecan 1.1 Offline/tools') ? javascriptFiles('Mecan 1.1 Offline/tools') : []),
 ];
 for (const file of files) {
   const checked = spawnSync(process.execPath, ['--check', file], { stdio: 'inherit' });
@@ -27,6 +29,8 @@ for (const required of [
   'public/app.css',
   'public/app.js',
   'public/mecan.ico',
+  'public/vendor/three/three.module.min.js',
+  'public/diagnosis3d/studio.js',
   'README.md',
   '.env.example',
 ]) {

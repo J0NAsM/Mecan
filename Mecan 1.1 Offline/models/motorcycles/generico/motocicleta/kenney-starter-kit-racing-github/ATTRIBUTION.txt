@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney · Starter Kit Racing (GitHub)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Starter Kit Racing (GitHub): https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-motorcycle.glb (models/vehicle-motorcycle.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: c23b117bd96a6bac5b747897c36ff06f9acaf7c25b292faa5c4815bcc6cc5bb4

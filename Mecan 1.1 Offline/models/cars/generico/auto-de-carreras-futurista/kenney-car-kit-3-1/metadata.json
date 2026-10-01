@@ -1,0 +1,78 @@
+{
+  "id": "generico-auto-de-carreras-futurista-kenney-car-kit-3-1",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Auto de carreras futurista",
+  "version": "Kenney Car Kit (3.1)",
+  "year": null,
+  "category": "cars",
+  "vehicleType": "auto de carreras",
+  "file": "models/cars/generico/auto-de-carreras-futurista/kenney-car-kit-3-1/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 185464,
+  "triangles": 2068,
+  "vertices": 3198,
+  "stats": {
+    "triangles": 2068,
+    "vertices": 3198,
+    "primitives": 5,
+    "meshes": 5,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.2,
+    "y": 0.833,
+    "z": 2.66,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/cars/generico/auto-de-carreras-futurista/kenney-car-kit-3-1/model.glb"
+  },
+  "thumbnail": "models/cars/generico/auto-de-carreras-futurista/kenney-car-kit-3-1/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-auto-de-carreras-futurista-kenney-car-kit-3-1.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Car Kit",
+  "url": "https://kenney.nl/assets/car-kit",
+  "sources": [
+    {
+      "key": "kenney-car-kit:Models/GLB format/race-future.glb",
+      "name": "Kenney · Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "originalPath": "Models/GLB format/race-future.glb",
+      "downloadedAt": "2026-09-28T15:45:28.929Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:28.929Z",
+  "sha256": "fff9a980e7747873c6a1bee3a4d157f4125ceae3634099ecea8cbe125b1b6da5",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.534Z",
+    "issues": []
+  }
+}

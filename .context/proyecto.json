@@ -17,12 +17,12 @@
     "movile/build.gradle",
     "movile/app/build.gradle"
   ],
-  "LAST_CONTEXT_UPDATE": "2026-09-14",
+  "LAST_CONTEXT_UPDATE": "2026-09-28",
   "LAST_VALIDATION": {
-    "date": "NO DETERMINADO",
-    "revision": "NO DETERMINADO",
-    "command": "NO DETERMINADO",
-    "result": "NO DETERMINADO"
+    "date": "2026-09-28",
+    "revision": "4a4bc05 + cambios sin commit (diagnóstico 3D y Mecan 1.1 Offline)",
+    "command": "npm run build; node --test --test-concurrency=1; node --test integration/postgres.spec.js; playwright test (e2e); recorrido Chromium del diagnóstico 3D; Mecan 1.1 Offline/tools/launcher/start.js --check",
+    "result": "Clúster PostgreSQL 18.6 desechable: build OK (109 JS); unitarias 78/78; integración 10/10 aislada (tras la batería completa la limpieza DROP DATABASE agotó el statement timeout 2 de 3 veces); e2e 15/16 (el caso móvil de operación completa superó su límite de 90 s bajo carga y pasó al repetirse aislado); paquete offline 43/43 modelos y 3 migraciones."
   },
   "LAST_DEPLOY": "NO DETERMINADO",
   "EXTERNAL_DEPENDENCIES": "Node >=24, PostgreSQL, correo y almacenamiento persistente.",
@@ -32,7 +32,7 @@
     ".github/workflows/quality.yml"
   ],
   "SOURCE_HASHES": {
-    "package.json": "dba7bb70635b80489beefb2cc89eb7d019cb00f4b7c85037f137adbe649ae1f6",
+    "package.json": "f302c357d6a0fc5d4d9d4374f66b5289fc72105b67e4d7ada0f28c508eaae8d0",
     "movile/build.gradle": "9a497d8eee0e4abdd604d97921338c4ce23046f777fa6ad2ee255a369a4c02df",
     "movile/app/build.gradle": "a5ceeeda1dc457cfaa78418fdf219933b702a11eb89bc0abae392ed4080656f2",
     "compose.yaml": "a6df56457a66edd4c5b7d3e1ac9378c778e5d4894dd50cd34120e14eaea308d9",

@@ -31,6 +31,7 @@ Los archivos .env reales se conservan fuera del contexto y deben estar ignorados
 | EMAIL_TRANSPORT | Configuración específica; consultar el consumidor y las fuentes indicadas | NO DETERMINADO | NO DETERMINADO; verificar modo de ejecución | .env.example |
 | HOST | Configuración específica; consultar el consumidor y las fuentes indicadas | NO DETERMINADO | NO DETERMINADO; verificar modo de ejecución | .env, .env.example |
 | LOG_LEVEL | Configuración específica; consultar el consumidor y las fuentes indicadas | NO DETERMINADO | NO DETERMINADO; verificar modo de ejecución | .env, .env.example |
+| MODEL_LIBRARY_PATH | Carpeta de la biblioteca local de modelos 3D («Mecan 1.1 Offline»); solo lectura | "./Mecan 1.1 Offline" | No; sin ella el diagnóstico usa carrocerías paramétricas y marca 3D_NOT_AVAILABLE | .env.example, src/config.js |
 | MOBILE_RELEASES_PATH | Configuración específica; consultar el consumidor y las fuentes indicadas | NO DETERMINADO | NO DETERMINADO; verificar modo de ejecución | .env.example |
 | NODE_ENV | Configuración específica; consultar el consumidor y las fuentes indicadas | NO DETERMINADO | NO DETERMINADO; verificar modo de ejecución | .env, .env.example |
 | NOTIFICATION_WEBHOOK_SECRET | Configuración específica; consultar el consumidor y las fuentes indicadas | REEMPLAZAR_LOCALMENTE | NO DETERMINADO; verificar modo de ejecución | .env.example |

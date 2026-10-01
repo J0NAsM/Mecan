@@ -7,7 +7,7 @@ import { DatabaseSync, backup } from 'node:sqlite';
 import { openDatabase } from './sqlite-db.js';
 import { financialIntegrityIssues } from '../../src/services/financial-integrity.js';
 import { quoteIdentifier } from '../../src/postgres/database.js';
-import { migratePostgres } from '../../src/postgres/migrate.js';
+import { migratePostgres, postBaselineAdditions } from '../../src/postgres/migrate.js';
 
 const legacyVersions = [
   '001_initial',
@@ -70,6 +70,8 @@ export async function importLegacyDatabase(db, sourceFile) {
       return { table, columns: columns.map((column) => column.name), primaryKey };
     });
     await migratePostgres(db);
+    // Tables/columns added after the legacy schema start empty or with their defaults.
+    const additions = postBaselineAdditions();
     return await db.transaction(
       async () => {
         const targetTables = (
@@ -79,7 +81,11 @@ export async function importLegacyDatabase(db, sourceFile) {
           )
         )
           .map((row) => row.table_name)
-          .filter((table) => !['schema_migrations', 'legacy_imports'].includes(table));
+          .filter(
+            (table) =>
+              !['schema_migrations', 'legacy_imports'].includes(table) &&
+              !additions.tables.has(table),
+          );
         if (JSON.stringify(targetTables) !== JSON.stringify(tables))
           throw new Error('El esquema destino no coincide con el origen; no se importaron datos.');
         await db.query(
@@ -108,7 +114,9 @@ export async function importLegacyDatabase(db, sourceFile) {
               'SELECT column_name FROM information_schema.columns WHERE table_schema=$1 AND table_name=$2 ORDER BY ordinal_position',
               [db.schema, table],
             )
-          ).map((column) => column.column_name);
+          )
+            .map((column) => column.column_name)
+            .filter((column) => !additions.columns.get(table)?.has(column));
           if (JSON.stringify(targetColumns) !== JSON.stringify(columns))
             throw new Error('Las columnas del destino no coinciden: ' + table);
           rowCounts[table] = 0;

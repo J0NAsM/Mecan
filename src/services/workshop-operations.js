@@ -15,6 +15,7 @@ import { roundMoney, moneyAmount, tenantCurrency } from '../money.js';
 import { reservedStock } from './inventory.js';
 import { tenantDateTime, paymentTimestamp } from '../time.js';
 import { allocateNumber } from './document-sequences.js';
+import { VEHICLE_PART_CODES } from '../vehicle-diagnosis.js';
 
 async function transaction(db, operation) {
   try {
@@ -304,116 +305,131 @@ export async function addEstimateItem(db, context, orderId, input, meta = {}) {
     assertTenantWritable(context);
     const order = await tenantRow(db, 'work_orders', orderId, context.tenant.id, 'Orden');
     assertOrderState(order, ['ESTIMATE'], 'preparar el presupuesto');
-    return await transaction(db, async () => {
-      let estimate = await db
-        .prepare(
-          "SELECT * FROM estimates WHERE tenant_id=? AND work_order_id=? AND status='DRAFT' ORDER BY version DESC LIMIT 1",
-        )
-        .get(context.tenant.id, order.id);
-      if (!estimate) {
-        const estimateId = id(),
-          number = await allocateNumber(db, context.tenant.id, 'ESTIMATE');
-        await db
-          .prepare(
-            `INSERT INTO estimates (id,tenant_id,work_order_id,number,version,status,valid_until,created_by,created_at,updated_at)
-      VALUES (?,?,?,?,1,'DRAFT',?,?,?,?)`,
-          )
-          .run(
-            estimateId,
-            context.tenant.id,
-            order.id,
-            number,
-            input.validUntil ? isoDate(input.validUntil) : addDays(now(), 7),
-            context.user.user_id,
-            now(),
-            now(),
-          );
-        estimate = await db.prepare('SELECT * FROM estimates WHERE id=?').get(estimateId);
-      }
-      const type = oneOf(
-        input.itemType,
-        ['LABOR', 'PART', 'SERVICE', 'OTHER'],
-        'El tipo de concepto',
-      );
-      const quantity = positive(input.quantity || 1, 'La cantidad');
-      if (input.unitCost !== undefined) assertPermission(context, 'billing.cost');
-      let unitCost = positive(input.unitCost || 0, 'El costo', { allowZero: true });
-      const currency = await tenantCurrency(db, context.tenant.id);
-      const unitPrice = moneyAmount(input.unitPrice, currency, 'El precio', { allowZero: true });
-      let inventoryId = null;
-      if (input.inventoryItemId) {
-        const item = await tenantRow(
-          db,
-          'inventory_items',
-          input.inventoryItemId,
-          context.tenant.id,
-          'Repuesto',
-        );
-        if (item.branch_id !== order.branch_id)
-          throw new AppError('El repuesto pertenece a otra sucursal.', { status: 409 });
-        inventoryId = item.id;
-        if (type === 'PART') unitCost = Number(item.cost);
-      }
-      if (type === 'PART' && !inventoryId)
-        throw new AppError(
-          'Selecciona un artículo de inventario para cada repuesto presupuestado.',
-          {
-            status: 422,
-          },
-        );
-      await db
-        .prepare(
-          `INSERT INTO estimate_items (id,tenant_id,estimate_id,item_type,description,inventory_item_id,quantity,unit_cost,unit_price,approved,total)
-      VALUES (?,?,?,?,?,?,?,?,?,1,?)`,
-        )
-        .run(
-          id(),
-          context.tenant.id,
-          estimate.id,
-          type,
-          required(input.description, 'La descripción', { max: 1000 }),
-          inventoryId,
-          quantity,
-          unitCost,
-          unitPrice,
-          roundMoney(quantity * unitPrice, currency),
-        );
-      const totals = await db
-        .prepare(
-          'SELECT COALESCE(SUM(total),0) subtotal FROM estimate_items WHERE tenant_id=? AND estimate_id=?',
-        )
-        .get(context.tenant.id, estimate.id);
-      const rate = Number(
-          (
-            await db
-              .prepare('SELECT tax_rate FROM tenant_settings WHERE tenant_id=?')
-              .get(context.tenant.id)
-          )?.tax_rate || 0,
-        ),
-        tax = roundMoney((Number(totals.subtotal) * rate) / 100, currency);
-      await db
-        .prepare(
-          'UPDATE estimates SET subtotal=?,tax=?,total=?,updated_at=?,tax_rate=? WHERE id=? AND tenant_id=?',
-        )
-        .run(
-          totals.subtotal,
-          tax,
-          roundMoney(Number(totals.subtotal) + tax, currency),
-          now(),
-          rate,
-          estimate.id,
-          context.tenant.id,
-        );
-      await audit(db, {
-        ...actorMeta(context, meta),
-        action: 'ESTIMATE_ITEM_ADDED',
-        entityType: 'estimate',
-        entityId: estimate.id,
-        after: { type, quantity, unitPrice },
-      });
-      return estimate.id;
-    });
+    return (await transaction(db, () => insertEstimateItem(db, context, order, input, meta)))
+      .estimateId;
   });
+}
+
+// Single estimate calculation shared by manual concepts and concepts generated from the damage
+// diagnosis. Callers hold withTenantWrite and already checked `orders.estimate` and the ESTIMATE state.
+export async function insertEstimateItem(db, context, order, input, meta = {}) {
+  let estimate = await db
+    .prepare(
+      "SELECT * FROM estimates WHERE tenant_id=? AND work_order_id=? AND status='DRAFT' ORDER BY version DESC LIMIT 1",
+    )
+    .get(context.tenant.id, order.id);
+  if (!estimate) {
+    const estimateId = id(),
+      number = await allocateNumber(db, context.tenant.id, 'ESTIMATE');
+    await db
+      .prepare(
+        `INSERT INTO estimates (id,tenant_id,work_order_id,number,version,status,valid_until,created_by,created_at,updated_at)
+  VALUES (?,?,?,?,1,'DRAFT',?,?,?,?)`,
+      )
+      .run(
+        estimateId,
+        context.tenant.id,
+        order.id,
+        number,
+        input.validUntil ? isoDate(input.validUntil) : addDays(now(), 7),
+        context.user.user_id,
+        now(),
+        now(),
+      );
+    estimate = await db.prepare('SELECT * FROM estimates WHERE id=?').get(estimateId);
+  }
+  const type = oneOf(input.itemType, ['LABOR', 'PART', 'SERVICE', 'OTHER'], 'El tipo de concepto');
+  const quantity = positive(input.quantity || 1, 'La cantidad');
+  if (input.unitCost !== undefined) assertPermission(context, 'billing.cost');
+  let unitCost = positive(input.unitCost || 0, 'El costo', { allowZero: true });
+  const currency = await tenantCurrency(db, context.tenant.id);
+  const unitPrice = moneyAmount(input.unitPrice, currency, 'El precio', { allowZero: true });
+  let inventoryId = null;
+  if (input.inventoryItemId) {
+    const item = await tenantRow(
+      db,
+      'inventory_items',
+      input.inventoryItemId,
+      context.tenant.id,
+      'Repuesto',
+    );
+    if (item.branch_id !== order.branch_id)
+      throw new AppError('El repuesto pertenece a otra sucursal.', { status: 409 });
+    inventoryId = item.id;
+    if (type === 'PART') unitCost = Number(item.cost);
+  }
+  if (type === 'PART' && !inventoryId)
+    throw new AppError('Selecciona un artículo de inventario para cada repuesto presupuestado.', {
+      status: 422,
+    });
+  const vehiclePart = input.vehiclePart
+    ? oneOf(input.vehiclePart, VEHICLE_PART_CODES, 'La pieza del vehículo')
+    : null;
+  const responsibleId = input.responsibleUserId || null;
+  if (
+    responsibleId &&
+    !(await db
+      .prepare("SELECT 1 FROM memberships WHERE tenant_id=? AND user_id=? AND status='ACTIVE'")
+      .get(context.tenant.id, responsibleId))
+  )
+    throw new AppError('El responsable seleccionado no pertenece al taller o está inactivo.', {
+      status: 422,
+    });
+  const itemId = id();
+  await db
+    .prepare(
+      `INSERT INTO estimate_items (id,tenant_id,estimate_id,item_type,description,inventory_item_id,quantity,unit_cost,unit_price,approved,total,vehicle_part,responsible_user_id,damage_part_id)
+  VALUES (?,?,?,?,?,?,?,?,?,1,?,?,?,?)`,
+    )
+    .run(
+      itemId,
+      context.tenant.id,
+      estimate.id,
+      type,
+      required(input.description, 'La descripción', { max: 1000 }),
+      inventoryId,
+      quantity,
+      unitCost,
+      unitPrice,
+      roundMoney(quantity * unitPrice, currency),
+      vehiclePart,
+      responsibleId,
+      input.damagePartId || null,
+    );
+  const totals = await db
+    .prepare(
+      'SELECT COALESCE(SUM(total),0) subtotal FROM estimate_items WHERE tenant_id=? AND estimate_id=?',
+    )
+    .get(context.tenant.id, estimate.id);
+  const rate = Number(
+      (
+        await db
+          .prepare('SELECT tax_rate FROM tenant_settings WHERE tenant_id=?')
+          .get(context.tenant.id)
+      )?.tax_rate || 0,
+    ),
+    tax = roundMoney((Number(totals.subtotal) * rate) / 100, currency);
+  await db
+    .prepare(
+      'UPDATE estimates SET subtotal=?,tax=?,total=?,updated_at=?,tax_rate=? WHERE id=? AND tenant_id=?',
+    )
+    .run(
+      totals.subtotal,
+      tax,
+      roundMoney(Number(totals.subtotal) + tax, currency),
+      now(),
+      rate,
+      estimate.id,
+      context.tenant.id,
+    );
+  await audit(db, {
+    ...actorMeta(context, meta),
+    action: 'ESTIMATE_ITEM_ADDED',
+    entityType: 'estimate',
+    entityId: estimate.id,
+    after: { type, quantity, unitPrice },
+  });
+  return { estimateId: estimate.id, itemId };
 }
 
 export async function sendEstimate(db, context, orderId, meta = {}) {
@@ -496,12 +512,13 @@ export async function approveEstimate(db, context, orderId, input, meta = {}) {
         .all(context.tenant.id, estimate.id)) {
         await db
           .prepare(
-            `INSERT INTO work_order_labor (id,tenant_id,work_order_id,description,hours,hourly_cost,hourly_price,total,created_by,created_at) VALUES (?,?,?,?,?,?,?,?,?,?)`,
+            `INSERT INTO work_order_labor (id,tenant_id,work_order_id,technician_user_id,description,hours,hourly_cost,hourly_price,total,created_by,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)`,
           )
           .run(
             id(),
             context.tenant.id,
             order.id,
+            item.responsible_user_id || null,
             item.description,
             item.quantity,
             item.unit_cost,

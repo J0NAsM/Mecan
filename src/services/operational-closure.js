@@ -99,7 +99,7 @@ export async function reviseEstimate(db, context, orderId, input) {
         .run(reason, now(), old.id, context.tenant.id);
       await db
         .prepare(
-          "INSERT INTO estimates (id,tenant_id,work_order_id,number,version,status,subtotal,tax,discount,total,valid_until,created_by,created_at,updated_at,tax_rate) VALUES (?,?,?,?,?,'DRAFT',?,?,?,?,?,?,?,?,?)",
+          "INSERT INTO estimates (id,tenant_id,work_order_id,number,version,status,subtotal,tax,discount,total,valid_until,created_by,created_at,updated_at,tax_rate,payment_terms,work_time_value,work_time_unit) VALUES (?,?,?,?,?,'DRAFT',?,?,?,?,?,?,?,?,?,?,?,?)",
         )
         .run(
           estimateId,
@@ -116,13 +116,16 @@ export async function reviseEstimate(db, context, orderId, input) {
           now(),
           now(),
           old.tax_rate,
+          old.payment_terms,
+          old.work_time_value,
+          old.work_time_unit,
         );
       for (const item of await db
         .prepare('SELECT * FROM estimate_items WHERE estimate_id=? AND tenant_id=?')
         .all(old.id, context.tenant.id))
         await db
           .prepare(
-            'INSERT INTO estimate_items (id,tenant_id,estimate_id,item_type,description,inventory_item_id,quantity,unit_cost,unit_price,approved,total) VALUES (?,?,?,?,?,?,?,?,?,1,?)',
+            'INSERT INTO estimate_items (id,tenant_id,estimate_id,item_type,description,inventory_item_id,quantity,unit_cost,unit_price,approved,total,vehicle_part,responsible_user_id,damage_part_id) VALUES (?,?,?,?,?,?,?,?,?,1,?,?,?,?)',
           )
           .run(
             id(),
@@ -135,6 +138,9 @@ export async function reviseEstimate(db, context, orderId, input) {
             item.unit_cost,
             item.unit_price,
             item.total,
+            item.vehicle_part,
+            item.responsible_user_id,
+            item.damage_part_id,
           );
       await db
         .prepare("UPDATE work_orders SET status='ESTIMATE' WHERE id=? AND tenant_id=?")

@@ -22,6 +22,8 @@ export const config = Object.freeze({
   storagePath: env('STORAGE_PATH', './storage'),
   backupPath: env('BACKUP_PATH', './backups'),
   mobileReleasesPath: env('MOBILE_RELEASES_PATH', './movile/releases'),
+  // Biblioteca local de modelos 3D (solo lectura en ejecución; nunca descarga de internet).
+  modelLibraryPath: env('MODEL_LIBRARY_PATH', './Mecan 1.1 Offline'),
   sessionDays: Number(env('SESSION_DAYS', '14')),
   seedDemo: bool('SEED_DEMO', !production),
   superadminEmail: env('SUPERADMIN_EMAIL', production ? '' : 'admin@mecan.local').toLowerCase(),

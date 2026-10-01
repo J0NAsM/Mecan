@@ -1,0 +1,78 @@
+{
+  "id": "generico-motocicleta-kenney-starter-kit-racing-github",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Motocicleta",
+  "version": "Kenney · Starter Kit Racing (GitHub)",
+  "year": null,
+  "category": "motorcycles",
+  "vehicleType": "motocicleta",
+  "file": "models/motorcycles/generico/motocicleta/kenney-starter-kit-racing-github/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 107336,
+  "triangles": 960,
+  "vertices": 1786,
+  "stats": {
+    "triangles": 960,
+    "vertices": 1786,
+    "primitives": 4,
+    "meshes": 4,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.09,
+    "y": 1.266,
+    "z": 2.435,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/motorcycles/generico/motocicleta/kenney-starter-kit-racing-github/model.glb"
+  },
+  "thumbnail": "models/motorcycles/generico/motocicleta/kenney-starter-kit-racing-github/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-motocicleta-kenney-starter-kit-racing-github.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "README.md: «3D Models & sounds _(CC0»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Starter Kit Racing (GitHub)",
+  "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-motorcycle.glb",
+  "sources": [
+    {
+      "key": "kenney-starter-kit-racing:models/vehicle-motorcycle.glb",
+      "name": "Kenney · Starter Kit Racing (GitHub)",
+      "adapter": "github",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-motorcycle.glb",
+      "downloadUrl": null,
+      "originalPath": "models/vehicle-motorcycle.glb",
+      "downloadedAt": "2026-09-28T15:59:25.431Z",
+      "licenseEvidence": [
+        "README.md: «3D Models & sounds _(CC0»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:59:25.431Z",
+  "sha256": "c23b117bd96a6bac5b747897c36ff06f9acaf7c25b292faa5c4815bcc6cc5bb4",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.665Z",
+    "issues": []
+  }
+}

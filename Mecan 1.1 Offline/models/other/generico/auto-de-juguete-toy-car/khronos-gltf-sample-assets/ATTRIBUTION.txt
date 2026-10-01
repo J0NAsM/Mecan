@@ -1,0 +1,16 @@
+Modelo genérico
+
+Versión/origen: Khronos glTF Sample Assets
+
+Autor: Guido Odendahl, Eric Chadwick
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Khronos · glTF Sample Assets: https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/ToyCar (Models/ToyCar/glTF-Binary/ToyCar.glb)
+
+SHA-256: 01a60862de55cd4b9f3acfab0b0def86451800f9c42467fcd61052c16cb9838c

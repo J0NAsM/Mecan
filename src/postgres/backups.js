@@ -47,26 +47,30 @@ async function pgCommand(name, args, env, options) {
       env: cliEnvironment(env, options),
       windowsHide: true,
       stdio: ['ignore', 'ignore', 'pipe'],
-      timeout: 600000,
     });
+    // Own timer instead of spawn's `timeout`: that one is only cleared on 'exit', which never
+    // fires when the executable is missing, and kept the process alive for ten minutes.
+    const timer = setTimeout(() => child.kill(), 600000);
     // Drain diagnostics without logging SQL, row data, file names or credentials.
-    child.stderr.resume();
-    child.on('error', () =>
+    child.stderr?.resume();
+    child.on('error', () => {
+      clearTimeout(timer);
       reject(
         new Error(
           `No se pudo ejecutar ${name}. Verifica POSTGRES_BIN_PATH y la instalación de clientes PostgreSQL.`,
         ),
-      ),
-    );
-    child.on('exit', (code) =>
-      code === 0
-        ? resolve()
-        : reject(
-            new Error(
-              `${name} no pudo completar la operación; código ${code ?? 'interrumpido'}. No se considera un respaldo/restauración verificado.`,
-            ),
+      );
+    });
+    child.on('exit', (code) => {
+      clearTimeout(timer);
+      if (code === 0) resolve();
+      else
+        reject(
+          new Error(
+            `${name} no pudo completar la operación; código ${code ?? 'interrumpido'}. No se considera un respaldo/restauración verificado.`,
           ),
-    );
+        );
+    });
   });
 }
 function regularPrivateFile(root, key, expectedSize) {

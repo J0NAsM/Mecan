@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-09-28T18:02:41.971Z",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attributionRequired": false,
+      "shareAlike": false,
+      "commercialUse": true,
+      "derivatives": true,
+      "redistributable": true,
+      "models": 43
+    }
+  ]
+}

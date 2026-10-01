@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney Toy Car Kit (1.2)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Toy Car Kit: https://kenney.nl/assets/toy-car-kit (Models/GLB format/vehicle-racer.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: 6467e4bc011a09b4335e86f9116bb09f849fda3cc58bd9b78c0b7a672017d8c5

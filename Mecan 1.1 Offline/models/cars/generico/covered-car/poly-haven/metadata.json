@@ -1,0 +1,80 @@
+{
+  "id": "generico-covered-car-poly-haven",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Covered Car",
+  "version": "Poly Haven",
+  "year": null,
+  "category": "cars",
+  "vehicleType": "automóvil",
+  "file": "models/cars/generico/covered-car/poly-haven/model.glb",
+  "format": "glb",
+  "originalFormat": "gltf",
+  "conversion": "glTF + buffers + texturas → GLB sin pérdida (geometría, UV, materiales y texturas intactos).",
+  "sizeBytes": 8052568,
+  "triangles": 12592,
+  "vertices": 10722,
+  "stats": {
+    "triangles": 12592,
+    "vertices": 10722,
+    "primitives": 5,
+    "meshes": 5,
+    "materials": 2,
+    "textures": 6,
+    "images": 3,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_materials_specular",
+      "KHR_materials_ior"
+    ]
+  },
+  "dimensions": {
+    "x": 1.789,
+    "y": 1.411,
+    "z": 4.38,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/cars/generico/covered-car/poly-haven/model.glb",
+    "LOW": "models/cars/generico/covered-car/poly-haven/model-low.glb"
+  },
+  "thumbnail": "models/cars/generico/covered-car/poly-haven/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-covered-car-poly-haven.webp",
+  "author": "MP (Poly Haven)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "polyhaven.com/license: todos los assets se publican bajo CC0."
+    }
+  ],
+  "attribution": "Modelo de Poly Haven (polyhaven.com), obtenido mediante su API pública.",
+  "trademarkNotice": null,
+  "source": "Poly Haven",
+  "url": "https://polyhaven.com/a/covered_car",
+  "sources": [
+    {
+      "key": "polyhaven:covered_car",
+      "name": "Poly Haven",
+      "adapter": "public_3d",
+      "url": "https://polyhaven.com/a/covered_car",
+      "downloadUrl": null,
+      "originalPath": "api.polyhaven.com/files/covered_car",
+      "downloadedAt": "2026-09-28T15:47:27.530Z",
+      "licenseEvidence": [
+        "polyhaven.com/license: todos los assets se publican bajo CC0."
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:47:27.530Z",
+  "sha256": "32389568f3bf78aa4af1ebd604b05fab01ce569cdf90e8d1d44302e817bb6ffd",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.604Z",
+    "issues": []
+  }
+}

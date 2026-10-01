@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney Car Kit (3.1)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Car Kit: https://kenney.nl/assets/car-kit (Models/GLB format/sedan.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: 110d595b02bb7fd22592a7c3c02ea26270056c0d6baac261095e1a2588149164

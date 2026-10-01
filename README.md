@@ -97,6 +97,24 @@ Antes de exponerlo hay que cerrar las cuentas con claves publicadas en el reposi
 (`admin@mecan.local` y los usuarios demo). Todo el procedimiento, incluida la exclusión que pide
 Windows Defender para el agente, está en [publicar con un túnel](docs/TUNEL.md).
 
+## Diagnóstico visual 3D y «Mecan 1.1 Offline»
+
+La orden de trabajo incluye un diagnóstico 3D por pieza (13 zonas, 8 carrocerías, gravedad, presión,
+zona pintada, costos y fotos) guardado en PostgreSQL, que alimenta el presupuesto existente y tres
+documentos imprimibles: control de materiales e insumos, presupuesto con diagnóstico visual y
+presupuesto del servicio. Detalle en [diagnóstico 3D](docs/DIAGNOSTICO_3D.md).
+
+`Mecan 1.1 Offline/` contiene la biblioteca local de modelos 3D (GLB con licencia verificada, catálogo,
+miniaturas e informe) y, tras `npm run offline:package`, una copia portátil de la aplicación con Node y
+PostgreSQL que funciona sin internet. Ver [su README](Mecan%201.1%20Offline/README.md).
+
+```powershell
+npm run vendor:three       # Three.js 0.160.0 local (sin CDN)
+npm run models:collect     # única fase con internet: recopila modelos con licencia reutilizable
+npm run models:validate    # revalida SHA-256 y estructura sin internet
+npm run offline:package    # arma la carpeta portátil
+```
+
 ## Aplicación móvil (Android)
 
 ```powershell
@@ -124,6 +142,8 @@ La cobranza SaaS implementada es manual con reactivación automática después d
 ## Documentación
 
 - [Arquitectura](docs/ARCHITECTURE.md)
+- [Diagnóstico 3D, presupuestos y documentos](docs/DIAGNOSTICO_3D.md)
+- [Mecan 1.1 Offline](Mecan%201.1%20Offline/README.md)
 - [Mapa funcional](docs/FUNCTIONAL_MAP.md)
 - [Seguridad](docs/SECURITY.md)
 - [Operación y recuperación](docs/OPERATIONS.md)

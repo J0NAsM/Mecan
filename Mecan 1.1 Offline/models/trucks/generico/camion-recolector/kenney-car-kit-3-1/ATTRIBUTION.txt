@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney Car Kit (3.1)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Car Kit: https://kenney.nl/assets/car-kit (Models/GLB format/garbage-truck.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: 11eefcc96475e6bf9e91b782b107df6425b71a87777dacc4b721c00f28786976

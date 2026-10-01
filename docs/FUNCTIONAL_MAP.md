@@ -17,6 +17,9 @@ Este mapa sustituye las declaraciones genéricas de «todo completo» del docume
 | Inspección y diagnóstico | Funcional y probado de extremo a extremo | Captura, secuencia, responsable e integración con presupuesto |
 | Presupuestos y autorizaciones | Funcional | Conceptos, precios, versión revisada antes de aprobación y autorización registrada. Lo aprobado queda protegido |
 | Orden, técnicos y tiempos | Funcional y probado de extremo a extremo | Asignar, iniciar, pausar/continuar, finalizar, evidencias y estados de trabajo |
+| Diagnóstico visual 3D | Funcional y probado localmente | 13 piezas, 8 carrocerías, mapa de daños persistido, mapa de calor, presión independiente, costos por pieza, fotos, historial por vehículo, paso idempotente al presupuesto. Sin prueba en la app Android |
+| Documentos del taller | Funcional | Control de materiales e insumos, presupuesto con diagnóstico visual y presupuesto del servicio desde la misma orden. Logo solo por URL HTTPS |
+| Biblioteca 3D offline | Funcional con modelos genéricos | 43 GLB CC0 validados por SHA-256; modelos de marca registrados como 3D_NOT_AVAILABLE o pendientes de token de Sketchfab |
 | Inventario | Funcional | Apertura, ajuste, reserva, liberación, consumo autorizado, devolución de consumo completo, traslado y costo promedio |
 | Compras y deuda a proveedores | Funcional | Solicitud de orden o reposición de stock, proveedor/costo acordado, compra, recepción y pago parcial transaccional |
 | Calidad, comprobantes, caja, cobros y entrega | Funcional y probado de extremo a extremo | No factura sin autorización/calidad; no cobra sobre saldo; pagos parciales, corrección auditada de registros erróneos y entrega con garantía. No ejecuta devoluciones bancarias |

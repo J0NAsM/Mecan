@@ -1,0 +1,78 @@
+{
+  "id": "generico-deportivo-de-juguete-kenney-toy-car-kit-1-2",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Deportivo de juguete",
+  "version": "Kenney Toy Car Kit (1.2)",
+  "year": null,
+  "category": "cars",
+  "vehicleType": "deportivo (juguete)",
+  "file": "models/cars/generico/deportivo-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 112272,
+  "triangles": 1068,
+  "vertices": 1884,
+  "stats": {
+    "triangles": 1068,
+    "vertices": 1884,
+    "primitives": 5,
+    "meshes": 5,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 0.55,
+    "y": 0.375,
+    "z": 0.875,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/cars/generico/deportivo-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+  },
+  "thumbnail": "models/cars/generico/deportivo-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-deportivo-de-juguete-kenney-toy-car-kit-1-2.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Toy Car Kit",
+  "url": "https://kenney.nl/assets/toy-car-kit",
+  "sources": [
+    {
+      "key": "kenney-toy-car-kit:Models/GLB format/vehicle-speedster.glb",
+      "name": "Kenney · Toy Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+      "originalPath": "Models/GLB format/vehicle-speedster.glb",
+      "downloadedAt": "2026-09-28T15:45:29.308Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:29.308Z",
+  "sha256": "bac5581384a1522eb9a468822b188dc5134fb17c9f29b2cd9c503447e4b7a766",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.615Z",
+    "issues": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "mecan-1-1-offline-models",
+  "private": true,
+  "type": "module",
+  "description": "Biblioteca local de modelos 3D de vehículos para Mecan 1.1 Offline",
+  "scripts": {
+    "collect": "node tools/downloader/collect.js",
+    "import": "node tools/importer/import-local.js",
+    "validate": "node tools/validator/validate.js",
+    "convert": "node tools/converter/convert.js"
+  }
+}

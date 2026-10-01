@@ -38,6 +38,12 @@ La audiencia de cada aviso requiere el permiso correspondiente; los cobros requi
 
 El respaldo programado ejecuta `pg_dump` en otro proceso usando una instantánea exportada. El vencimiento relee la suscripción después del bloqueo del tenant para no sobrescribir una renovación concurrente. Los resets se serializan por cuenta y se revalidan antes de consumir el enlace. Estas protecciones no equivalen a alta disponibilidad.
 
+## Diagnóstico visual 3D
+
+`src/routes/diagnosis.js` publica el estudio (`/workshop/orders/:id/diagnosis-3d`), su API JSON (`/damage-assessment`), el paso al presupuesto, la finalización y los archivos de la biblioteca local. `src/services/damage-assessments.js` valida, guarda con control de revisión y reutiliza `completeInspection`, `completeDiagnosis` e `insertEstimateItem`: no existe un segundo cálculo de presupuesto. Los documentos operativos (`src/pages/workshop-documents.js`) se sirven por la misma ruta de impresión que los existentes.
+
+El navegador (`public/diagnosis3d/`) construye carrocerías paramétricas con Three.js 0.160.0 local y reconstruye el mapa de daños desde los trazos guardados. `src/services/vehicle-models.js` lee la biblioteca «Mecan 1.1 Offline» solo desde disco, dentro de `MODEL_LIBRARY_PATH`, y marca `3D_NOT_AVAILABLE` cuando no hay modelo; nunca descarga en ejecución. Ver [diagnóstico 3D](DIAGNOSTICO_3D.md).
+
 ## Distribución móvil
 
 `src/routes/mobile.js` publica la aplicación Android: `/movil` es la página de descarga,

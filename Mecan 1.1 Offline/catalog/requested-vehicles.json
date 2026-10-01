@@ -1,0 +1,305 @@
+{
+  "_nota": "Vehículos que el taller necesita ver en 3D. Se buscan con prioridad y, si no existe un modelo con licencia reutilizable, quedan registrados como 3D_NOT_AVAILABLE. Editable sin modificar la aplicación.",
+  "vehicles": [
+    {
+      "brand": "Toyota",
+      "model": "Ractis",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Vitz",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Corolla",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Premio",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Allion",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Hilux",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Toyota",
+      "model": "RAV4",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Land Cruiser Prado",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Fortuner",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Probox",
+      "category": "vans",
+      "vehicleType": "furgoneta"
+    },
+    {
+      "brand": "Kia",
+      "model": "Picanto",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Kia",
+      "model": "Rio",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Kia",
+      "model": "Sportage",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Kia",
+      "model": "Sorento",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Accent",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "HB20",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Tucson",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Santa Fe",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Creta",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Gol",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Voyage",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Amarok",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Onix",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Prisma",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "S10",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Spin",
+      "category": "vans",
+      "vehicleType": "monovolumen"
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Tracker",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Frontier",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Nissan",
+      "model": "March",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Sentra",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Nissan",
+      "model": "X-Trail",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Nissan",
+      "model": "Tiida",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Ford",
+      "model": "Ranger",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Ford",
+      "model": "Ka",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Ford",
+      "model": "EcoSport",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Mitsubishi",
+      "model": "L200",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Mitsubishi",
+      "model": "Outlander",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Swift",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Suzuki",
+      "model": "Vitara",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Honda",
+      "model": "Fit",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Honda",
+      "model": "Civic",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Honda",
+      "model": "CR-V",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Fiat",
+      "model": "Strada",
+      "category": "pickups",
+      "vehicleType": "pickup"
+    },
+    {
+      "brand": "Fiat",
+      "model": "Mobi",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Renault",
+      "model": "Kwid",
+      "category": "cars",
+      "vehicleType": "hatchback"
+    },
+    {
+      "brand": "Renault",
+      "model": "Duster",
+      "category": "suv",
+      "vehicleType": "SUV"
+    },
+    {
+      "brand": "Renault",
+      "model": "Logan",
+      "category": "cars",
+      "vehicleType": "sedán"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "Sprinter",
+      "category": "vans",
+      "vehicleType": "furgoneta"
+    },
+    {
+      "brand": "Hyundai",
+      "model": "H-1",
+      "category": "vans",
+      "vehicleType": "furgoneta"
+    },
+    {
+      "brand": "Honda",
+      "model": "CG 150",
+      "category": "motorcycles",
+      "vehicleType": "motocicleta"
+    }
+  ]
+}

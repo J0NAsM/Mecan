@@ -73,8 +73,8 @@ test('PostgreSQL real: migración, importación íntegra, aislamiento y concurre
   try {
     assert.match((await db.get('SELECT version() version')).version, /PostgreSQL/);
     await t.test('migraciones atómicas, repetibles y esquema nativo completo', async () => {
-      assert.deepEqual(await migratePostgres(db), { migrations: 2 });
-      assert.deepEqual(await migratePostgres(db), { migrations: 2 });
+      assert.deepEqual(await migratePostgres(db), { migrations: 3 });
+      assert.deepEqual(await migratePostgres(db), { migrations: 3 });
       assert.equal(
         (
           await db.get(
@@ -82,7 +82,7 @@ test('PostgreSQL real: migración, importación íntegra, aislamiento y concurre
             [schema],
           )
         ).n,
-        74,
+        76,
       );
       assert.equal(
         (
@@ -91,7 +91,7 @@ test('PostgreSQL real: migración, importación íntegra, aislamiento y concurre
             [schema],
           )
         ).n,
-        184,
+        192,
       );
       assert.ok(
         (
@@ -450,8 +450,20 @@ test('PostgreSQL real: migración, importación íntegra, aislamiento y concurre
           await assert.rejects(verifyPostgresBackup(backup.directory), /modificado/);
         } finally {
           await restored?.close();
-          if (/^mecan_restore_[a-f0-9]{24}$/.test(restoreName))
-            await db.query('DROP DATABASE ' + quoteIdentifier(restoreName));
+          // DROP DATABASE waits for an immediate checkpoint; after a full suite it can outlast the
+          // application statement timeout, so this cleanup uses its own maintenance connection.
+          if (/^mecan_restore_[a-f0-9]{24}$/.test(restoreName)) {
+            const maintenance = createPostgresDatabase({
+              ...options,
+              max: 1,
+              statement_timeout: 300000,
+            });
+            try {
+              await maintenance.query('DROP DATABASE ' + quoteIdentifier(restoreName));
+            } finally {
+              await maintenance.close();
+            }
+          }
         }
       },
     );

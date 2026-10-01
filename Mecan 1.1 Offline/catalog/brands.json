@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-09-28T18:02:41.971Z",
+  "brands": [
+    {
+      "slug": "chevrolet",
+      "brand": "Chevrolet",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "fiat",
+      "brand": "Fiat",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "ford",
+      "brand": "Ford",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "generico",
+      "brand": "Genérico",
+      "generic": true,
+      "models": 43,
+      "categories": [
+        "cars",
+        "motorcycles",
+        "other",
+        "pickups",
+        "suv",
+        "trucks",
+        "vans"
+      ]
+    },
+    {
+      "slug": "honda",
+      "brand": "Honda",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "hyundai",
+      "brand": "Hyundai",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "kia",
+      "brand": "Kia",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "mercedes-benz",
+      "brand": "Mercedes-Benz",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "mitsubishi",
+      "brand": "Mitsubishi",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "nissan",
+      "brand": "Nissan",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "renault",
+      "brand": "Renault",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "suzuki",
+      "brand": "Suzuki",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "toyota",
+      "brand": "Toyota",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    },
+    {
+      "slug": "volkswagen",
+      "brand": "Volkswagen",
+      "generic": false,
+      "models": 0,
+      "categories": [],
+      "status": "3D_NOT_AVAILABLE"
+    }
+  ]
+}

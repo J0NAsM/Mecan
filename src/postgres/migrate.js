@@ -5,7 +5,24 @@ import { quoteIdentifier } from './database.js';
 const migrationFiles = [
   new URL('./migrations/001_baseline.sql', import.meta.url),
   new URL('./migrations/002_import_history.sql', import.meta.url),
+  new URL('./migrations/003_vehicle_damage_diagnosis.sql', import.meta.url),
 ];
+// The legacy SQLite schema ends at 002. Later migrations only add tables and nullable/defaulted
+// columns, declared with quoted identifiers so an import can recognise exactly those additions.
+const legacyBaseline = new Set(['001_baseline', '002_import_history']);
+export function postBaselineAdditions() {
+  const tables = new Set(),
+    columns = new Map();
+  for (const { id, sql } of postgresMigrations()) {
+    if (legacyBaseline.has(id)) continue;
+    for (const [, table] of sql.matchAll(/CREATE TABLE "([a-z_0-9]+)"/g)) tables.add(table);
+    for (const [, table, column] of sql.matchAll(
+      /ALTER TABLE "([a-z_0-9]+)" ADD COLUMN "([a-z_0-9]+)"/g,
+    ))
+      columns.set(table, new Set([...(columns.get(table) || []), column]));
+  }
+  return { tables, columns };
+}
 export function postgresMigrations() {
   return migrationFiles.map((file) => {
     const id = file.pathname

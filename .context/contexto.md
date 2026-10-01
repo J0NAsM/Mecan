@@ -26,6 +26,8 @@ No introducir React ni fallback SQLite: los .db antiguos son material legado. Ma
 - [README.md](<../README.md>)
 - [docs/ACCEPTANCE.md](<../docs/ACCEPTANCE.md>)
 - [docs/ARCHITECTURE.md](<../docs/ARCHITECTURE.md>)
+- [docs/DIAGNOSTICO_3D.md](<../docs/DIAGNOSTICO_3D.md>)
+- [Mecan 1.1 Offline/README.md](<../Mecan 1.1 Offline/README.md>)
 - [docs/FUNCTIONAL_MAP.md](<../docs/FUNCTIONAL_MAP.md>)
 - [docs/OPERATIONS.md](<../docs/OPERATIONS.md>)
 - [docs/PHASES.md](<../docs/PHASES.md>)

@@ -1,0 +1,78 @@
+{
+  "id": "generico-camion-de-bomberos-kenney-car-kit-3-1",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Camión de bomberos",
+  "version": "Kenney Car Kit (3.1)",
+  "year": null,
+  "category": "trucks",
+  "vehicleType": "camión de bomberos",
+  "file": "models/trucks/generico/camion-de-bomberos/kenney-car-kit-3-1/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 244700,
+  "triangles": 2767,
+  "vertices": 4338,
+  "stats": {
+    "triangles": 2767,
+    "vertices": 4338,
+    "primitives": 6,
+    "meshes": 6,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.5,
+    "y": 1.7,
+    "z": 3.4,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/trucks/generico/camion-de-bomberos/kenney-car-kit-3-1/model.glb"
+  },
+  "thumbnail": "models/trucks/generico/camion-de-bomberos/kenney-car-kit-3-1/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-camion-de-bomberos-kenney-car-kit-3-1.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Car Kit",
+  "url": "https://kenney.nl/assets/car-kit",
+  "sources": [
+    {
+      "key": "kenney-car-kit:Models/GLB format/firetruck.glb",
+      "name": "Kenney · Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "originalPath": "Models/GLB format/firetruck.glb",
+      "downloadedAt": "2026-09-28T15:45:28.760Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:28.760Z",
+  "sha256": "c9204a99cf1d62ec3398c0d7dcc292d7783617bf2945d8bec1eaa35afd00b7c6",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.849Z",
+    "issues": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "generico-auto-de-carreras-de-juguete-kenney-toy-car-kit-1-2",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Auto de carreras de juguete",
+  "version": "Kenney Toy Car Kit (1.2)",
+  "year": null,
+  "category": "cars",
+  "vehicleType": "auto de carreras (juguete)",
+  "file": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 112968,
+  "triangles": 1076,
+  "vertices": 1898,
+  "stats": {
+    "triangles": 1076,
+    "vertices": 1898,
+    "primitives": 5,
+    "meshes": 5,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 0.525,
+    "y": 0.45,
+    "z": 0.875,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+    "LOW": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model-low.glb"
+  },
+  "thumbnail": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-auto-de-carreras-de-juguete-kenney-toy-car-kit-1-2.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Toy Car Kit",
+  "url": "https://kenney.nl/assets/toy-car-kit",
+  "sources": [
+    {
+      "key": "kenney-toy-car-kit:Models/GLB format/vehicle-racer.glb",
+      "name": "Kenney · Toy Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+      "originalPath": "Models/GLB format/vehicle-racer.glb",
+      "downloadedAt": "2026-09-28T15:45:29.285Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:29.285Z",
+  "sha256": "6467e4bc011a09b4335e86f9116bb09f849fda3cc58bd9b78c0b7a672017d8c5",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.530Z",
+    "issues": []
+  }
+}

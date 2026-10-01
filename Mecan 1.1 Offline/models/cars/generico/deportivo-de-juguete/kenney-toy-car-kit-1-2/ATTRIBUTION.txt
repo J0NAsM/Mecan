@@ -1,0 +1,17 @@
+Modelo genérico
+
+Versión/origen: Kenney Toy Car Kit (1.2)
+
+Autor: Kenney (www.kenney.nl)
+
+Licencia(s):
+CC0-1.0 — Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+Atribución no obligatoria (se recomienda citar al autor).
+
+Fuentes:
+- Kenney · Toy Car Kit: https://kenney.nl/assets/toy-car-kit (Models/GLB format/vehicle-speedster.glb)
+
+Conversión: GLB con recursos externos empaquetado en un único GLB (sin pérdida).
+
+SHA-256: bac5581384a1522eb9a468822b188dc5134fb17c9f29b2cd9c503447e4b7a766

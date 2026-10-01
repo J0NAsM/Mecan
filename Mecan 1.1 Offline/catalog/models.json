@@ -1,0 +1,3375 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-28T18:02:41.971Z",
+  "models": [
+    {
+      "id": "generico-auto-clasico-de-carreras-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto clásico de carreras de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras clásico (juguete)",
+      "file": "models/cars/generico/auto-clasico-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 110796,
+      "triangles": 1052,
+      "vertices": 1856,
+      "stats": {
+        "triangles": 1052,
+        "vertices": 1856,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.55,
+        "y": 0.325,
+        "z": 0.875,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-clasico-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-clasico-de-carreras-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-clasico-de-carreras-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-vintage-racer.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-vintage-racer.glb",
+          "downloadedAt": "2026-09-28T15:45:29.361Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.361Z",
+      "sha256": "6cb2cf34e4a85da94f98248f863406334808f6b510ace098349ac6ac12f70147",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.514Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-blanco-kenney-racing-kit-2-0",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras blanco",
+      "version": "Kenney Racing Kit (2.0)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras",
+      "file": "models/cars/generico/auto-de-carreras-blanco/kenney-racing-kit-2-0/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": null,
+      "sizeBytes": 105864,
+      "triangles": 1430,
+      "vertices": 5520,
+      "stats": {
+        "triangles": 1430,
+        "vertices": 5520,
+        "primitives": 11,
+        "meshes": 5,
+        "materials": 3,
+        "textures": 0,
+        "images": 0,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ]
+      },
+      "dimensions": {
+        "x": 0.729,
+        "y": 0.397,
+        "z": 1.346,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras-blanco/kenney-racing-kit-2-0/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras-blanco/kenney-racing-kit-2-0/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-blanco-kenney-racing-kit-2-0.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Racing Kit",
+      "url": "https://kenney.nl/assets/racing-kit",
+      "sources": [
+        {
+          "key": "kenney-racing-kit:Models/GLTF format/raceCarWhite.glb",
+          "name": "Kenney · Racing Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/racing-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/racing-kit/933b8fd9fd-1677580949/kenney_racing-kit.zip",
+          "originalPath": "Models/GLTF format/raceCarWhite.glb",
+          "downloadedAt": "2026-09-28T15:45:29.233Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.233Z",
+      "sha256": "b1e50959852ec6f91070f802edd1be42896b2c87fbacfebab72f6e1017832cd0",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.520Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras (juguete)",
+      "file": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 112968,
+      "triangles": 1076,
+      "vertices": 1898,
+      "stats": {
+        "triangles": 1076,
+        "vertices": 1898,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.525,
+        "y": 0.45,
+        "z": 0.875,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+        "LOW": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/model-low.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-racer.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-racer.glb",
+          "downloadedAt": "2026-09-28T15:45:29.285Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.285Z",
+      "sha256": "6467e4bc011a09b4335e86f9116bb09f849fda3cc58bd9b78c0b7a672017d8c5",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.530Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-futurista-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras futurista",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras",
+      "file": "models/cars/generico/auto-de-carreras-futurista/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 185464,
+      "triangles": 2068,
+      "vertices": 3198,
+      "stats": {
+        "triangles": 2068,
+        "vertices": 3198,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.2,
+        "y": 0.833,
+        "z": 2.66,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras-futurista/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras-futurista/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-futurista-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/race-future.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/race-future.glb",
+          "downloadedAt": "2026-09-28T15:45:28.929Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.929Z",
+      "sha256": "fff9a980e7747873c6a1bee3a4d157f4125ceae3634099ecea8cbe125b1b6da5",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.534Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-naranja-kenney-racing-kit-2-0",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras naranja",
+      "version": "Kenney Racing Kit (2.0)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras",
+      "file": "models/cars/generico/auto-de-carreras-naranja/kenney-racing-kit-2-0/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": null,
+      "sizeBytes": 106068,
+      "triangles": 1430,
+      "vertices": 5520,
+      "stats": {
+        "triangles": 1430,
+        "vertices": 5520,
+        "primitives": 11,
+        "meshes": 5,
+        "materials": 4,
+        "textures": 0,
+        "images": 0,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ]
+      },
+      "dimensions": {
+        "x": 0.729,
+        "y": 0.397,
+        "z": 1.346,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras-naranja/kenney-racing-kit-2-0/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras-naranja/kenney-racing-kit-2-0/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-naranja-kenney-racing-kit-2-0.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Racing Kit",
+      "url": "https://kenney.nl/assets/racing-kit",
+      "sources": [
+        {
+          "key": "kenney-racing-kit:Models/GLTF format/raceCarOrange.glb",
+          "name": "Kenney · Racing Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/racing-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/racing-kit/933b8fd9fd-1677580949/kenney_racing-kit.zip",
+          "originalPath": "Models/GLTF format/raceCarOrange.glb",
+          "downloadedAt": "2026-09-28T15:45:29.201Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.201Z",
+      "sha256": "3f7d799e54e0f64c846db3764f04ccfcddfbfe48d7d59f366495d4585a35a980",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.543Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-rojo-kenney-racing-kit-2-0",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras rojo",
+      "version": "Kenney Racing Kit (2.0)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras",
+      "file": "models/cars/generico/auto-de-carreras-rojo/kenney-racing-kit-2-0/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": null,
+      "sizeBytes": 106064,
+      "triangles": 1430,
+      "vertices": 5520,
+      "stats": {
+        "triangles": 1430,
+        "vertices": 5520,
+        "primitives": 11,
+        "meshes": 5,
+        "materials": 4,
+        "textures": 0,
+        "images": 0,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ]
+      },
+      "dimensions": {
+        "x": 0.729,
+        "y": 0.397,
+        "z": 1.346,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras-rojo/kenney-racing-kit-2-0/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras-rojo/kenney-racing-kit-2-0/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-rojo-kenney-racing-kit-2-0.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Racing Kit",
+      "url": "https://kenney.nl/assets/racing-kit",
+      "sources": [
+        {
+          "key": "kenney-racing-kit:Models/GLTF format/raceCarRed.glb",
+          "name": "Kenney · Racing Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/racing-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/racing-kit/933b8fd9fd-1677580949/kenney_racing-kit.zip",
+          "originalPath": "Models/GLTF format/raceCarRed.glb",
+          "downloadedAt": "2026-09-28T15:45:29.217Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.217Z",
+      "sha256": "1098f37bd5bfad5e6d46266b57f146e0f1f8ea96193df03653966d58f0692b3c",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.552Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-verde-kenney-racing-kit-2-0",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras verde",
+      "version": "Kenney Racing Kit (2.0)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras",
+      "file": "models/cars/generico/auto-de-carreras-verde/kenney-racing-kit-2-0/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": null,
+      "sizeBytes": 106068,
+      "triangles": 1430,
+      "vertices": 5520,
+      "stats": {
+        "triangles": 1430,
+        "vertices": 5520,
+        "primitives": 11,
+        "meshes": 5,
+        "materials": 4,
+        "textures": 0,
+        "images": 0,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_materials_unlit"
+        ]
+      },
+      "dimensions": {
+        "x": 0.729,
+        "y": 0.397,
+        "z": 1.346,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras-verde/kenney-racing-kit-2-0/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras-verde/kenney-racing-kit-2-0/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-verde-kenney-racing-kit-2-0.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Racing Kit",
+      "url": "https://kenney.nl/assets/racing-kit",
+      "sources": [
+        {
+          "key": "kenney-racing-kit:Models/GLTF format/raceCarGreen.glb",
+          "name": "Kenney · Racing Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/racing-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/racing-kit/933b8fd9fd-1677580949/kenney_racing-kit.zip",
+          "originalPath": "Models/GLTF format/raceCarGreen.glb",
+          "downloadedAt": "2026-09-28T15:45:29.186Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Racing Kit (2.0)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.186Z",
+      "sha256": "9d5fe01fb3dd1cc656238a669a79764aeaa45cecbd36cbd7321a38ec04b2cb55",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.561Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-carreras-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de carreras",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "auto de carreras",
+      "file": "models/cars/generico/auto-de-carreras/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 179576,
+      "triangles": 1952,
+      "vertices": 3090,
+      "stats": {
+        "triangles": 1952,
+        "vertices": 3090,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.3,
+        "y": 0.733,
+        "z": 2.56,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/auto-de-carreras/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/auto-de-carreras/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-carreras-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/race.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/race.glb",
+          "downloadedAt": "2026-09-28T15:45:28.946Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.946Z",
+      "sha256": "c73b32df8a1fe6a753b6299fdd98f85f792c6d4dbfee94af02b792a365e7540b",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.571Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-covered-car-poly-haven",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Covered Car",
+      "version": "Poly Haven",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "automóvil",
+      "file": "models/cars/generico/covered-car/poly-haven/model.glb",
+      "format": "glb",
+      "originalFormat": "gltf",
+      "conversion": "glTF + buffers + texturas → GLB sin pérdida (geometría, UV, materiales y texturas intactos).",
+      "sizeBytes": 8052568,
+      "triangles": 12592,
+      "vertices": 10722,
+      "stats": {
+        "triangles": 12592,
+        "vertices": 10722,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 2,
+        "textures": 6,
+        "images": 3,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_materials_specular",
+          "KHR_materials_ior"
+        ]
+      },
+      "dimensions": {
+        "x": 1.789,
+        "y": 1.411,
+        "z": 4.38,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/covered-car/poly-haven/model.glb",
+        "LOW": "models/cars/generico/covered-car/poly-haven/model-low.glb"
+      },
+      "thumbnail": "models/cars/generico/covered-car/poly-haven/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-covered-car-poly-haven.webp",
+      "author": "MP (Poly Haven)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "polyhaven.com/license: todos los assets se publican bajo CC0."
+        }
+      ],
+      "attribution": "Modelo de Poly Haven (polyhaven.com), obtenido mediante su API pública.",
+      "trademarkNotice": null,
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/covered_car",
+      "sources": [
+        {
+          "key": "polyhaven:covered_car",
+          "name": "Poly Haven",
+          "adapter": "public_3d",
+          "url": "https://polyhaven.com/a/covered_car",
+          "downloadUrl": null,
+          "originalPath": "api.polyhaven.com/files/covered_car",
+          "downloadedAt": "2026-09-28T15:47:27.530Z",
+          "licenseEvidence": [
+            "polyhaven.com/license: todos los assets se publican bajo CC0."
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:47:27.530Z",
+      "sha256": "32389568f3bf78aa4af1ebd604b05fab01ce569cdf90e8d1d44302e817bb6ffd",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.604Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-deportivo-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Deportivo de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "deportivo (juguete)",
+      "file": "models/cars/generico/deportivo-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 112272,
+      "triangles": 1068,
+      "vertices": 1884,
+      "stats": {
+        "triangles": 1068,
+        "vertices": 1884,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.55,
+        "y": 0.375,
+        "z": 0.875,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/deportivo-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+      },
+      "thumbnail": "models/cars/generico/deportivo-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-deportivo-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-speedster.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-speedster.glb",
+          "downloadedAt": "2026-09-28T15:45:29.308Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.308Z",
+      "sha256": "bac5581384a1522eb9a468822b188dc5134fb17c9f29b2cd9c503447e4b7a766",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.615Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-dragster-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Dragster de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "dragster (juguete)",
+      "file": "models/cars/generico/dragster-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 113276,
+      "triangles": 1084,
+      "vertices": 1902,
+      "stats": {
+        "triangles": 1084,
+        "vertices": 1902,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.587,
+        "y": 0.606,
+        "z": 1.338,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/dragster-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+      },
+      "thumbnail": "models/cars/generico/dragster-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-dragster-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-drag-racer.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-drag-racer.glb",
+          "downloadedAt": "2026-09-28T15:45:29.249Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.249Z",
+      "sha256": "f3e25bc85322b5d4b07d5991a83326951215579704831253d76f8b06efdd723b",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.623Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-hatchback-deportivo-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Hatchback deportivo",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "hatchback",
+      "file": "models/cars/generico/hatchback-deportivo/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 210108,
+      "triangles": 2088,
+      "vertices": 3709,
+      "stats": {
+        "triangles": 2088,
+        "vertices": 3709,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.3,
+        "y": 1.1,
+        "z": 2.85,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/hatchback-deportivo/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/hatchback-deportivo/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-hatchback-deportivo-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/hatchback-sports.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/hatchback-sports.glb",
+          "downloadedAt": "2026-09-28T15:45:28.800Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.800Z",
+      "sha256": "e8b73e61265f3bc3a166244ad97e5d4edccd585cb094119e869acf4cd1aa034a",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.628Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-patrullero-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Patrullero",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "patrullero",
+      "file": "models/cars/generico/patrullero/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 207600,
+      "triangles": 2304,
+      "vertices": 3606,
+      "stats": {
+        "triangles": 2304,
+        "vertices": 3606,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 3.1,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/patrullero/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/patrullero/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-patrullero-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/police.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/police.glb",
+          "downloadedAt": "2026-09-28T15:45:28.913Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.913Z",
+      "sha256": "73d6bb2cbe117721fc8752a8bba942a6057d901e0a81e549bc61163ec123b40c",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.635Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-sedan-deportivo-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Sedán deportivo",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "sedán",
+      "file": "models/cars/generico/sedan-deportivo/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 189936,
+      "triangles": 2088,
+      "vertices": 3268,
+      "stats": {
+        "triangles": 2088,
+        "vertices": 3268,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.3,
+        "y": 1.1,
+        "z": 2.55,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/sedan-deportivo/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/sedan-deportivo/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-sedan-deportivo-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/sedan-sports.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/sedan-sports.glb",
+          "downloadedAt": "2026-09-28T15:45:28.960Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.960Z",
+      "sha256": "3d40b018430189a3f00fd949e815bb245b07e2ebb89a825535a69b83b35bc126",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.645Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-sedan-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Sedán",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "sedán",
+      "file": "models/cars/generico/sedan/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 184520,
+      "triangles": 2032,
+      "vertices": 3184,
+      "stats": {
+        "triangles": 2032,
+        "vertices": 3184,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.55,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/sedan/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/sedan/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-sedan-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/sedan.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/sedan.glb",
+          "downloadedAt": "2026-09-28T15:45:28.973Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.973Z",
+      "sha256": "110d595b02bb7fd22592a7c3c02ea26270056c0d6baac261095e1a2588149164",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.651Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-taxi-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Taxi",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "cars",
+      "vehicleType": "taxi",
+      "file": "models/cars/generico/taxi/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 187912,
+      "triangles": 2072,
+      "vertices": 3250,
+      "stats": {
+        "triangles": 2072,
+        "vertices": 3250,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.5,
+        "z": 2.75,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/cars/generico/taxi/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/cars/generico/taxi/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-taxi-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/taxi.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/taxi.glb",
+          "downloadedAt": "2026-09-28T15:45:29.030Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.030Z",
+      "sha256": "167d26280406e4f24f929a177eccf1073eff29bce4c60f85122ee319a4463319",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.660Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-motocicleta-kenney-starter-kit-racing-github",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Motocicleta",
+      "version": "Kenney · Starter Kit Racing (GitHub)",
+      "year": null,
+      "category": "motorcycles",
+      "vehicleType": "motocicleta",
+      "file": "models/motorcycles/generico/motocicleta/kenney-starter-kit-racing-github/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 107336,
+      "triangles": 960,
+      "vertices": 1786,
+      "stats": {
+        "triangles": 960,
+        "vertices": 1786,
+        "primitives": 4,
+        "meshes": 4,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.09,
+        "y": 1.266,
+        "z": 2.435,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/motorcycles/generico/motocicleta/kenney-starter-kit-racing-github/model.glb"
+      },
+      "thumbnail": "models/motorcycles/generico/motocicleta/kenney-starter-kit-racing-github/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-motocicleta-kenney-starter-kit-racing-github.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "README.md: «3D Models & sounds _(CC0»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Starter Kit Racing (GitHub)",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-motorcycle.glb",
+      "sources": [
+        {
+          "key": "kenney-starter-kit-racing:models/vehicle-motorcycle.glb",
+          "name": "Kenney · Starter Kit Racing (GitHub)",
+          "adapter": "github",
+          "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-motorcycle.glb",
+          "downloadUrl": null,
+          "originalPath": "models/vehicle-motorcycle.glb",
+          "downloadedAt": "2026-09-28T15:59:25.431Z",
+          "licenseEvidence": [
+            "README.md: «3D Models & sounds _(CC0»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:59:25.431Z",
+      "sha256": "c23b117bd96a6bac5b747897c36ff06f9acaf7c25b292faa5c4815bcc6cc5bb4",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.665Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-auto-de-juguete-toy-car-khronos-gltf-sample-assets",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Auto de juguete (Toy Car)",
+      "version": "Khronos glTF Sample Assets",
+      "year": null,
+      "category": "other",
+      "vehicleType": "auto de juguete",
+      "file": "models/other/generico/auto-de-juguete-toy-car/khronos-gltf-sample-assets/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": null,
+      "sizeBytes": 5422412,
+      "triangles": 108936,
+      "vertices": 77429,
+      "stats": {
+        "triangles": 108936,
+        "vertices": 77429,
+        "primitives": 3,
+        "meshes": 3,
+        "materials": 3,
+        "textures": 8,
+        "images": 8,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform",
+          "KHR_materials_clearcoat",
+          "KHR_materials_transmission",
+          "KHR_materials_sheen"
+        ]
+      },
+      "dimensions": {
+        "x": 0.073,
+        "y": 0.029,
+        "z": 0.074,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/auto-de-juguete-toy-car/khronos-gltf-sample-assets/model.glb"
+      },
+      "thumbnail": "models/other/generico/auto-de-juguete-toy-car/khronos-gltf-sample-assets/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-auto-de-juguete-toy-car-khronos-gltf-sample-assets.webp",
+      "author": "Guido Odendahl, Eric Chadwick",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Initial car model (Guido Odendahl, 2020)"
+        },
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Extensions and scene composition (Eric Chadwick, 2020)"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Khronos · glTF Sample Assets",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/ToyCar",
+      "sources": [
+        {
+          "key": "khronos-gltf-sample-assets:Models/ToyCar/glTF-Binary/ToyCar.glb",
+          "name": "Khronos · glTF Sample Assets",
+          "adapter": "github",
+          "url": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/ToyCar",
+          "downloadUrl": null,
+          "originalPath": "Models/ToyCar/glTF-Binary/ToyCar.glb",
+          "downloadedAt": "2026-09-28T15:45:38.340Z",
+          "licenseEvidence": [
+            "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Initial car model (Guido Odendahl, 2020)",
+            "Models/ToyCar/metadata.json: Creative Commons Zero v1.0 Universal — Extensions and scene composition (Eric Chadwick, 2020)"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:38.340Z",
+      "sha256": "01a60862de55cd4b9f3acfab0b0def86451800f9c42467fcd61052c16cb9838c",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.693Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-kart-oobi-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Kart OOBI",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "kart",
+      "file": "models/other/generico/kart-oobi/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 263796,
+      "triangles": 2884,
+      "vertices": 4699,
+      "stats": {
+        "triangles": 2884,
+        "vertices": 4699,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.974,
+        "y": 1.329,
+        "z": 1.428,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/kart-oobi/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/kart-oobi/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-kart-oobi-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/kart-oobi.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/kart-oobi.glb",
+          "downloadedAt": "2026-09-28T15:45:28.821Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.821Z",
+      "sha256": "640b98ae3f80819fd8baa0feb5628919448cd8a7d995404fc3f12eb1ed1d7880",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.697Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-kart-oodi-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Kart OODI",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "kart",
+      "file": "models/other/generico/kart-oodi/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 243264,
+      "triangles": 2726,
+      "vertices": 4291,
+      "stats": {
+        "triangles": 2726,
+        "vertices": 4291,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.974,
+        "y": 1.329,
+        "z": 1.428,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/kart-oodi/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/kart-oodi/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-kart-oodi-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/kart-oodi.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/kart-oodi.glb",
+          "downloadedAt": "2026-09-28T15:45:28.839Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.839Z",
+      "sha256": "aa4e13e7d88e840d8c1af10a5475991651c0958564733620f8f8d9c3e45f214e",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.708Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-kart-ooli-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Kart OOLI",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "kart",
+      "file": "models/other/generico/kart-ooli/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 245660,
+      "triangles": 2706,
+      "vertices": 4343,
+      "stats": {
+        "triangles": 2706,
+        "vertices": 4343,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.974,
+        "y": 1.329,
+        "z": 1.428,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/kart-ooli/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/kart-ooli/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-kart-ooli-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/kart-ooli.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/kart-ooli.glb",
+          "downloadedAt": "2026-09-28T15:45:28.857Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.857Z",
+      "sha256": "06a43958a9924cca263110f1b5d291ea08c33a77bbc0ad176da2c254374f43a4",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.721Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-kart-oopi-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Kart OOPI",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "kart",
+      "file": "models/other/generico/kart-oopi/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 248480,
+      "triangles": 2726,
+      "vertices": 4399,
+      "stats": {
+        "triangles": 2726,
+        "vertices": 4399,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.974,
+        "y": 1.329,
+        "z": 1.428,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/kart-oopi/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/kart-oopi/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-kart-oopi-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/kart-oopi.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/kart-oopi.glb",
+          "downloadedAt": "2026-09-28T15:45:28.877Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.877Z",
+      "sha256": "839afffbfa7c05ab9f6f7e87d641c0b5da85a06461d4368c5ac1610a7fadc2d8",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.731Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-kart-oozi-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Kart OOZI",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "kart",
+      "file": "models/other/generico/kart-oozi/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 253056,
+      "triangles": 2726,
+      "vertices": 4495,
+      "stats": {
+        "triangles": 2726,
+        "vertices": 4495,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.974,
+        "y": 1.329,
+        "z": 1.428,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/kart-oozi/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/kart-oozi/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-kart-oozi-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/kart-oozi.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/kart-oozi.glb",
+          "downloadedAt": "2026-09-28T15:45:28.895Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.895Z",
+      "sha256": "2c08b888ac5f55d3eb13f14fc4ee4b2d748fd22b1ac1d0b549b5f1c69e82cfc7",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.741Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-pala-cargadora-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Pala cargadora",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "pala cargadora",
+      "file": "models/other/generico/pala-cargadora/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 234844,
+      "triangles": 2646,
+      "vertices": 4130,
+      "stats": {
+        "triangles": 2646,
+        "vertices": 4130,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.661,
+        "y": 1.512,
+        "z": 2.47,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/pala-cargadora/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/pala-cargadora/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-pala-cargadora-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/tractor-shovel.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/tractor-shovel.glb",
+          "downloadedAt": "2026-09-28T15:45:29.085Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.085Z",
+      "sha256": "5ab6bc4569c3d34721720d0342fdffe3b05316a7716d06436bf36e93cdd5e287",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.752Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-tractor-policial-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Tractor policial",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "tractor",
+      "file": "models/other/generico/tractor-policial/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 208564,
+      "triangles": 2278,
+      "vertices": 3630,
+      "stats": {
+        "triangles": 2278,
+        "vertices": 3630,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.342,
+        "y": 1.702,
+        "z": 2.302,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/tractor-policial/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/tractor-policial/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-tractor-policial-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/tractor-police.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/tractor-police.glb",
+          "downloadedAt": "2026-09-28T15:45:29.068Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.068Z",
+      "sha256": "85449d86e11faaaaaccbc6158b1fa618cc7845fdd73276fbb231fdd4c35ff10c",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.760Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-tractor-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Tractor",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "other",
+      "vehicleType": "tractor",
+      "file": "models/other/generico/tractor/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 188248,
+      "triangles": 2044,
+      "vertices": 3260,
+      "stats": {
+        "triangles": 2044,
+        "vertices": 3260,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.342,
+        "y": 1.602,
+        "z": 2.202,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/other/generico/tractor/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/other/generico/tractor/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-tractor-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/tractor.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/tractor.glb",
+          "downloadedAt": "2026-09-28T15:45:29.104Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.104Z",
+      "sha256": "c4680a8383e4f09115ccc9f309f84cbf1efe21eeeec1fcc88aad7cbf5c4f7fd1",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.767Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-pickup-de-caja-plana-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Pickup de caja plana",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "pickups",
+      "vehicleType": "pickup",
+      "file": "models/pickups/generico/pickup-de-caja-plana/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 219708,
+      "triangles": 2488,
+      "vertices": 3868,
+      "stats": {
+        "triangles": 2488,
+        "vertices": 3868,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.745,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/pickups/generico/pickup-de-caja-plana/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/pickups/generico/pickup-de-caja-plana/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-pickup-de-caja-plana-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/truck-flat.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/truck-flat.glb",
+          "downloadedAt": "2026-09-28T15:45:29.121Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.121Z",
+      "sha256": "73c9c05b1ef8ccbe040a2dca1cbb76e95afb5d2e74816d8b41522f0b17504c69",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.777Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-pickup-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Pickup",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "pickups",
+      "vehicleType": "pickup",
+      "file": "models/pickups/generico/pickup/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 188668,
+      "triangles": 2082,
+      "vertices": 3264,
+      "stats": {
+        "triangles": 2082,
+        "vertices": 3264,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.95,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/pickups/generico/pickup/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/pickups/generico/pickup/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-pickup-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/truck.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/truck.glb",
+          "downloadedAt": "2026-09-28T15:45:29.155Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.155Z",
+      "sha256": "2c33c63ecdc8863373640fded4cd438392e45a0c00ef05a96f0e8b860b1adac4",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.789Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-suv-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "SUV de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "suv",
+      "vehicleType": "SUV (juguete)",
+      "file": "models/suv/generico/suv-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 115364,
+      "triangles": 1110,
+      "vertices": 1944,
+      "stats": {
+        "triangles": 1110,
+        "vertices": 1944,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.525,
+        "y": 0.505,
+        "z": 0.875,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/suv/generico/suv-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+      },
+      "thumbnail": "models/suv/generico/suv-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-suv-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-suv.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-suv.glb",
+          "downloadedAt": "2026-09-28T15:45:29.330Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.330Z",
+      "sha256": "947ff61b7d695b7b7a3c113f0bcb46a78b641ea5b0877c0dda7dbd88ccf7bee3",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.802Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-suv-de-lujo-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "SUV de lujo",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "suv",
+      "vehicleType": "SUV",
+      "file": "models/suv/generico/suv-de-lujo/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 188212,
+      "triangles": 2086,
+      "vertices": 3254,
+      "stats": {
+        "triangles": 2086,
+        "vertices": 3254,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.85,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/suv/generico/suv-de-lujo/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/suv/generico/suv-de-lujo/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-suv-de-lujo-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/suv-luxury.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/suv-luxury.glb",
+          "downloadedAt": "2026-09-28T15:45:28.988Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.988Z",
+      "sha256": "af1ee6ab45a121d6893deca0ccf08df4e9e2e9db0d140f0f114e1c9aff39255b",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.815Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-suv-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "SUV",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "suv",
+      "vehicleType": "SUV",
+      "file": "models/suv/generico/suv/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 219852,
+      "triangles": 2474,
+      "vertices": 3836,
+      "stats": {
+        "triangles": 2474,
+        "vertices": 3836,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.7,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/suv/generico/suv/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/suv/generico/suv/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-suv-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/suv.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/suv.glb",
+          "downloadedAt": "2026-09-28T15:45:29.014Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.014Z",
+      "sha256": "08cc8a194f1c8a13f46db4799e53e86137e592edb3cc5acacc660182ed437c82",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.826Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-amarillo-kenney-starter-kit-racing-github",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión amarillo",
+      "version": "Kenney · Starter Kit Racing (GitHub)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión",
+      "file": "models/trucks/generico/camion-amarillo/kenney-starter-kit-racing-github/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 103576,
+      "triangles": 989,
+      "vertices": 1681,
+      "stats": {
+        "triangles": 989,
+        "vertices": 1681,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.55,
+        "z": 2.8,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-amarillo/kenney-starter-kit-racing-github/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-amarillo/kenney-starter-kit-racing-github/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-amarillo-kenney-starter-kit-racing-github.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "README.md: «3D Models & sounds _(CC0»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Starter Kit Racing (GitHub)",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-yellow.glb",
+      "sources": [
+        {
+          "key": "kenney-starter-kit-racing:models/vehicle-truck-yellow.glb",
+          "name": "Kenney · Starter Kit Racing (GitHub)",
+          "adapter": "github",
+          "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-yellow.glb",
+          "downloadUrl": null,
+          "originalPath": "models/vehicle-truck-yellow.glb",
+          "downloadedAt": "2026-09-28T15:59:26.511Z",
+          "licenseEvidence": [
+            "README.md: «3D Models & sounds _(CC0»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:59:26.511Z",
+      "sha256": "c7995e470700a6d9af1a1777559b7b46efcdbd828bfc33461a984c703e964822",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.837Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-de-bomberos-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión de bomberos",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión de bomberos",
+      "file": "models/trucks/generico/camion-de-bomberos/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 244700,
+      "triangles": 2767,
+      "vertices": 4338,
+      "stats": {
+        "triangles": 2767,
+        "vertices": 4338,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.7,
+        "z": 3.4,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-de-bomberos/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-de-bomberos/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-de-bomberos-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/firetruck.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/firetruck.glb",
+          "downloadedAt": "2026-09-28T15:45:28.760Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.760Z",
+      "sha256": "c9204a99cf1d62ec3398c0d7dcc292d7783617bf2945d8bec1eaa35afd00b7c6",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.849Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión (juguete)",
+      "file": "models/trucks/generico/camion-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 112124,
+      "triangles": 1090,
+      "vertices": 1878,
+      "stats": {
+        "triangles": 1090,
+        "vertices": 1878,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.525,
+        "y": 0.525,
+        "z": 0.863,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-truck.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-truck.glb",
+          "downloadedAt": "2026-09-28T15:45:29.344Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.344Z",
+      "sha256": "d1346c46ff94910c10d716e72b24d1613c11ecf6192ac05d46b1d6a9ac1432ff",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.860Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-de-plataforma-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión de plataforma",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión de plataforma",
+      "file": "models/trucks/generico/camion-de-plataforma/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 226744,
+      "triangles": 2574,
+      "vertices": 4004,
+      "stats": {
+        "triangles": 2574,
+        "vertices": 4004,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.35,
+        "z": 3.25,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-de-plataforma/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-de-plataforma/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-de-plataforma-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/delivery-flat.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/delivery-flat.glb",
+          "downloadedAt": "2026-09-28T15:45:28.710Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.710Z",
+      "sha256": "344bdaccb138584aad3d2d70bd4abac80d672a392147e582fcfb0e50bd1e9747",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.873Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-de-reparto-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión de reparto",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión de reparto",
+      "file": "models/trucks/generico/camion-de-reparto/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 252516,
+      "triangles": 2476,
+      "vertices": 4530,
+      "stats": {
+        "triangles": 2476,
+        "vertices": 4530,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.65,
+        "z": 3.25,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-de-reparto/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-de-reparto/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-de-reparto-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/delivery.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/delivery.glb",
+          "downloadedAt": "2026-09-28T15:45:28.736Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.736Z",
+      "sha256": "d10baaab514f4972166dd6094943ea5672b9902686805394a545240d7d5e628d",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.888Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-recolector-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión recolector",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión recolector",
+      "file": "models/trucks/generico/camion-recolector/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 280444,
+      "triangles": 3124,
+      "vertices": 5003,
+      "stats": {
+        "triangles": 3124,
+        "vertices": 5003,
+        "primitives": 7,
+        "meshes": 7,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.6,
+        "y": 1.6,
+        "z": 3.45,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-recolector/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-recolector/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-recolector-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/garbage-truck.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/garbage-truck.glb",
+          "downloadedAt": "2026-09-28T15:45:28.783Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.783Z",
+      "sha256": "11eefcc96475e6bf9e91b782b107df6425b71a87777dacc4b721c00f28786976",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.898Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-rojo-kenney-starter-kit-racing-github",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión rojo",
+      "version": "Kenney · Starter Kit Racing (GitHub)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión",
+      "file": "models/trucks/generico/camion-rojo/kenney-starter-kit-racing-github/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 102528,
+      "triangles": 946,
+      "vertices": 1664,
+      "stats": {
+        "triangles": 946,
+        "vertices": 1664,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.8,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-rojo/kenney-starter-kit-racing-github/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-rojo/kenney-starter-kit-racing-github/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-rojo-kenney-starter-kit-racing-github.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "README.md: «3D Models & sounds _(CC0»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Starter Kit Racing (GitHub)",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-red.glb",
+      "sources": [
+        {
+          "key": "kenney-starter-kit-racing:models/vehicle-truck-red.glb",
+          "name": "Kenney · Starter Kit Racing (GitHub)",
+          "adapter": "github",
+          "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-red.glb",
+          "downloadUrl": null,
+          "originalPath": "models/vehicle-truck-red.glb",
+          "downloadedAt": "2026-09-28T15:59:26.272Z",
+          "licenseEvidence": [
+            "README.md: «3D Models & sounds _(CC0»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:59:26.272Z",
+      "sha256": "3a11774abc90327867c6ad013dcb75390032b75ab44c1aff12530cc87b8900b1",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.909Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-verde-kenney-starter-kit-racing-github",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión verde",
+      "version": "Kenney · Starter Kit Racing (GitHub)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión",
+      "file": "models/trucks/generico/camion-verde/kenney-starter-kit-racing-github/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 114332,
+      "triangles": 1104,
+      "vertices": 1890,
+      "stats": {
+        "triangles": 1104,
+        "vertices": 1890,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.4,
+        "z": 2.903,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-verde/kenney-starter-kit-racing-github/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-verde/kenney-starter-kit-racing-github/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-verde-kenney-starter-kit-racing-github.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "README.md: «3D Models & sounds _(CC0»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Starter Kit Racing (GitHub)",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-green.glb",
+      "sources": [
+        {
+          "key": "kenney-starter-kit-racing:models/vehicle-truck-green.glb",
+          "name": "Kenney · Starter Kit Racing (GitHub)",
+          "adapter": "github",
+          "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-green.glb",
+          "downloadUrl": null,
+          "originalPath": "models/vehicle-truck-green.glb",
+          "downloadedAt": "2026-09-28T15:59:25.711Z",
+          "licenseEvidence": [
+            "README.md: «3D Models & sounds _(CC0»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:59:25.711Z",
+      "sha256": "13ec0aee0f336766f293e71fffc674e6d6b0d52a8c6b658eb0f611c2bf36c5d9",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.919Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-camion-violeta-kenney-starter-kit-racing-github",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Camión violeta",
+      "version": "Kenney · Starter Kit Racing (GitHub)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "camión",
+      "file": "models/trucks/generico/camion-violeta/kenney-starter-kit-racing-github/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 88644,
+      "triangles": 814,
+      "vertices": 1392,
+      "stats": {
+        "triangles": 814,
+        "vertices": 1392,
+        "primitives": 6,
+        "meshes": 6,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.3,
+        "z": 2.8,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/camion-violeta/kenney-starter-kit-racing-github/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/camion-violeta/kenney-starter-kit-racing-github/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-camion-violeta-kenney-starter-kit-racing-github.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "README.md: «3D Models & sounds _(CC0»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Starter Kit Racing (GitHub)",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-purple.glb",
+      "sources": [
+        {
+          "key": "kenney-starter-kit-racing:models/vehicle-truck-purple.glb",
+          "name": "Kenney · Starter Kit Racing (GitHub)",
+          "adapter": "github",
+          "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-purple.glb",
+          "downloadUrl": null,
+          "originalPath": "models/vehicle-truck-purple.glb",
+          "downloadedAt": "2026-09-28T15:59:25.983Z",
+          "licenseEvidence": [
+            "README.md: «3D Models & sounds _(CC0»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:59:25.983Z",
+      "sha256": "374f9723dbb8a4d3454407722f2e9ba94fe5a888ec994b1141153e42184c2db0",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.931Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-monster-truck-de-juguete-kenney-toy-car-kit-1-2",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Monster truck de juguete",
+      "version": "Kenney Toy Car Kit (1.2)",
+      "year": null,
+      "category": "trucks",
+      "vehicleType": "monster truck (juguete)",
+      "file": "models/trucks/generico/monster-truck-de-juguete/kenney-toy-car-kit-1-2/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 130264,
+      "triangles": 1272,
+      "vertices": 2234,
+      "stats": {
+        "triangles": 1272,
+        "vertices": 2234,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 0.625,
+        "y": 0.75,
+        "z": 0.875,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/trucks/generico/monster-truck-de-juguete/kenney-toy-car-kit-1-2/model.glb"
+      },
+      "thumbnail": "models/trucks/generico/monster-truck-de-juguete/kenney-toy-car-kit-1-2/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-monster-truck-de-juguete-kenney-toy-car-kit-1-2.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Toy Car Kit",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "sources": [
+        {
+          "key": "kenney-toy-car-kit:Models/GLB format/vehicle-monster-truck.glb",
+          "name": "Kenney · Toy Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/toy-car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/42e19cc426-1736346027/kenney_toy-car-kit.zip",
+          "originalPath": "Models/GLB format/vehicle-monster-truck.glb",
+          "downloadedAt": "2026-09-28T15:45:29.266Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Toy Car Kit (1.2)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.266Z",
+      "sha256": "f98e23572b2bf91186e412cef9d384114984e20005dc4a7cf6e1e62f19ca4f7d",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.943Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-ambulancia-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Ambulancia",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "vans",
+      "vehicleType": "ambulancia",
+      "file": "models/vans/generico/ambulancia/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 245816,
+      "triangles": 2804,
+      "vertices": 4328,
+      "stats": {
+        "triangles": 2804,
+        "vertices": 4328,
+        "primitives": 7,
+        "meshes": 7,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.8,
+        "z": 3.25,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/vans/generico/ambulancia/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/vans/generico/ambulancia/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-ambulancia-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/ambulance.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/ambulance.glb",
+          "downloadedAt": "2026-09-28T15:45:28.677Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:28.677Z",
+      "sha256": "77f0a5d931fceb494887f061c6086da526fc3b6ad9f276198f957a596505d3dc",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.951Z",
+        "issues": []
+      }
+    },
+    {
+      "id": "generico-furgoneta-kenney-car-kit-3-1",
+      "brand": "Genérico",
+      "generic": true,
+      "model": "Furgoneta",
+      "version": "Kenney Car Kit (3.1)",
+      "year": null,
+      "category": "vans",
+      "vehicleType": "furgoneta",
+      "file": "models/vans/generico/furgoneta/kenney-car-kit-3-1/model.glb",
+      "format": "glb",
+      "originalFormat": "glb",
+      "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+      "sizeBytes": 187968,
+      "triangles": 2082,
+      "vertices": 3250,
+      "stats": {
+        "triangles": 2082,
+        "vertices": 3250,
+        "primitives": 5,
+        "meshes": 5,
+        "materials": 1,
+        "textures": 1,
+        "images": 1,
+        "animations": 0,
+        "extensionsUsed": [
+          "KHR_texture_transform"
+        ]
+      },
+      "dimensions": {
+        "x": 1.5,
+        "y": 1.35,
+        "z": 2.75,
+        "unit": "m (unidades glTF)"
+      },
+      "lod": {
+        "HIGH": "models/vans/generico/furgoneta/kenney-car-kit-3-1/model.glb"
+      },
+      "thumbnail": "models/vans/generico/furgoneta/kenney-car-kit-3-1/thumbnail.webp",
+      "thumbnailSmall": "thumbnails/generico-furgoneta-kenney-car-kit-3-1.webp",
+      "author": "Kenney (www.kenney.nl)",
+      "license": "CC0-1.0",
+      "licenses": [
+        {
+          "spdx": "CC0-1.0",
+          "name": "Creative Commons Zero v1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution": false,
+          "shareAlike": false,
+          "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+        }
+      ],
+      "attribution": null,
+      "trademarkNotice": null,
+      "source": "Kenney · Car Kit",
+      "url": "https://kenney.nl/assets/car-kit",
+      "sources": [
+        {
+          "key": "kenney-car-kit:Models/GLB format/van.glb",
+          "name": "Kenney · Car Kit",
+          "adapter": "open_assets",
+          "url": "https://kenney.nl/assets/car-kit",
+          "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+          "originalPath": "Models/GLB format/van.glb",
+          "downloadedAt": "2026-09-28T15:45:29.172Z",
+          "licenseEvidence": [
+            "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+          ]
+        }
+      ],
+      "downloadedAt": "2026-09-28T15:45:29.172Z",
+      "sha256": "25257a6eb9f805b1b983c78e1f8327e58997b0e69d5831a17934c762605983fc",
+      "validation": {
+        "status": "VALID",
+        "checkedAt": "2026-09-28T16:03:05.961Z",
+        "issues": []
+      }
+    }
+  ]
+}

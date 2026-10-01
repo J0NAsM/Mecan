@@ -1,0 +1,10 @@
+{
+  "package": "three",
+  "version": "0.160.0",
+  "addons": [
+    "controls/OrbitControls.js",
+    "environments/RoomEnvironment.js",
+    "loaders/GLTFLoader.js",
+    "utils/BufferGeometryUtils.js"
+  ]
+}

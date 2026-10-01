@@ -1,0 +1,78 @@
+{
+  "id": "generico-taxi-kenney-car-kit-3-1",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Taxi",
+  "version": "Kenney Car Kit (3.1)",
+  "year": null,
+  "category": "cars",
+  "vehicleType": "taxi",
+  "file": "models/cars/generico/taxi/kenney-car-kit-3-1/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 187912,
+  "triangles": 2072,
+  "vertices": 3250,
+  "stats": {
+    "triangles": 2072,
+    "vertices": 3250,
+    "primitives": 5,
+    "meshes": 5,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.5,
+    "y": 1.5,
+    "z": 2.75,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/cars/generico/taxi/kenney-car-kit-3-1/model.glb"
+  },
+  "thumbnail": "models/cars/generico/taxi/kenney-car-kit-3-1/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-taxi-kenney-car-kit-3-1.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Car Kit",
+  "url": "https://kenney.nl/assets/car-kit",
+  "sources": [
+    {
+      "key": "kenney-car-kit:Models/GLB format/taxi.glb",
+      "name": "Kenney · Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "originalPath": "Models/GLB format/taxi.glb",
+      "downloadedAt": "2026-09-28T15:45:29.030Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:29.030Z",
+  "sha256": "167d26280406e4f24f929a177eccf1073eff29bce4c60f85122ee319a4463319",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.660Z",
+    "issues": []
+  }
+}

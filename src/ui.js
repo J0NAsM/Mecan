@@ -103,6 +103,7 @@ const workshopNav = [
   ['/workshop/warranties', 'Garantías', 'clipboard', 'orders.view'],
   ['/workshop/customers', 'Clientes', 'users', 'customers.view'],
   ['/workshop/vehicles', 'Vehículos', 'car', 'vehicles.view'],
+  ['/workshop/models3d', 'Modelos 3D', 'car', 'vehicles.view'],
   ['/workshop/services', 'Servicios', 'clipboard', 'orders.view'],
   ['/workshop/schedule', 'Agenda y bahías', 'grid', 'orders.view'],
   ['/workshop/inventory', 'Inventario', 'box', 'inventory.view'],

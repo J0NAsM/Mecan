@@ -1,0 +1,38 @@
+{
+  "_nota": "Política editable. Solo se incorporan automáticamente licencias que permiten redistribución, uso comercial y obras derivadas (convertir/optimizar es derivar). NC y ND se rechazan; las marcas registradas incrustadas requieren revisión manual.",
+  "allowed": {
+    "CC0-1.0": {
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false
+    },
+    "CC-BY-4.0": {
+      "name": "Creative Commons Attribution 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": true,
+      "shareAlike": false
+    },
+    "CC-BY-3.0": {
+      "name": "Creative Commons Attribution 3.0",
+      "url": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": true,
+      "shareAlike": false
+    },
+    "CC-BY-SA-4.0": {
+      "name": "Creative Commons Attribution-ShareAlike 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": true,
+      "shareAlike": true
+    }
+  },
+  "reviewPatterns": [
+    "^LicenseRef-LegalMark-"
+  ],
+  "deniedReasons": {
+    "NC": "La licencia prohíbe el uso comercial (NC).",
+    "ND": "La licencia prohíbe obras derivadas (ND): no se puede convertir ni optimizar.",
+    "UNKNOWN": "La licencia no está declarada o no es verificable.",
+    "RESTRICTED": "Licencia propietaria o limitada a pruebas: no permite redistribución."
+  }
+}

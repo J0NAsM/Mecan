@@ -7,6 +7,7 @@ import { config, validateProductionConfig } from './config.js';
 import { postgresReadinessIssues } from './postgres/readiness.js';
 import { releaseGet, releasePost } from './routes/release.js';
 import { mobileGet } from './routes/mobile.js';
+import { diagnosisGet, diagnosisPost } from './routes/diagnosis.js';
 import { legalDocument } from './legal.js';
 import { catalogActions } from './pages/catalog.js';
 import { configureUi, withUiSettings } from './ui.js';
@@ -101,6 +102,7 @@ import {
 } from './notifications.js';
 import { processNotificationQueue } from './notification-delivery.js';
 import { required, optional, email as validEmail, positive, integer, oneOf } from './validation.js';
+import { BODY_TYPES, BODY_TYPE_CODES, bodyTypeLabel } from './vehicle-diagnosis.js';
 import {
   receiveVehicle,
   completeInspection,
@@ -223,7 +225,8 @@ function headers(type = 'text/html; charset=utf-8') {
     'Cache-Control': 'private, no-store',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Content-Security-Policy':
-      "default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https:; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+      // blob: only for textures that GLTFLoader extracts from local .glb files (no remote origins).
+      "default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https: blob:; connect-src 'self' blob:; script-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
   };
   if (config.secureTransport)
     values['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
@@ -721,7 +724,8 @@ async function customersPage(req) {
           '/workshop/customers',
           req.session.csrf_token,
           field('name', 'Nombre completo', 'text', '', { required: true }) +
-            field('document', 'Documento / RUC') +
+            field('document', 'C.I. / Documento') +
+            field('taxId', 'RUC') +
             field('phone', 'Teléfono', 'tel') +
             field('email', 'Email', 'email') +
             field('address', 'Dirección') +
@@ -737,7 +741,8 @@ async function customersPage(req) {
             label: 'Nombre',
             render: (r) => `<a href="/workshop/customers/${r.id}">${esc(r.name)}</a>`,
           },
-          { label: 'Documento', key: 'document' },
+          { label: 'C.I.', key: 'document' },
+          { label: 'RUC', key: 'tax_id' },
           { label: 'Teléfono', key: 'phone' },
           { label: 'Email', key: 'email' },
           { label: 'Alta', render: (r) => shortDate(r.created_at) },
@@ -775,7 +780,12 @@ async function vehiclesPage(req) {
             field('year', 'Año', 'number') +
             field('color', 'Color') +
             field('vin', 'VIN / Chasis') +
-            field('odometer', 'Kilometraje', 'number', 0, { min: 0 }),
+            field('odometer', 'Kilometraje', 'number', 0, { min: 0 }) +
+            select('bodyType', 'Tipo de carrocería', [
+              ['', 'Sin definir'],
+              ...BODY_TYPES.map((b) => [b.code, `${b.label} · ${b.doors} puertas`]),
+            ]) +
+            textarea('notes', 'Observaciones'),
           'Registrar vehículo',
         )
       : '') +
@@ -789,6 +799,10 @@ async function vehiclesPage(req) {
           },
           { label: 'Vehículo', render: (r) => `${esc(r.make || '')} ${esc(r.model || '')}` },
           { label: 'Año', key: 'year' },
+          {
+            label: 'Carrocería',
+            render: (r) => esc(r.body_type ? bodyTypeLabel(r.body_type) : '—'),
+          },
           { label: 'Cliente', key: 'customer' },
           {
             label: 'Kilometraje',
@@ -1368,6 +1382,7 @@ async function settingsPage(req) {
         field('phone', 'Teléfono', 'tel', t.phone) +
         field('email', 'Email', 'email', t.email) +
         field('address', 'Dirección', 'text', t.address) +
+        field('city', 'Ciudad', 'text', t.city) +
         field('logoUrl', 'URL del logo', 'url', t.logo_url) +
         field('primaryColor', 'Color principal', 'color', t.primary_color) +
         field('currency', 'Moneda', 'text', s.currency) +
@@ -1908,6 +1923,7 @@ async function handleGet(req, res, url) {
   const p = url.pathname;
   if (await releaseGet(req, res, url, releaseApi())) return;
   if (await mobileGet(req, res, url, releaseApi())) return;
+  if (await diagnosisGet(req, res, url, releaseApi())) return;
   let workshopParams;
   if (p.startsWith('/assets/')) {
     const relative = p.slice('/assets/'.length);
@@ -2294,6 +2310,7 @@ async function handleGet(req, res, url) {
 
 async function handlePost(req, res, url, data) {
   const p = url.pathname;
+  if (await diagnosisPost(req, res, url, data, releaseApi())) return;
   if (await releasePost(req, res, url, data, releaseApi())) return;
   if (p === '/login') {
     checkGuestCsrf(req, data);
@@ -2537,7 +2554,7 @@ async function handlePost(req, res, url, data) {
       customerId = id();
     await db
       .prepare(
-        'INSERT INTO customers (id,tenant_id,branch_id,name,document,phone,email,address,notes,created_at) VALUES (?,?,?,?,?,?,?,?,?,?)',
+        'INSERT INTO customers (id,tenant_id,branch_id,name,document,tax_id,phone,email,address,notes,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)',
       )
       .run(
         customerId,
@@ -2545,6 +2562,7 @@ async function handlePost(req, res, url, data) {
         branch,
         name,
         optional(data.document, { max: 80 }),
+        optional(data.taxId, { max: 80 }),
         optional(data.phone, { max: 60 }),
         customerEmail,
         optional(data.address, { max: 500 }),
@@ -2637,7 +2655,7 @@ async function handlePost(req, res, url, data) {
       odometer = integer(data.odometer || 0, 'El kilometraje');
     await db
       .prepare(
-        'INSERT INTO vehicles (id,tenant_id,customer_id,plate,make,model,year,vin,color,odometer,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)',
+        'INSERT INTO vehicles (id,tenant_id,customer_id,plate,make,model,year,vin,color,odometer,body_type,notes,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)',
       )
       .run(
         vehicleId,
@@ -2650,6 +2668,8 @@ async function handlePost(req, res, url, data) {
         optional(data.vin, { max: 80 }),
         optional(data.color, { max: 60 }),
         odometer,
+        data.bodyType ? oneOf(data.bodyType, BODY_TYPE_CODES, 'El tipo de carrocería') : null,
+        optional(data.notes, { max: 3000 }),
         now(),
       );
     await audit(db, {

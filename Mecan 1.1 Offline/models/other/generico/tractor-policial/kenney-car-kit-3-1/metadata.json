@@ -1,0 +1,78 @@
+{
+  "id": "generico-tractor-policial-kenney-car-kit-3-1",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Tractor policial",
+  "version": "Kenney Car Kit (3.1)",
+  "year": null,
+  "category": "other",
+  "vehicleType": "tractor",
+  "file": "models/other/generico/tractor-policial/kenney-car-kit-3-1/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 208564,
+  "triangles": 2278,
+  "vertices": 3630,
+  "stats": {
+    "triangles": 2278,
+    "vertices": 3630,
+    "primitives": 6,
+    "meshes": 6,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.342,
+    "y": 1.702,
+    "z": 2.302,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/other/generico/tractor-policial/kenney-car-kit-3-1/model.glb"
+  },
+  "thumbnail": "models/other/generico/tractor-policial/kenney-car-kit-3-1/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-tractor-policial-kenney-car-kit-3-1.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Car Kit",
+  "url": "https://kenney.nl/assets/car-kit",
+  "sources": [
+    {
+      "key": "kenney-car-kit:Models/GLB format/tractor-police.glb",
+      "name": "Kenney · Car Kit",
+      "adapter": "open_assets",
+      "url": "https://kenney.nl/assets/car-kit",
+      "downloadUrl": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+      "originalPath": "Models/GLB format/tractor-police.glb",
+      "downloadedAt": "2026-09-28T15:45:29.068Z",
+      "licenseEvidence": [
+        "License.txt del paquete «Car Kit (3.1)»: «License: (Creative Commons Zero, CC0)»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:45:29.068Z",
+  "sha256": "85449d86e11faaaaaccbc6158b1fa618cc7845fdd73276fbb231fdd4c35ff10c",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.760Z",
+    "issues": []
+  }
+}

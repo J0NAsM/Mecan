@@ -1,0 +1,78 @@
+{
+  "id": "generico-camion-verde-kenney-starter-kit-racing-github",
+  "brand": "Genérico",
+  "generic": true,
+  "model": "Camión verde",
+  "version": "Kenney · Starter Kit Racing (GitHub)",
+  "year": null,
+  "category": "trucks",
+  "vehicleType": "camión",
+  "file": "models/trucks/generico/camion-verde/kenney-starter-kit-racing-github/model.glb",
+  "format": "glb",
+  "originalFormat": "glb",
+  "conversion": "GLB con recursos externos empaquetado en un único GLB (sin pérdida).",
+  "sizeBytes": 114332,
+  "triangles": 1104,
+  "vertices": 1890,
+  "stats": {
+    "triangles": 1104,
+    "vertices": 1890,
+    "primitives": 6,
+    "meshes": 6,
+    "materials": 1,
+    "textures": 1,
+    "images": 1,
+    "animations": 0,
+    "extensionsUsed": [
+      "KHR_texture_transform"
+    ]
+  },
+  "dimensions": {
+    "x": 1.5,
+    "y": 1.4,
+    "z": 2.903,
+    "unit": "m (unidades glTF)"
+  },
+  "lod": {
+    "HIGH": "models/trucks/generico/camion-verde/kenney-starter-kit-racing-github/model.glb"
+  },
+  "thumbnail": "models/trucks/generico/camion-verde/kenney-starter-kit-racing-github/thumbnail.webp",
+  "thumbnailSmall": "thumbnails/generico-camion-verde-kenney-starter-kit-racing-github.webp",
+  "author": "Kenney (www.kenney.nl)",
+  "license": "CC0-1.0",
+  "licenses": [
+    {
+      "spdx": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": false,
+      "shareAlike": false,
+      "evidence": "README.md: «3D Models & sounds _(CC0»"
+    }
+  ],
+  "attribution": null,
+  "trademarkNotice": null,
+  "source": "Kenney · Starter Kit Racing (GitHub)",
+  "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-green.glb",
+  "sources": [
+    {
+      "key": "kenney-starter-kit-racing:models/vehicle-truck-green.glb",
+      "name": "Kenney · Starter Kit Racing (GitHub)",
+      "adapter": "github",
+      "url": "https://github.com/KenneyNL/Starter-Kit-Racing/blob/main/models/vehicle-truck-green.glb",
+      "downloadUrl": null,
+      "originalPath": "models/vehicle-truck-green.glb",
+      "downloadedAt": "2026-09-28T15:59:25.711Z",
+      "licenseEvidence": [
+        "README.md: «3D Models & sounds _(CC0»"
+      ]
+    }
+  ],
+  "downloadedAt": "2026-09-28T15:59:25.711Z",
+  "sha256": "13ec0aee0f336766f293e71fffc674e6d6b0d52a8c6b658eb0f611c2bf36c5d9",
+  "validation": {
+    "status": "VALID",
+    "checkedAt": "2026-09-28T16:03:05.919Z",
+    "issues": []
+  }
+}
